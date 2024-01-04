@@ -158,8 +158,6 @@ def main():
 
     game = take_random(games)
     print(game.match_id)
-    print(game.date)
-    print(datetime.datetime.fromtimestamp(int(game.date[:-3])))
 
 if __name__ == '__main__':
     main()
