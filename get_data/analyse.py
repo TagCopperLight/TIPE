@@ -111,7 +111,7 @@ def length_to_int(length):
 
 def take_random(games):
     print(len(games))
-    games = [game for game in games if get_region(game) == 'kr']
+    games = [game for game in games if get_region(game) == 'euw']
 
     for game in games:
         elo = [elo_to_int(player.elo) for player in game.players]
