@@ -83,6 +83,7 @@ class Game:
         self.page = page
         self.match_id = self.get_match_id()
         self.type = self.get_type()
+        self.winner = self.get_winner()
         self.duration = self.get_duration()
         self.date = self.get_date()
         self.players = self.get_players()
@@ -98,6 +99,10 @@ class Game:
         type = re.findall(r'<span class="queueName">(?:.|\n)*?<\/span>', self.table)
         type = type[0].replace('<span class="queueName">', '').replace('</span>', '')
         return re.search(r"\s*(.*?)\s*$", type).group(1)
+    
+    def get_winner(self):
+        winner = re.findall(r'<th class="text-left-dark-only"(?:.|\n)*?<span(.*?)>(.*?)<\/span>', self.table)
+        return "blue" if winner[0][1] == "Victory" else "red"
     
     def get_duration(self):
         duration = re.findall(r'<span class="gameDuration">(?:.|\n)*?<\/span>', self.table)
@@ -124,7 +129,7 @@ class Game:
             if game['match_id'] == self.match_id:
                 return
         
-        saved_games.append({'match_id': self.match_id, 'type': self.type, 'duration': self.duration, 'date': self.date, 'players': [{'champion': player.champion, 'summoner': player.summoner, 'elo': player.elo} for player in self.players]})
+        saved_games.append({'match_id': self.match_id, 'type': self.type, 'winner': self.winner, 'duration': self.duration, 'date': self.date, 'players': [{'champion': player.champion, 'summoner': player.summoner, 'elo': player.elo} for player in self.players]})
 
     def write_file(self):
         if self.file == "twitch":
@@ -156,7 +161,7 @@ def record_data(browser, page):
 
 def main():
         browser = Browser()
-        for page in range(1, 51):
+        for page in range(1, 2):
             parser = record_data(browser, page)
             games = get_games(parser, browser)
             for game in games:
