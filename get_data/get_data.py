@@ -161,7 +161,7 @@ def record_data(browser, page):
 
 def main():
         browser = Browser()
-        for page in range(1, 2):
+        for page in range(1, 51):
             parser = record_data(browser, page)
             games = get_games(parser, browser)
             for game in games:
