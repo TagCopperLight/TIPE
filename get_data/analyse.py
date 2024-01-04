@@ -1,6 +1,8 @@
 import json
 import re
 from matplotlib import pyplot as plt
+import random
+import datetime
 
 
 class Game:
@@ -56,7 +58,6 @@ def int_to_elo(int_elo):
 def get_region(game):
     return game.match_id.split('/')[1]
 
-
 def get_saved_games():
     with open ('saved_games.json', 'r') as f:
         data = json.load(f)
@@ -108,6 +109,22 @@ def length_to_int(length):
     length = length.replace('(', '').replace(')', '').split(':')
     return int(length[0]) * 60 + int(length[1])
 
+def take_random(games):
+    print(len(games))
+    games = [game for game in games if get_region(game) == 'kr']
+
+    for game in games:
+        elo = [elo_to_int(player.elo) for player in game.players]
+        if -1 in elo:
+            games.remove(game)
+            continue
+        if round(sum(elo) / len(elo)) != 28:
+            games.remove(game)
+            continue
+
+    print(len(games))
+    return random.choice(games)
+
 def main():
     data = get_saved_games()
     games = convert_to_games(data)
@@ -136,8 +153,13 @@ def main():
     max_length = max([length_to_int(game.duration) for game in games])
     print(f'Max length: {int(max_length / 60)}:{int(max_length % 60)}')
 
-    show_champion_distribution(games)
-    show_elo_distribution(games)
+    # show_champion_distribution(games)
+    # show_elo_distribution(games)
+
+    game = take_random(games)
+    print(game.match_id)
+    print(game.date)
+    print(datetime.datetime.fromtimestamp(int(game.date[:-3])))
 
 if __name__ == '__main__':
     main()
