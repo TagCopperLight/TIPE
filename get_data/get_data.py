@@ -114,6 +114,8 @@ class Game:
         return players
     
     def get_file(self):
+        if "twitchSpectatePopup" in self.table:
+            return "twitch"
         file_data = re.findall(r'<a href="#" data-rel="spectatePopup" data-width="640" class="poplight spectatePopupLink" data-spectate-link="(.*)" data-spectate-platform="(.*)" data-spectate-gameid="(.*)" data-spectate-encryptionkey="(.*)" data-spectate-endpoint="(.*)">', self.table)
         return file_data[0]
     
@@ -125,6 +127,8 @@ class Game:
         saved_games.append({'match_id': self.match_id, 'type': self.type, 'duration': self.duration, 'date': self.date, 'players': [{'champion': player.champion, 'summoner': player.summoner, 'elo': player.elo} for player in self.players]})
 
     def write_file(self):
+        if self.file == "twitch":
+            return
         try:
             with open(f'games/{self.file[2]}.bat', 'r') as f:
                 return
