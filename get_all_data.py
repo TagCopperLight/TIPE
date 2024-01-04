@@ -71,10 +71,12 @@ def add_data_from_games(games):
             if game.game_id in saved_game['match_id']:
                 game.duration = saved_game['duration']
                 game.date = saved_game['date']
-                # game.winner = saved_game['winner']
+                game.winner = saved_game['winner']
 
                 new_games.append(game)
                 break
+        if game.duration is None:
+            print(f'Game {game.game_id} not found in saved_games.json')
     
     return new_games
 
