@@ -80,8 +80,13 @@ def add_data_from_games(games):
     
     return new_games
 
-if __name__ == '__main__':
+def get_games():
     data = get_all_data()
     games = parse_data(data)
     games = add_data_from_games(games)
-    print(games)
+    print(games[0].time_frames[0])
+
+    return games
+
+if __name__ == '__main__':
+    get_games()

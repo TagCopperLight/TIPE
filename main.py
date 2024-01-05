@@ -1,6 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 from C45.c45.c45 import C45
+from get_all_data import get_games, Game
 
 
 def create_graph():
@@ -62,7 +63,25 @@ def show_graph(graph):
     nx.draw(graph, with_labels=True, font_weight='bold', pos=pos)
     plt.show()
 
+def create_graph_from_game(game: Game, time_frame: int):
+    G = nx.DiGraph()
+    for team in [1, 2]:
+        for role in range(1, 6):
+            G.add_node(f"T{team}-R{role}")
+    G.add_node("DEATH")
+    
+    for data, blue_player in enumerate(game.time_frames[time_frame]):
+        for data2, red_player in enumerate(data):
+            if data2[0] == 'TRUE':
+                G.add_edge(f"T1-R{red_player+1}", f"T2-R{blue_player+1}")
+            if data2[1] == 'TRUE':
+                G.add_edge(f"T2-R{blue_player+1}", f"T1-R{red_player+1}")
+    
+    return G
+
+
 G = create_graph()
+G = create_graph_from_game(get_games()[0], 0)
 G = add_edges_exemples(G)
 get_metrics(G)
 show_graph(G)
