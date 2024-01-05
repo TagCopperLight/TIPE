@@ -123,6 +123,7 @@ def take_random(games):
             continue
 
     print(len(games))
+    
     return random.choice(games)
 
 def main():
@@ -158,6 +159,7 @@ def main():
 
     game = take_random(games)
     print(game.match_id)
+    print(game.duration)
 
 if __name__ == '__main__':
     main()
