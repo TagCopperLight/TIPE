@@ -61,7 +61,7 @@ def parse_data(data):
 
 def add_data_from_games(games):
     new_games = []
-    with open(r'get_data\\saved_games.json', 'r') as file:
+    with open('get_data/saved_games.json', 'r') as file:
         saved_games = json.load(file)
     
     for game in games:
@@ -84,7 +84,6 @@ def get_games():
     data = get_all_data()
     games = parse_data(data)
     games = add_data_from_games(games)
-    print(games[0].time_frames[0])
 
     return games
 

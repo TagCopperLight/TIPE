@@ -70,18 +70,24 @@ def create_graph_from_game(game: Game, time_frame: int):
             G.add_node(f"T{team}-R{role}")
     G.add_node("DEATH")
     
-    for data, blue_player in enumerate(game.time_frames[time_frame]):
-        for data2, red_player in enumerate(data):
+    for blue_player, data in enumerate(game.time_frames[time_frame]):
+        for red_player, data2 in enumerate(data):
             if data2[0] == 'TRUE':
                 G.add_edge(f"T1-R{red_player+1}", f"T2-R{blue_player+1}")
             if data2[1] == 'TRUE':
                 G.add_edge(f"T2-R{blue_player+1}", f"T1-R{red_player+1}")
     
+    for player, data in enumerate(game.deaths_frames[time_frame]):
+        if data == 'TRUE':
+            if player < 5:
+                G.add_edge(f"T1-R{player+1}", "DEATH")
+            else:
+                G.add_edge(f"T2-R{player-4}", "DEATH")
     return G
 
 
-G = create_graph()
-G = create_graph_from_game(get_games()[0], 0)
-G = add_edges_exemples(G)
-get_metrics(G)
-show_graph(G)
+for i in range(1):
+    print(f"Time frame {i}")
+    G = create_graph_from_game(get_games()[0], 13)
+    get_metrics(G)
+    show_graph(G)
