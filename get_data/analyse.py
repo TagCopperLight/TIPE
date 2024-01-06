@@ -152,7 +152,10 @@ def main():
     average_length = sum([length_to_int(game.duration) for game in games]) / len(games)
     print(f'Average length: {int(average_length / 60)}:{int(average_length % 60)}')
     max_length = max([length_to_int(game.duration) for game in games])
+    min_length = min([length_to_int(game.duration) for game in games])
     print(f'Max length: {int(max_length / 60)}:{int(max_length % 60)}')
+    print(f'Min length: {int(min_length / 60)}:{int(min_length % 60)}')
+    print(f'Min length game : {min(games, key=lambda x: length_to_int(x.duration)).match_id}')
 
     # show_champion_distribution(games)
     # show_elo_distribution(games)
