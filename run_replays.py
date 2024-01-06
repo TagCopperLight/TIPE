@@ -26,8 +26,8 @@ def main():
     data = get_saved_games()
     games = convert_to_games(data)
 
-    print(f'Total games: {len(games)}')
-    print(f'EUW games: {len([game for game in games if get_region(game) == "euw"])}')
+    # print(f'Total games: {len(games)}')
+    # print(f'EUW games: {len([game for game in games if get_region(game) == "euw"])}')
 
     games = [game for game in games if get_region(game) == 'euw']
     games = [game for game in games if game.duration > 20*60]
@@ -47,7 +47,8 @@ def main():
 
 if __name__ == '__main__':
     try:
-        main()
+        while True:
+            main()
     except Exception as e:
         log.error(e)
         raise e
