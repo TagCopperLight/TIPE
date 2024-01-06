@@ -2,7 +2,7 @@
 
 ## Description
 
-Peut-on trouver des motifs de combats dans League of Legends qui permettent de gagner une partie.
+Can we find combat patterns in League of Legends that allow us to win a game?
 
 ## Installation
 
