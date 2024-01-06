@@ -1,7 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 from C45.c45.c45 import C45
-from get_all_data import get_games, Game
+from get_data import get_games, Game
 
 
 def show_graph(graph):
