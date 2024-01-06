@@ -41,8 +41,7 @@ def main():
 
     shortened_id = game.match_id[5:]
 
-    # generate_json(shortened_id, game.duration)
-    generate_json('6751404084', 28*60+50)
+    generate_json(shortened_id, game.duration)
 
     add_done_game(game.match_id)
 
