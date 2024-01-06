@@ -3,6 +3,7 @@ import re
 from matplotlib import pyplot as plt
 import random
 import pathlib
+import datetime
 
 SAVED_GAMES_PATH = pathlib.Path('get_data/saved_games.json')
 
@@ -16,7 +17,7 @@ class Game:
         self.players = None
 
     def __repr__(self):
-        return f'{self.match_id} - {self.type} - {self.duration}'
+        return f'{self.match_id} - {self.type} - {self.duration // 60}m{self.duration % 60}s'
 
 class Player:
     def __init__(self):

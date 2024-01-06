@@ -72,9 +72,10 @@ def main():
     print(f'Random Game: {game}')
 
     shortened_id = game.match_id[5:]
-    print(f'Shortened ID: {shortened_id}')
 
     generate_json(shortened_id, game.duration)
+
+    add_done_game(game.match_id)
 
 if __name__ == '__main__':
     main()
