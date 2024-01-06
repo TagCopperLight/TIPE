@@ -78,4 +78,8 @@ def main():
     add_done_game(game.match_id)
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception as e:
+        log.error(e)
+        raise e
