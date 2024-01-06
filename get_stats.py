@@ -1,4 +1,5 @@
 import enum
+import json
 
 
 class Vocabulary(enum.Enum):
@@ -30,3 +31,14 @@ class Game:
 
     def __repr__(self):
         return f'Game(id={self.id}, game_id={self.game_id}, duration={self.duration}, date={self.date}, winner={self.winner})'
+
+
+def get_done_games():
+    with open('get_data/data/done.json', 'r') as file:
+        return json.load(file)
+
+def main():
+    done_games = get_done_games()
+    
+    print(len(done_games))
+    print(done_games)
