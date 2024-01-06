@@ -4,44 +4,10 @@ from C45.c45.c45 import C45
 from get_all_data import get_games, Game
 
 
-def create_graph():
-    G = nx.DiGraph()
-    for team in [1, 2]:
-        for role in range(1, 6):
-            G.add_node(f"T{team}-R{role}")
-    G.add_node("DEATH")
-    return G
-
-def add_edges_exemples(graph):
-    graph.add_edge("T1-R1", "T2-R1")
-    graph.add_edge("T1-R1", "T2-R2")
-    graph.add_edge("T1-R1", "T1-R5")
-
-    graph.add_edge("T1-R2", "DEATH")
-    graph.add_edge("T1-R2", "T1-R4")
-
-    graph.add_edge("T1-R3", "T2-R5")
-    graph.add_edge("T1-R3", "T2-R3")
-
-    graph.add_edge("T1-R4", "T1-R2")
-    graph.add_edge("T1-R4", "T2-R4")
-
-    graph.add_edge("T1-R5", "T1-R4")
-
-    graph.add_edge("T2-R1", "DEATH")
-
-    graph.add_edge("T2-R2", "T2-R5")
-
-    graph.add_edge("T2-R3", "T1-R3")
-    graph.add_edge("T2-R3", "DEATH")
-
-    graph.add_edge("T2-R4", "T1-R1")
-    graph.add_edge("T2-R4", "T1-R5")
-
-    graph.add_edge("T2-R5", "T2-R2")
-    graph.add_edge("T2-R5", "T2-R1")
-
-    return graph
+def show_graph(graph):
+    pos = nx.nx_agraph.graphviz_layout(G)
+    nx.draw(graph, with_labels=True, font_weight='bold', pos=pos)
+    plt.show()
 
 def get_metrics(graph):
     indegrees = {}
@@ -57,11 +23,6 @@ def get_metrics(graph):
     print("Eigenvector centrality: ", nx.eigenvector_centrality(graph))
 
     return indegrees, outdegrees, nx.closeness_centrality(graph), nx.betweenness_centrality(graph), nx.eigenvector_centrality(graph)
-
-def show_graph(graph):
-    pos = nx.nx_agraph.graphviz_layout(G)
-    nx.draw(graph, with_labels=True, font_weight='bold', pos=pos)
-    plt.show()
 
 def create_graph_from_game(game: Game, time_frame: int):
     G = nx.DiGraph()

@@ -2,7 +2,9 @@ import json
 import re
 from matplotlib import pyplot as plt
 import random
-import datetime
+import pathlib
+
+SAVED_GAMES_PATH = pathlib.Path('get_data/saved_games.json')
 
 
 class Game:
@@ -14,7 +16,7 @@ class Game:
         self.players = None
 
     def __repr__(self):
-        return f'{self.match_id} - {self.type}'
+        return f'{self.match_id} - {self.type} - {self.duration}'
 
 class Player:
     def __init__(self):
@@ -59,9 +61,13 @@ def get_region(game):
     return game.match_id.split('/')[1]
 
 def get_saved_games():
-    with open ('saved_games.json', 'r') as f:
+    with open (SAVED_GAMES_PATH, 'r') as f:
         data = json.load(f)
     return data
+
+def length_to_int(length):
+    length = length.replace('(', '').replace(')', '').split(':')
+    return int(length[0]) * 60 + int(length[1])
 
 def convert_to_games(data):
     games = []
@@ -70,6 +76,7 @@ def convert_to_games(data):
         g.match_id = game['match_id']
         g.type = game['type']
         g.duration = game['duration']
+        g.duration = length_to_int(g.duration)
         g.date = game['date']
         g.players = []
         for player in game['players']:
@@ -105,9 +112,9 @@ def show_champion_distribution(games):
     plt.bar(champion_distribution.keys(), champion_distribution.values())
     plt.show()
 
-def length_to_int(length):
-    length = length.replace('(', '').replace(')', '').split(':')
-    return int(length[0]) * 60 + int(length[1])
+def get_mean_elo(game):
+    elo = [elo_to_int(player.elo) for player in game.players]
+    return sum(elo) / len(elo)
 
 def take_random(games):
     print(len(games))
@@ -149,13 +156,13 @@ def main():
     region = dict(sorted(list(regions.items()), key=lambda x: x[1], reverse=True))
     print(f'Regions: {region}')
 
-    average_length = sum([length_to_int(game.duration) for game in games]) / len(games)
+    average_length = sum([game.duration for game in games]) / len(games)
     print(f'Average length: {int(average_length / 60)}:{int(average_length % 60)}')
-    max_length = max([length_to_int(game.duration) for game in games])
-    min_length = min([length_to_int(game.duration) for game in games])
+    max_length = max([game.duration for game in games])
+    min_length = min([game.duration for game in games])
     print(f'Max length: {int(max_length / 60)}:{int(max_length % 60)}')
     print(f'Min length: {int(min_length / 60)}:{int(min_length % 60)}')
-    print(f'Min length game : {min(games, key=lambda x: length_to_int(x.duration)).match_id}')
+    print(f'Min length game : {min(games, key=lambda x: x.duration).match_id}')
 
     # show_champion_distribution(games)
     # show_elo_distribution(games)
@@ -165,4 +172,5 @@ def main():
     print(game.duration)
 
 if __name__ == '__main__':
+    SAVED_GAMES_PATH = pathlib.Path('saved_games.json')
     main()

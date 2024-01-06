@@ -1,5 +1,42 @@
-import csv
 import json
+import enum
+import random
+import logging
+
+from get_data.liveevents import generate_json
+from get_data.analyse import get_saved_games, convert_to_games, get_region, get_mean_elo
+
+
+log = logging.getLogger('main')
+logging.basicConfig(format='[%(name)s] %(asctime)s <%(levelname)s> %(message)s', level=logging.INFO, datefmt='%H:%M:%S')
+
+
+def get_done_games():
+    with open('get_data/data/done.json', 'r') as file:
+        return json.load(file)
+
+def add_done_game(game_id):
+    done_games = get_done_games()
+    done_games.append(game_id)
+    with open('get_data/data/done.json', 'w') as file:
+        json.dump(done_games, file, indent=4)
+
+
+class Vocabulary(enum.Enum):
+    TOP = 0
+    JUNGLE = 1
+    MID = 2
+    ADC = 3
+    SUPPORT = 4
+    RED = 0
+    BLUE = 1
+
+
+class TimeFrame:
+    def __init__(self, length):
+        self.length = length
+        self.interactions = [[(False, False) for _ in range(5)] for _ in range(5)]
+        self.deaths = [[False for _ in range(5)] for _ in range(2)]
 
 
 class Game:
@@ -11,81 +48,33 @@ class Game:
         self.winner = None
 
         self.time_frames = []
-        self.deaths_frames = []
 
     def __repr__(self):
         return f'Game(id={self.id}, game_id={self.game_id}, duration={self.duration}, date={self.date}, winner={self.winner})'
 
-def get_all_data():
-    with open('stats.csv', 'r') as file:
-        reader = csv.reader(file)
-        data = list(reader)
-        return data
-    
-def parse_data(data):
-    games = []
 
-    while len(data) > 0:
-        game = Game()
+def main():
+    done_games = get_done_games()
+    data = get_saved_games()
+    games = convert_to_games(data)
 
-        game.id = data[1][1]
-        game.game_id = data[1][3]
-        if game.game_id == '':
-            game.game_id = None
-        data = data[2:]
+    print(f'Total games: {len(games)}')
+    print(f'EUW games: {len([game for game in games if get_region(game) == "euw"])}')
 
-        game.time_frames = [[[[] for i in range(5)] for i in range(5)] for i in range(30)]
-        game.deaths_frames = [[[] for i in range(10)] for i in range(30)]
+    games = [game for game in games if get_region(game) == 'euw']
+    games = [game for game in games if game.duration > 20*60]
+    games = [game for game in games if round(get_mean_elo(game)) == 28]
+    games = [game for game in games if game.match_id not in done_games]
 
-        start_pos = 5
-        for i in range(5):
-            for time in range(30):
-                for j in range(5):
-                    game.time_frames[time][i][j] = (data[0][start_pos + 2*j], data[0][start_pos + 2*j + 1])
-                game.deaths_frames[time][i] = data[0][start_pos + 10]
-                start_pos += 12
-            data = data[1:]
-            start_pos = 5
-        
-        start_pos = 5
-        for time in range(30):
-            for j in range(5):
-                game.deaths_frames[time][j+5] = data[0][start_pos + 2*j]
-            start_pos += 12
-        
-        data = data[1:]
+    print(f'Valid games: {len(games)}')
 
-        games.append(game)
+    game = random.choice(games)
+    print(f'Random Game: {game}')
 
-    return games
+    shortened_id = game.match_id[5:]
+    print(f'Shortened ID: {shortened_id}')
 
-def add_data_from_games(games):
-    new_games = []
-    with open('get_data/saved_games.json', 'r') as file:
-        saved_games = json.load(file)
-    
-    for game in games:
-        if game.game_id is None:
-            continue
-        for saved_game in saved_games:
-            if game.game_id in saved_game['match_id']:
-                game.duration = saved_game['duration']
-                game.date = saved_game['date']
-                game.winner = saved_game['winner']
-
-                new_games.append(game)
-                break
-        if game.duration is None:
-            print(f'Game {game.game_id} not found in saved_games.json')
-    
-    return new_games
-
-def get_games():
-    data = get_all_data()
-    games = parse_data(data)
-    games = add_data_from_games(games)
-
-    return games
+    generate_json(shortened_id, game.duration)
 
 if __name__ == '__main__':
-    get_games()
+    main()

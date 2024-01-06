@@ -25,7 +25,7 @@ def get_stream(game_id, game_duration):
     start_time = datetime.datetime.now()
 
     log.info("Starting app ...")
-    game_path = pathlib.Path(f"./games/{game_id}.bat")
+    game_path = pathlib.Path(f"./get_data/games/{game_id}.bat")
     subprocess.run(game_path)
     log.info("Waiting for app to load ...")
     time.sleep(LOADING_SCREEN_TIME)
@@ -54,7 +54,7 @@ def get_stream(game_id, game_duration):
                         pydirectinput.press('=')
                     log.info("Waiting for minions to spawn ...")
             elif state == "Receiving":
-                if datetime.datetime.now() - start_time > datetime.timedelta(seconds=game_duration - 50)/8:
+                if datetime.datetime.now() - start_time > datetime.timedelta(seconds=game_duration - 40)/8:
                     log.info("Game finished, closing app")
                     state = "Closing"
             try:
@@ -122,7 +122,7 @@ def generate_json(game_id, game_duration):
     
     events = parse_data(text)
 
-    data_folder = pathlib.Path("data/")
+    data_folder = pathlib.Path("get_data/data/")
     file_name = data_folder / f"{game_id}.json"
 
     log.info("Saving data ...")
@@ -134,7 +134,7 @@ def generate_json(game_id, game_duration):
 
 if __name__ == "__main__":
     try:
-        generate_json("6751494867", (8*60+39)/3)
+        generate_json("6751494867", 8*60+39)
     except Exception as e:
         log.error(e)
         raise e

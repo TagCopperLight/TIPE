@@ -94,7 +94,6 @@ For %%A in ("%lcpath%") do (
 goto runSpectate
 
 :runSpectate
-cls
 for /f "tokens=* delims= " %%a in ("%LOL_PATH%") do set LOL_PATH=%%a
 for /l %%a in (1,1,100) do if "!LOL_PATH:~-1!"==" " set LOL_PATH=!LOL_PATH:~0,-1!
 cd /D %LOL_PATH%
@@ -124,7 +123,6 @@ for /f "tokens=1*" %%a in ("!Params!") do EndLocal & set %1=%%b
 exit /b
 
 :notfound
-cls
 echo Cannot find your League of Legends installation. (If the issue persists, contact trebonius@wargraphs.gg)
 set /p manualFolder="Please enter your League of Legends installation path: "
 
