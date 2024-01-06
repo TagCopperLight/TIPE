@@ -5,7 +5,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 from C45.c45.c45 import C45
 
-from get_stats import Game, TimeFrame
+from get_stats import Game, TimeFrame, show_interactions
 
 
 def get_games():
@@ -48,8 +48,8 @@ def create_graph_from_game(game: Game, time_frame):
             G.add_node(f"T{team}-R{role}")
     G.add_node("DEATH")
     
-    for blue_player, data in enumerate(game.time_frames[time_frame].interactions):
-        for red_player, data2 in enumerate(data):
+    for red_player, data in enumerate(game.time_frames[time_frame].interactions):
+        for blue_player, data2 in enumerate(data):
             if data2[0]:
                 G.add_edge(f"T1-R{red_player+1}", f"T2-R{blue_player+1}")
             if data2[1]:
@@ -64,11 +64,12 @@ def create_graph_from_game(game: Game, time_frame):
 def main():
     games: list[Game] = get_games()
 
-    for i in range(1):
+    for i in range(len(games[1].time_frames)):
         print(f"Time frame {i}")
-        G = create_graph_from_game(games[0], 13)
-        get_metrics(G)
-        # show_graph(G)
+        show_interactions(games[1].time_frames[i].interactions)
+        G = create_graph_from_game(games[1], i)
+        # get_metrics(G)
+        show_graph(G)
 
 if __name__ == '__main__':
     main()
