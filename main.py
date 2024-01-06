@@ -90,4 +90,4 @@ for i in range(1):
     print(f"Time frame {i}")
     G = create_graph_from_game(get_games()[0], 13)
     get_metrics(G)
-    show_graph(G)
+    # show_graph(G)
