@@ -7,8 +7,7 @@ Can we find combat patterns in League of Legends that allow us to win a game?
 ## Installation
 
 You will need Python 3, and League Of Legends installed.
-If you want to show to graphs, you will need pygraphviz and Graphviz.
-Clone the repository.
+If you want to show to graphs, you will need pygraphviz and Graphviz, then clone the repository.
 
 ## Dependencies
 
