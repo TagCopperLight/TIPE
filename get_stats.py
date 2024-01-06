@@ -1,4 +1,6 @@
 import json
+import pathlib
+import pickle
 
 from get_data.get_stats import length_to_int
 
@@ -27,7 +29,23 @@ def get_saved_games():
     saved_games_path = 'get_data/saved_games.json'
     with open(saved_games_path, 'r') as file:
         return json.load(file)
-    
+
+def get_game_objects():
+    done_objects_path = pathlib.Path('game_objects/done.json')
+    with open(done_objects_path, 'r') as file:
+        return json.load(file)
+
+def save_game_object(game):
+    done_objects = get_game_objects()
+    done_objects.append(game.game_id)
+    done_objects_path = pathlib.Path('game_objects/done.json')
+    with open(done_objects_path, 'w') as file:
+        json.dump(done_objects, file, indent=4)
+
+    object_path = pathlib.Path(f'game_objects/{game.game_id[5:]}.pkl')
+    with open(object_path, 'wb') as file:
+        pickle.dump(game, file)
+
 def get_game_infos(game_id):
     saved_games = get_saved_games()
 
@@ -41,8 +59,7 @@ def get_game_infos(game_id):
         name = player['summoner'].split('#')[0]
         p[name] = index
 
-    return duration, date, winner, p
-        
+    return duration, date, winner, p       
 
 def get_done_games():
     done_path = 'get_data/data/done.json'
@@ -69,8 +86,6 @@ def parse_game(game_id):
     duration = length_to_int(game.duration)
     start_time = float([event for event in events if event['eventname'] == "OnNexusCrystalStart"][0]["timestamp"])*8 - 65
 
-    print(game)
-    
     for time_frame_id in range(duration//120 + 1):
         events_in_time_frame = [event for event in events if float(event['timestamp'])*8 - start_time >= time_frame_id*120]
         events_in_time_frame = [event for event in events_in_time_frame if float(event['timestamp'])*8 - start_time < (time_frame_id+1)*120]
@@ -110,9 +125,15 @@ def parse_game(game_id):
 
 def main():
     done_games = get_done_games()
+    done_objects = get_game_objects()
 
     for game_id in done_games:
-        parse_game(game_id)
+        if game_id in done_objects:
+            continue
+        game = parse_game(game_id)
+        print(game)
+    
+        save_game_object(game)
 
 if __name__ == '__main__':
     main()
