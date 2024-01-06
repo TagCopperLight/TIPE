@@ -2,6 +2,7 @@ import json
 import enum
 import random
 import logging
+import time
 
 from get_data.liveevents import generate_json
 from get_data.get_stats import get_saved_games, convert_to_games, get_region, get_mean_elo
@@ -49,6 +50,7 @@ if __name__ == '__main__':
     try:
         while True:
             main()
+            time.sleep(15)
     except Exception as e:
         log.error(e)
         raise e
