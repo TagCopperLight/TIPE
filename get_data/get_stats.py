@@ -118,19 +118,11 @@ def get_mean_elo(game):
     return sum(elo) / len(elo)
 
 def take_random(games):
-    print(len(games))
     games = [game for game in games if get_region(game) == 'euw']
+    games = [game for game in games if game.duration > 20*60]
+    games = [game for game in games if round(get_mean_elo(game)) == 28]
 
-    for game in games:
-        elo = [elo_to_int(player.elo) for player in game.players]
-        if -1 in elo:
-            games.remove(game)
-            continue
-        if round(sum(elo) / len(elo)) != 28:
-            games.remove(game)
-            continue
-
-    print(len(games))
+    print(f'Valid games: {len(games)}')
     
     return random.choice(games)
 
@@ -169,8 +161,6 @@ def main():
     # show_elo_distribution(games)
 
     game = take_random(games)
-    print(game.match_id)
-    print(game.duration)
 
 if __name__ == '__main__':
     SAVED_GAMES_PATH = pathlib.Path('saved_games.json')
