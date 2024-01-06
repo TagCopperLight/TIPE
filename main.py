@@ -22,7 +22,7 @@ def get_games():
     return games
 
 def show_graph(graph):
-    pos = nx.nx_agraph.graphviz_layout(G)
+    pos = nx.nx_agraph.graphviz_layout(graph)
     nx.draw(graph, with_labels=True, font_weight='bold', pos=pos)
     plt.show()
 
