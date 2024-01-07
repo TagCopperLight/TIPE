@@ -100,7 +100,7 @@ def parse_game(game_id):
                 continue
             if event['other'] == event['source']:
                 continue
-
+            
             target = players[event['other']]
             target_team = target//5
             target = target%5
@@ -115,7 +115,11 @@ def parse_game(game_id):
         deaths = [event for event in events_in_time_frame if event['eventname'] == "OnChampionDie"]
         
         for death in deaths:
-            target = players[death['source']]
+            source = death['source'] # Sometimes, there's a space at the end of the name
+            if source[-1] == ' ':
+                source = source[:-1]
+
+            target = players[source]
             time_frame.deaths[target//5][target%5] = True
 
         game.time_frames.append(time_frame)
