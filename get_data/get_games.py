@@ -134,14 +134,11 @@ class Game:
     def write_file(self):
         if self.file == "twitch":
             return
-        try:
-            with open(f'games/{self.file[2]}.bat', 'r') as f:
-                return
-        except FileNotFoundError:
-            pass
-
-        with open(f'games/{self.file[2]}.bat', 'w+') as f:
-            f.write(MODEL_FILE.replace('ARG1', self.file[4]).replace('ARG2', self.file[3]).replace('ARG3', self.file[2]).replace('ARG4', self.file[1]))
+        
+        with open('games/batch_data.json', 'r') as f:
+            batch_data = json.load(f)
+        
+        batch_data.append({'id': self.file[2], 'arg1': self.file[4], 'arg2': self.file[3], 'arg3': self.file[2], 'arg4': self.file[1]})
 
 def get_games(parser, browser):
     games = []
