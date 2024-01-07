@@ -1,5 +1,6 @@
 import socket
 import sys
+import os
 import re
 import json
 import datetime
@@ -18,6 +19,28 @@ CONTINUE_BUTTON = (960, 640)
 log = logging.getLogger(__name__)
 logging.basicConfig(format='[%(name)s] %(asctime)s <%(levelname)s> %(message)s', level=logging.INFO, datefmt='%H:%M:%S')
 
+def start_game(game_id):
+    model_path = pathlib.Path(f"./get_data/games/model.bat")
+    batch_data_path = pathlib.Path(f"./get_data/games/batch_data.json")
+    temp_path = pathlib.Path(f"./get_data/games/temp.bat")
+
+    with open(model_path, "r") as file:
+        model = file.read()
+
+    with open(batch_data_path, "r") as file:
+        batch_data = json.load(file)
+
+    batch_data = [data for data in batch_data if data["id"] == game_id]
+
+    start_script = model.replace('ARG1', batch_data[0]['arg1']).replace('ARG2', batch_data[0]['arg2']).replace('ARG3', batch_data[0]['arg3']).replace('ARG4', batch_data[0]['arg4'])
+
+    with open(temp_path, "w") as file:
+        file.write(start_script)
+
+    subprocess.run(temp_path)
+
+    os.remove(temp_path)    
+
 def get_stream(game_id, game_duration):
 
     text = ""
@@ -25,8 +48,7 @@ def get_stream(game_id, game_duration):
     start_time = datetime.datetime.now()
 
     log.info("Starting app ...")
-    game_path = pathlib.Path(f"./get_data/games/{game_id}.bat")
-    subprocess.run(game_path)
+    start_game(game_id)
     log.info("Waiting for app to load ...")
     time.sleep(LOADING_SCREEN_TIME)
     log.info("App started and loaded")
