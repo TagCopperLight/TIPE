@@ -140,6 +140,9 @@ class Game:
         
         batch_data.append({'id': self.file[2], 'arg1': self.file[4], 'arg2': self.file[3], 'arg3': self.file[2], 'arg4': self.file[1]})
 
+        with open('games/batch_data.json', 'w') as f:
+            json.dump(batch_data, f, indent=4)
+
 def get_games(parser, browser):
     games = []
     for table in parser.tables:
