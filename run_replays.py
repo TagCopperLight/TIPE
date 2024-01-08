@@ -53,4 +53,3 @@ if __name__ == '__main__':
             time.sleep(15)
     except Exception as e:
         log.error(e)
-        raise e

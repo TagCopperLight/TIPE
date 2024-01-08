@@ -118,6 +118,8 @@ def parse_game(game_id):
             source = death['source'] # Sometimes, there's a space at the end of the name
             if source[-1] == ' ':
                 source = source[:-1]
+            if source[0] == ' ':
+                source = source[1:]
 
             target = players[source]
             time_frame.deaths[target//5][target%5] = True
