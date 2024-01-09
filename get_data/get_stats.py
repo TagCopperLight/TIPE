@@ -123,6 +123,8 @@ def take_random(games):
     games = [game for game in games if round(get_mean_elo(game)) == 28]
 
     print(f'Valid games: {len(games)}')
+    max_length = max([game.duration for game in games])
+    print(f'Max length: {int(max_length / 60)}:{int(max_length % 60)}')
     
     return random.choice(games)
 
