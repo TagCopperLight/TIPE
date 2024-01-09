@@ -1,0 +1,20 @@
+{
+    "classes": [
+        "T1",
+        "T2"
+    ],
+    "features": [
+        "cls of T2-R1 in time frame 6",
+        "outdeg of T1-R5 in time frame 15",
+        "eige of T2-R4 in time frame 8",
+        "cls of T2-R3 in time frame 13",
+        "outdeg of T1-R1 in time frame 13",
+        "outdeg of T1-R5 in time frame 1",
+        "indeg of T1-R1 in time frame 6",
+        "eige of T2-R3 in time frame 5",
+        "outdeg of T1-R2 in time frame 10",
+        "btw of T1-R1 in time frame 1",
+        "cls of T2-R5 in time frame 11",
+        "cls of T1-R1 in time frame 2"
+    ]
+}
