@@ -24,7 +24,7 @@ class C45:
         splitted_data = []
         best_feature = None
         best_threshold = None
-        max_gain = -1 * float("inf")
+        max_gain = -1
 
         for feature in features:
             sorted_data = sorted(data, key=lambda x: x[feature])
@@ -38,8 +38,8 @@ class C45:
                     splitted_data = [left, right]
                     best_feature = feature
                     best_threshold = threshold
-
-        return best_feature, best_threshold, splitted_data
+                    
+        return best_feature, best_threshold, [subset for subset in splitted_data if subset]
     
     def gain(self, parent, left, right):
         return self.entropy(parent) - self.entropy(left) * len(left) / len(parent) - self.entropy(right) * len(right) / len(parent)
@@ -63,7 +63,7 @@ class C45:
             return Node(True, self.get_majority_class(data), None)
         
         best_feature, best_threshold, splitted_data = self.split_attribute(data, features)
-        remaining_features = features[:]
+        remaining_features = features.copy()
         remaining_features.remove(best_feature)
 
         node = Node(False, best_feature, best_threshold)
@@ -76,20 +76,20 @@ class C45:
             return
         else:
             left = node.children[0]
-            right = node.children[1]
             if left.is_leaf:
                 print(' ' * depth + node.label + ' <= ' + str(node.threshold) + ' : ' + left.label)
             else:
                 print(' ' * depth + node.label + ' <= ' + str(node.threshold) + ' : ')
                 self.print_node(left, depth + 4)
+            if len(node.children) == 2:
+                right = node.children[1]
 
-            if right.is_leaf:
-                print(' ' * depth + node.label + ' > ' + str(node.threshold) + ' : ' + right.label)
-            else:
-                print(' ' * depth + node.label + ' > ' + str(node.threshold) + ' : ')
-                self.print_node(right, depth + 4)
+                if right.is_leaf:
+                    print(' ' * depth + node.label + ' > ' + str(node.threshold) + ' : ' + right.label)
+                else:
+                    print(' ' * depth + node.label + ' > ' + str(node.threshold) + ' : ')
+                    self.print_node(right, depth + 4)
 
-    
     def print_tree(self):
         self.print_node(self.tree)
 
@@ -101,8 +101,11 @@ class C45:
             return sum([1 for e in data if e["class"] == node.label])
         else:
             left_data = [e for e in data if e[node.label] <= node.threshold]
-            right_data = [e for e in data if e[node.label] > node.threshold]
-            return self.__get_accuracy_rec(node.children[0], left_data) + self.__get_accuracy_rec(node.children[1], right_data)
+            if len (node.children) == 2:
+                right_data = [e for e in data if e[node.label] > node.threshold]
+                return self.__get_accuracy_rec(node.children[0], left_data) + self.__get_accuracy_rec(node.children[1], right_data)
+            else:
+                return self.__get_accuracy_rec(node.children[0], left_data)
         
     def predict(self, data):
         return self.__predict_rec(self.tree, data)
