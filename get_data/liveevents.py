@@ -19,6 +19,10 @@ CONTINUE_BUTTON = (960, 640)
 log = logging.getLogger(__name__)
 logging.basicConfig(format='[%(name)s] %(asctime)s <%(levelname)s> %(message)s', level=logging.INFO, datefmt='%H:%M:%S')
 
+
+def close_game():
+    os.system('taskkill /f /im "League of Legends.exe"')
+
 def start_game(game_id):
     model_path = pathlib.Path(f"./get_data/games/model.bat")
     batch_data_path = pathlib.Path(f"./get_data/games/batch_data.json")
@@ -79,6 +83,12 @@ def get_stream(game_id, game_duration):
                 if datetime.datetime.now() - start_time > datetime.timedelta(seconds=game_duration - 40)/8:
                     log.info("Game finished, closing app")
                     state = "Closing"
+            elif state == "WaitingMinions":
+                if datetime.datetime.now() - start_time > datetime.timedelta(seconds=600):
+                    log.info("Game finished, closing app")
+                    state = "Closing"
+                    close_game()
+                    raise TimeoutError("Minions not spawned in time")
             try:
                 if soc.recv(1):
                     size = soc.recv(4)
