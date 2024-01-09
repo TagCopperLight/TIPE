@@ -1,8 +1,16 @@
 import math
-class C45:
 
-	"""Creates a decision tree with C4.5 algorithm"""
-	def __init__(self, pathToData,pathToNames):
+
+class Node:
+	def __init__(self, is_leaf, label, threshold):
+		self.label = label
+		self.threshold = threshold
+		self.is_leaf = is_leaf
+		self.children = []
+
+
+class C45:
+	def __init__(self, pathToData, pathToNames):
 		self.filePathToData = pathToData
 		self.filePathToNames = pathToNames
 		self.data = []
@@ -39,11 +47,11 @@ class C45:
 		self.printNode(self.tree)
 
 	def printNode(self, node, indent=""):
-		if not node.isLeaf:
+		if not node.is_leaf:
 			if node.threshold is None:
 				#discrete
 				for index,child in enumerate(node.children):
-					if child.isLeaf:
+					if child.is_leaf:
 						print(indent + node.label + " = " + attributes[index] + " : " + child.label)
 					else:
 						print(indent + node.label + " = " + attributes[index] + " : ")
@@ -52,13 +60,13 @@ class C45:
 				#numerical
 				leftChild = node.children[0]
 				rightChild = node.children[1]
-				if leftChild.isLeaf:
+				if leftChild.is_leaf:
 					print(indent + node.label + " <= " + str(node.threshold) + " : " + leftChild.label)
 				else:
 					print(indent + node.label + " <= " + str(node.threshold)+" : ")
 					self.printNode(leftChild, indent + "	")
 
-				if rightChild.isLeaf:
+				if rightChild.is_leaf:
 					print(indent + node.label + " > " + str(node.threshold) + " : " + rightChild.label)
 				else:
 					print(indent + node.label + " > " + str(node.threshold) + " : ")
@@ -196,12 +204,3 @@ class C45:
 			return 0
 		else:
 			return math.log(x,2)
-
-class Node:
-	def __init__(self,isLeaf, label, threshold):
-		self.label = label
-		self.threshold = threshold
-		self.isLeaf = isLeaf
-		self.children = []
-
-

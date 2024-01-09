@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-import pdb
 from c45 import C45
 
 c1 = C45("../data/iris/iris.data", "../data/iris/iris.names")
