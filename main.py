@@ -79,22 +79,27 @@ def create_decision_tree_files(games, features):
     with open("graph_data/names.json", "w") as file:
         json.dump(names, file, indent=4)
 
+    with open('graph_data/graphs.json', 'r') as file:
+        graphs = json.load(file)
+
     data = []
     for game in games:
         game_metrics = {"class": "T1"} if game.winner == 'blue' else {"class": "T2"}
         for feature in features:
-            graph = create_graph_from_game(game, feature[2])
-            metrics = get_metrics(graph)
+            game_metrics = [graph for graph in graphs if graph["game_id"] == game.game_id][0]
+
+            metrics = game_metrics["time_frames"][feature[2]]["metrics"]
+
             if feature[0] == 'indeg':
-                game_metrics[features_names[feature]] = metrics[0][feature[1]]
+                game_metrics[features_names[feature]] = metrics['indeg'][feature[1]]
             elif feature[0] == 'outdeg':
-                game_metrics[features_names[feature]] = metrics[1][feature[1]]
+                game_metrics[features_names[feature]] = metrics['outdeg'][feature[1]]
             elif feature[0] == 'cls':
-                game_metrics[features_names[feature]] = metrics[2][feature[1]]
+                game_metrics[features_names[feature]] = metrics['cls'][feature[1]]
             elif feature[0] == 'btw':
-                game_metrics[features_names[feature]] = metrics[3][feature[1]]
+                game_metrics[features_names[feature]] = metrics['btw'][feature[1]]
             elif feature[0] == 'eige':
-                game_metrics[features_names[feature]] = metrics[4][feature[1]]
+                game_metrics[features_names[feature]] = metrics['eige'][feature[1]]
         
         data.append(game_metrics)
 
@@ -111,17 +116,33 @@ def create_decision_tree():
     c45 = C45(data, names["classes"], names["features"])
     c45.generate_tree()
     # c45.print_tree()
-    log.info(f'Accuracy : {c45.get_accuracy()}')
 
     return c45.get_accuracy()
+
+def save_graphs(games):
+    graphs = []
+
+    for i, game in enumerate(games):
+        log.info(f'Game {i+1}/{len(games)}')
+        game_metrics = {"game_id": game.game_id, "winner": game.winner, "time_frames": []}
+        for time_frame in range(len(game.time_frames)):
+            graph = create_graph_from_game(game, time_frame)
+            metrics = get_metrics(graph)
+            game_metrics["time_frames"].append({"metrics": {"indeg": metrics[0], "outdeg": metrics[1], "cls": metrics[2], "btw": metrics[3], "eige": metrics[4]}})
+        graphs.append(game_metrics)
+
+    with open("graph_data/graphs.json", "w") as file:
+        json.dump(graphs, file, indent=4)
 
 def main():
     games: list[Game] = get_games()
     best_accuracy = 0
     best_features = []
 
+    print(get_metrics(create_graph_from_game(games[0], 30)))
+
     for i in range(100):
-        nb_features = random.randint(1, 30)
+        nb_features = random.randint(1, 20)
         # log.info(f'Number of features: {nb_features}')
 
         features = []
@@ -140,7 +161,8 @@ def main():
         create_decision_tree_files(games, features)
         # log.info('Files created')
         # log.info('Creating decision tree ...')
-        acc = create_decision_tree() - math.sqrt(math.log(nb_features, 2))
+        acc = create_decision_tree() / math.sqrt(math.log(nb_features+1, 6))
+        log.info(f'Accuracy: {acc}')
         # log.info('Decision tree created')
         if acc > best_accuracy:
             best_accuracy = acc
