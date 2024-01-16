@@ -4,13 +4,10 @@
         "T2"
     ],
     "features": [
-        "btw of T2-R1 in time frame 4",
-        "eige of T1-R3 in time frame 7",
-        "indeg of T1-R4 in time frame 4",
-        "btw of T1-R5 in time frame 0",
-        "cls of T1-R1 in time frame 6",
-        "indeg of T1-R1 in time frame 6",
-        "eige of T2-R3 in time frame 10",
-        "cls of T2-R1 in time frame 9"
+        "cls of T1-R1 in time frame 11",
+        "btw of T2-R2 in time frame 4",
+        "cls of T2-R4 in time frame 1",
+        "indeg of T1-R2 in time frame 10",
+        "eige of T2-R1 in time frame 12"
     ]
 }
