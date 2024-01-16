@@ -118,3 +118,24 @@ class C45:
                 return self.__predict_rec(node.children[0], data)
             else:
                 return self.__predict_rec(node.children[1], data)
+            
+    def k_fold_cross_validation(self, k):
+        save = self.data.copy()
+        data = self.data.copy()
+        data = [data[i::k] for i in range(k)]
+        accuracies = []
+        
+        for i in range(k):
+            test_data = data[i]
+            train_data = []
+            for j in range(k):
+                if j != i:
+                    train_data += data[j]
+            
+            self.data = train_data
+            self.generate_tree()
+            self.data = test_data
+            accuracies.append(self.get_accuracy())
+            
+        self.data = save
+        return sum(accuracies) / len(accuracies)
