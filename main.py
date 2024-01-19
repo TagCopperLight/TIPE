@@ -6,17 +6,10 @@ import random
 import math
 import networkx as nx
 import matplotlib.pyplot as plt
-from c45 import C45
 
 from get_stats import Game, TimeFrame, show_interactions
-
-VOID_METRICS = {
-    'indeg': {'T1-R1': 0, 'T1-R2': 0, 'T1-R3': 0, 'T1-R4': 0, 'T1-R5': 0, 'T2-R1': 0, 'T2-R2': 0, 'T2-R3': 0, 'T2-R4': 0, 'T2-R5': 0, 'DEATH': 0},
-    'outdeg': {'T1-R1': 0, 'T1-R2': 0, 'T1-R3': 0, 'T1-R4': 0, 'T1-R5': 0, 'T2-R1': 0, 'T2-R2': 0, 'T2-R3': 0, 'T2-R4': 0, 'T2-R5': 0, 'DEATH': 0},
-    'cls': {'T1-R1': 0.0, 'T1-R2': 0.0, 'T1-R3': 0.0, 'T1-R4': 0.0, 'T1-R5': 0.0, 'T2-R1': 0.0, 'T2-R2': 0.0, 'T2-R3': 0.0, 'T2-R4': 0.0, 'T2-R5': 0.0, 'DEATH': 0.0},
-    'btw': {'T1-R1': 0.0, 'T1-R2': 0.0, 'T1-R3': 0.0, 'T1-R4': 0.0, 'T1-R5': 0.0, 'T2-R1': 0.0, 'T2-R2': 0.0, 'T2-R3': 0.0, 'T2-R4': 0.0, 'T2-R5': 0.0, 'DEATH': 0.0},
-    'eige': {'T1-R1': 0.30151134457776363, 'T1-R2': 0.30151134457776363, 'T1-R3': 0.30151134457776363, 'T1-R4': 0.30151134457776363, 'T1-R5': 0.30151134457776363, 'T2-R1': 0.30151134457776363, 'T2-R2': 0.30151134457776363, 'T2-R3': 0.30151134457776363, 'T2-R4': 0.30151134457776363, 'T2-R5': 0.30151134457776363, 'DEATH': 0.30151134457776363}
-}
+from classes.get_tree import create_decision_tree_files, create_decision_tree
+from classes.train_features import main as train_features
 
 
 log = logging.getLogger(__name__)
@@ -78,58 +71,6 @@ def show_graph(graph):
     nx.draw(graph, with_labels=True, font_weight='bold', pos=pos)
     plt.show()
 
-def create_decision_tree_files(games, features):
-    features_names = {}
-    for feature in features:
-        features_names[feature] = f'{feature[0]} of {feature[1]} in time frame {feature[2]}'
-
-    names = {"classes": ["T1", "T2"], "features": list(features_names.values())}
-    with open("graph_data/names.json", "w") as file:
-        json.dump(names, file, indent=4)
-
-    with open('graph_data/graphs.json', 'r') as file:
-        graphs = json.load(file)
-
-    data = []
-    for game in games:
-        data_to_tree = {"class": "T1"} if game.winner == 'blue' else {"class": "T2"}
-        for feature in features:
-            game_metrics = [graph for graph in graphs if graph["game_id"] == game.game_id][0]
-
-            if feature[2] < len(game_metrics["time_frames"]):
-                metrics = game_metrics["time_frames"][feature[2]]["metrics"]
-            else:
-                metrics = VOID_METRICS
-
-            if feature[0] == 'indeg':
-                data_to_tree[features_names[feature]] = metrics['indeg'][feature[1]]
-            elif feature[0] == 'outdeg':
-                data_to_tree[features_names[feature]] = metrics['outdeg'][feature[1]]
-            elif feature[0] == 'cls':
-                data_to_tree[features_names[feature]] = metrics['cls'][feature[1]]
-            elif feature[0] == 'btw':
-                data_to_tree[features_names[feature]] = metrics['btw'][feature[1]]
-            elif feature[0] == 'eige':
-                data_to_tree[features_names[feature]] = metrics['eige'][feature[1]]
-        
-        data.append(data_to_tree)
-
-    with open("graph_data/data.json", "w") as file:
-        json.dump(data, file, indent=4)
-        
-def create_decision_tree():
-    with open("graph_data/names.json", "r") as file:
-        names = json.load(file)
-
-    with open("graph_data/data.json", "r") as file:
-        data = json.load(file)
-
-    c45 = C45(data, names["classes"], names["features"])
-    c45.generate_tree()
-    # c45.print_tree()
-
-    return c45
-
 def save_graphs(games):
     graphs = []
 
@@ -168,7 +109,8 @@ def get_selected_features(games):
             features.append((feature, f'T{team}-R{role}', time_frame))
         
         # features = [('indeg', 'T1-R2', 12), ('outdeg', 'T1-R2', 21), ('indeg', 'T2-R3', 0), ('cls', 'T2-R5', 10), ('indeg', 'T2-R5', 11), ('eige', 'T1-R4', 7), ('btw', 'T1-R4', 7), ('outdeg', 'T2-R1', 16)]
-        features = [('cls', 'T1-R1', 11), ('btw', 'T2-R2', 4), ('cls', 'T2-R4', 1), ('indeg', 'T1-R2', 10), ('eige', 'T2-R1', 12)]
+        # features = [('cls', 'T1-R1', 11), ('btw', 'T2-R2', 4), ('cls', 'T2-R4', 1), ('indeg', 'T1-R2', 10), ('eige', 'T2-R1', 12)]
+        features = [('btw', 'T1-R2', 13), ('btw', 'T2-R2', 15), ('btw', 'T2-R4', 7), ('eige', 'T1-R1', 11), ('eige', 'T1-R3', 11), ('eige', 'T2-R2', 13)]
 
         # log.info('Creating files ...')
         create_decision_tree_files(games, features)
@@ -241,8 +183,16 @@ def get_rules(tree, confidence, support):
 def main():
     games: list[Game] = get_games()
     # get_selected_features(games)
-    tree = create_decision_tree()
-    get_rules(tree, 0.5, 20)
+    # tree = create_decision_tree()
+    # print(tree.get_accuracy())
+    # get_rules(tree, 0.5, 20)
+
+    train_features(games)
+    #[['indeg', 2, 8], ['cls', 0, 5], ['btw', 6, 9], ['eige', 1, 3], ['eige', 3, 7]]
+    #[['btw', 6, 15], ['btw', 7, 7], ['eige', 0, 11], ['eige', 2, 11], ['eige', 6, 13]]
+    #[['btw', 1, 13], ['btw', 6, 15], ['btw', 7, 7], ['eige', 0, 11], ['eige', 2, 11], ['eige', 6, 13]]
+    #[['indeg', 8, 12], ['cls', 6, 9], ['cls', 7, 11], ['btw', 1, 14], ['btw', 2, 7], ['eige', 1, 9], ['eige', 4, 5]]
+    #[['cls', 1, 10], ['btw', 7, 10], ['btw', 9, 9], ['eige', 1, 6], ['eige', 2, 11], ['eige', 10, 9]]
 
     # save_graphs(games)
     # get_selected_features(games)

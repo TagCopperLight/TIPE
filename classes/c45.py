@@ -1,4 +1,5 @@
 import math
+import random
 
 
 class Node:
@@ -93,8 +94,13 @@ class C45:
     def print_tree(self):
         self.print_node(self.tree)
 
-    def get_accuracy(self):
-        return self.__get_accuracy_rec(self.tree, self.data) / len(self.data)
+    def get_accuracy(self, split=None):
+        data = self.data.copy()
+        if split:
+            random.shuffle(data)
+            data = data[:len(data) // split]
+
+        return self.__get_accuracy_rec(self.tree, data) / len(data)
     
     def __get_accuracy_rec(self, node, data):
         if node.is_leaf:
