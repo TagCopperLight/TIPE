@@ -1,12 +1,13 @@
 import random
 import matplotlib.pyplot as plt
 from multiprocessing import Pool
+from itertools import product
 from math import prod, exp
 from classes.get_tree import create_decision_tree_files, create_decision_tree_from_dict
 
 
 def accuracy_fix(features):
-    return 0.02 * exp(len(features)/2.8)
+    return 0.02 * exp(len(features)/3)
 
 def chunk_split(a, n):
     k, m = divmod(len(a), n)
@@ -48,7 +49,7 @@ class GeneticAlgorithm:
         self.population_size = population_size
         self.propagation_rate = 0.8
         self.crossover_rate = 0.8
-        self.mutation_rate = 0.001
+        self.mutation_rate = 0.0005
 
         self.population = Population(self.population_size, self.features)
 
@@ -77,6 +78,19 @@ class GeneticAlgorithm:
 
         return features
     
+    def set_features(self, features):
+        int = 0
+
+        reversed_features = [reversed(feature) for feature in self.features]
+
+        for i in product(*reversed_features):
+            if list(i) in features:
+                int = (int << 1) | 1
+            else:
+                int = int << 1
+
+        return int
+
     def threaded_fitness(self, args):
         id = args[0]
         args = args[1]
@@ -86,11 +100,11 @@ class GeneticAlgorithm:
             raw_features = self.get_features(individual)
             features = []
             for feature in raw_features:
-                team, role = feature[1]%2, feature[1]//2
-                if role == 5:
+                if feature[1] == 10:
                     features.append((feature[0], f'DEATH', feature[2]))
                 else:
-                    features.append((feature[0], f'T{team+1}-R{role+1}', feature[2]))
+                    player = ['T1-R1', 'T1-R2', 'T1-R3', 'T1-R4', 'T1-R5', 'T2-R1', 'T2-R2', 'T2-R3', 'T2-R4', 'T2-R5'][feature[1]]
+                    features.append((feature[0], player, feature[2]))
 
             names, data = create_decision_tree_files(self.games, features, False)
             tree = create_decision_tree_from_dict(names, data)
@@ -101,8 +115,6 @@ class GeneticAlgorithm:
 
     def fitness(self, processes=24):
         args = list(enumerate(self.population.population))
-        for arg in args:
-            print(arg[1])
 
         with Pool(processes=processes) as pool:
             results = pool.map(self.threaded_fitness, [(i, chunk) for i, chunk in enumerate(chunk_split(args, processes))], chunksize=1)
@@ -178,26 +190,26 @@ class GeneticAlgorithm:
     
 
 def main(games):
-    pop_size = 10
+    pop_size = 300
     genetic_algorithm = GeneticAlgorithm(games, pop_size, [['indeg', 'outdeg', 'cls', 'btw', 'eige'], list(range(11)), list(range(30))])
+    i = genetic_algorithm.set_features([['outdeg', 0, 12], ['outdeg', 4, 11], ['cls', 8, 2], ['btw', 9, 8], ['eige', 10, 9]])
+    genetic_algorithm.population.population[0].individual = i
+
     maxes = []
-    mins = []
     avgs = []
     true_maxes = []
-    for i in range(2):
+    for i in range(100):
         print(f'Generation {i+1}')
         ma, mi, av, tma = genetic_algorithm.next_generation()
         maxes.append(ma)
-        mins.append(mi)
         avgs.append(av)
         true_maxes.append(tma)
 
     plt.plot(maxes, label='Max')
-    plt.plot(mins, label='Min')
     plt.plot(avgs, label='Avg')
     plt.plot(true_maxes, label='True Max')
 
-    # plt.show()
+    plt.show()
 
 if __name__ == '__main__':
     main()
