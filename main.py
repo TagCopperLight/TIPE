@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 from get_stats import Game, TimeFrame, show_interactions
 from classes.get_tree import create_decision_tree_files, create_decision_tree
-from classes.train_features import main as train_features
+from classes.train_features import main as train_features, accuracy_fix
 
 
 log = logging.getLogger(__name__)
@@ -86,61 +86,16 @@ def save_graphs(games):
     with open("graph_data/graphs.json", "w") as file:
         json.dump(graphs, file, indent=4)
 
-def get_selected_features(games):
-    best_accuracy = 0
-    best_features = []
-    best_tree = None
-
-    for i in range(1):
-        log.info(f'Iteration {i+1}/500')
-        nb_features = random.randint(1, 10)
-        nb_features = 0
-        # log.info(f'Number of features: {nb_features}')
-
-        features = []
-
-        for i in range(nb_features):
-            feature = random.choice(['indeg', 'outdeg', 'cls', 'btw', 'eige'])
-            team = random.randint(1, 2)
-            role = random.randint(1, 5)
-            time_frame = random.randint(0, 30)
-            # log.info(f'Feature {i+1}: {feature} of T{team}-R{role} in time frame {time_frame}')
-
-            features.append((feature, f'T{team}-R{role}', time_frame))
-        
-        # features = [('indeg', 'T1-R2', 12), ('outdeg', 'T1-R2', 21), ('indeg', 'T2-R3', 0), ('cls', 'T2-R5', 10), ('indeg', 'T2-R5', 11), ('eige', 'T1-R4', 7), ('btw', 'T1-R4', 7), ('outdeg', 'T2-R1', 16)]
-        # features = [('cls', 'T1-R1', 11), ('btw', 'T2-R2', 4), ('cls', 'T2-R4', 1), ('indeg', 'T1-R2', 10), ('eige', 'T2-R1', 12)]
-        features = [('btw', 'T1-R2', 13), ('btw', 'T2-R2', 15), ('btw', 'T2-R4', 7), ('eige', 'T1-R1', 11), ('eige', 'T1-R3', 11), ('eige', 'T2-R2', 13)]
-
-        # log.info('Creating files ...')
+def get_selected_features(games, features):
         create_decision_tree_files(games, features)
-        # log.info('Files created')
-        # log.info('Creating decision tree ...')
         tree = create_decision_tree()
         acc = tree.get_accuracy()
-        # Penalty for too many features
-        penalty = 0.02 * math.exp(nb_features/3)
-        acc -= penalty
-        log.info(f'Penalty: {penalty}')
-
-        log.info(f'Accuracy: {acc}')
-        # log.info('Decision tree created')
-        if acc > best_accuracy:
-            best_accuracy = acc
-            best_features = features
-            best_tree = tree
-            log.info(f'New best accuracy: {best_accuracy}')
-            log.info(f'New best features: {best_features}')
-            
-        log.info(f'Best accuracy: {best_accuracy}')
-        log.info(f'Best True accuracy: {best_tree.get_accuracy()}')
-
-    log.info(f'Best accuracy: {best_accuracy}')
-    log.info(f'True accuracy: {best_tree.get_accuracy()}')
-    log.info(f'Best features: {best_features}')
-    best_tree.print_tree()
-
-    print(best_tree.k_fold_cross_validation(10))
+        print(f'Fixed accuracy: {acc - accuracy_fix(features)}')
+        print(f'Accuracy: {acc}')
+        print(f'Features: {features}')
+        print(f'Number of features: {len(features)}')
+        print(f'3-fold cross validation: {tree.k_fold_cross_validation(3)}')
+        print()
 
 def get_rules(tree, confidence, support):
     rules = {}
@@ -182,10 +137,19 @@ def get_rules(tree, confidence, support):
 
 def main():
     games: list[Game] = get_games()
-    # get_selected_features(games)
-    # tree = create_decision_tree()
-    # print(tree.get_accuracy())
-    # get_rules(tree, 0.5, 20)
+
+    trained_features = [
+        [('indeg', 'T1-R2', 8), ('cls', 'T1-R1', 5), ('btw', 'T1-R4', 9), ('eige', 'T2-R1', 3), ('eige', 'T2-R2', 7)],
+        [('btw', 'T1-R4', 15), ('btw', 'T2-R4', 7), ('eige', 'T1-R1', 11), ('eige', 'T1-R2', 11), ('eige', 'T1-R4', 13)],
+        [('btw', 'T2-R1', 13), ('btw', 'T1-R4', 15), ('btw', 'T2-R4', 7), ('eige', 'T1-R1', 11), ('eige', 'T1-R2', 11), ('eige', 'T1-R4', 13)],
+        [('indeg', 'T1-R5', 12), ('cls', 'T1-R4', 9), ('cls', 'T2-R4', 11), ('btw', 'T2-R1', 14), ('btw', 'T1-R2', 7), ('eige', 'T2-R1', 9), ('eige', 'T1-R3', 5)],
+        [('cls', 'T2-R1', 10), ('btw', 'T2-R4', 10), ('btw', 'T2-R5', 9), ('eige', 'T2-R1', 6), ('eige', 'T1-R2', 11), ('eige', 'DEATH', 9)],
+        [('indeg', 'T2-R1', 8), ('outdeg', 'T1-R5', 11), ('btw', 'T1-R5', 14), ('eige', 'T2-R1', 2)],
+        [('cls', 'T2-R1', 12), ('eige', 'T1-R1', 10), ('eige', 'T1-R4', 7), ('eige', 'T2-R5', 14), ('eige', 'DEATH', 6)]
+    ]
+
+    # for features in trained_features:
+    #     get_selected_features(games, features)
 
     train_features(games)
     #[['indeg', 2, 8], ['cls', 0, 5], ['btw', 6, 9], ['eige', 1, 3], ['eige', 3, 7]]
@@ -193,6 +157,7 @@ def main():
     #[['btw', 1, 13], ['btw', 6, 15], ['btw', 7, 7], ['eige', 0, 11], ['eige', 2, 11], ['eige', 6, 13]]
     #[['indeg', 8, 12], ['cls', 6, 9], ['cls', 7, 11], ['btw', 1, 14], ['btw', 2, 7], ['eige', 1, 9], ['eige', 4, 5]]
     #[['cls', 1, 10], ['btw', 7, 10], ['btw', 9, 9], ['eige', 1, 6], ['eige', 2, 11], ['eige', 10, 9]]
+    #[['indeg', 1, 8], ['outdeg', 8, 11], ['btw', 8, 14], ['eige', 1, 2]]
 
     # save_graphs(games)
     # get_selected_features(games)
