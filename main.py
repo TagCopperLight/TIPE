@@ -145,19 +145,16 @@ def main():
         [('indeg', 'T1-R5', 12), ('cls', 'T1-R4', 9), ('cls', 'T2-R4', 11), ('btw', 'T2-R1', 14), ('btw', 'T1-R2', 7), ('eige', 'T2-R1', 9), ('eige', 'T1-R3', 5)],
         [('cls', 'T2-R1', 10), ('btw', 'T2-R4', 10), ('btw', 'T2-R5', 9), ('eige', 'T2-R1', 6), ('eige', 'T1-R2', 11), ('eige', 'DEATH', 9)],
         [('indeg', 'T2-R1', 8), ('outdeg', 'T1-R5', 11), ('btw', 'T1-R5', 14), ('eige', 'T2-R1', 2)],
-        [('cls', 'T2-R1', 12), ('eige', 'T1-R1', 10), ('eige', 'T1-R4', 7), ('eige', 'T2-R5', 14), ('eige', 'DEATH', 6)]
+        [('cls', 'T2-R1', 12), ('eige', 'T1-R1', 10), ('eige', 'T1-R4', 7), ('eige', 'T2-R5', 14), ('eige', 'DEATH', 6)],
+        [('outdeg', 'T2-R1', 5), ('outdeg', 'T1-R2', 10), ('cls', 'T2-R1', 5), ('cls', 'T2-R2', 3), ('cls', 'T1-R3', 13)],
+        [('outdeg', 'T1-R4', 12), ('outdeg', 'T1-R5', 7), ('cls', 'T2-R4', 11), ('btw', 'T1-R4', 13), ('btw', 'T2-R2', 6), ('eige', 'T1-R5', 5)],
+        [('outdeg', 'T1-R1', 12), ('outdeg', 'T1-R5', 11), ('cls', 'T2-R4', 2), ('btw', 'T2-R5', 8), ('eige', 'DEATH', 9)]
     ]
 
     # for features in trained_features:
     #     get_selected_features(games, features)
 
     train_features(games)
-    #[['indeg', 2, 8], ['cls', 0, 5], ['btw', 6, 9], ['eige', 1, 3], ['eige', 3, 7]]
-    #[['btw', 6, 15], ['btw', 7, 7], ['eige', 0, 11], ['eige', 2, 11], ['eige', 6, 13]]
-    #[['btw', 1, 13], ['btw', 6, 15], ['btw', 7, 7], ['eige', 0, 11], ['eige', 2, 11], ['eige', 6, 13]]
-    #[['indeg', 8, 12], ['cls', 6, 9], ['cls', 7, 11], ['btw', 1, 14], ['btw', 2, 7], ['eige', 1, 9], ['eige', 4, 5]]
-    #[['cls', 1, 10], ['btw', 7, 10], ['btw', 9, 9], ['eige', 1, 6], ['eige', 2, 11], ['eige', 10, 9]]
-    #[['indeg', 1, 8], ['outdeg', 8, 11], ['btw', 8, 14], ['eige', 1, 2]]
 
     # save_graphs(games)
     # get_selected_features(games)
