@@ -8,6 +8,10 @@ from classes.get_tree import create_decision_tree_files, create_decision_tree_fr
 def accuracy_fix(features):
     return 0.02 * exp(len(features)/2.8)
 
+def chunk_split(a, n):
+    k, m = divmod(len(a), n)
+    return (a[i*k+min(i, m):(i+1)*k+min(i+1, m)] for i in range(n))
+
 
 class Individual:
     def __init__(self, features):
@@ -44,7 +48,7 @@ class GeneticAlgorithm:
         self.population_size = population_size
         self.propagation_rate = 0.8
         self.crossover_rate = 0.8
-        self.mutation_rate = 1
+        self.mutation_rate = 0.001
 
         self.population = Population(self.population_size, self.features)
 
@@ -74,6 +78,9 @@ class GeneticAlgorithm:
         return features
     
     def threaded_fitness(self, args):
+        id = args[0]
+        args = args[1]
+        computed_values = {}
         for i, individual in args:
             print(f'{i+1}/{self.population_size}')
             raw_features = self.get_features(individual)
@@ -88,14 +95,26 @@ class GeneticAlgorithm:
             names, data = create_decision_tree_files(self.games, features, False)
             tree = create_decision_tree_from_dict(names, data)
             accuracy = tree.get_accuracy() - accuracy_fix(features)
-            individual.fitness = accuracy
+            computed_values[individual] = (id, i, accuracy)
 
-    def fitness(self):
+        return computed_values
+
+    def fitness(self, processes=24):
         args = list(enumerate(self.population.population))
+        for arg in args:
+            print(arg[1])
 
-        with Pool(processes=6) as pool:
-            pool.map(self.threaded_fitness, [args[i::6] for i in range(6)], chunksize=1)
+        with Pool(processes=processes) as pool:
+            results = pool.map(self.threaded_fitness, [(i, chunk) for i, chunk in enumerate(chunk_split(args, processes))], chunksize=1)
             pool.close()
+
+        args = [(i, chunk) for i, chunk in enumerate(chunk_split(args, processes))]
+        for result in results:
+            for _, accuracy in result.items():
+                for i, individual in args[accuracy[0]][1]:
+                    if i == accuracy[1]:
+                        individual.fitness = accuracy[2]
+                        break
 
     def rank_selection(self):
         ranked_population = sorted(self.population.population, key=lambda ind: ind.fitness, reverse=True)[2:]
@@ -127,8 +146,9 @@ class GeneticAlgorithm:
     
     def mutation(self, children):
         for child in children:
-            if random.random() < self.mutation_rate:
-                child.individual ^= 1 << random.randint(0, child.int_length)
+            for i in range(child.int_length):
+                if random.random() < self.mutation_rate:
+                    child.individual ^= 1 << i
         return children
     
     def next_generation(self):
@@ -158,13 +178,13 @@ class GeneticAlgorithm:
     
 
 def main(games):
-    pop_size = 100
+    pop_size = 10
     genetic_algorithm = GeneticAlgorithm(games, pop_size, [['indeg', 'outdeg', 'cls', 'btw', 'eige'], list(range(11)), list(range(30))])
     maxes = []
     mins = []
     avgs = []
     true_maxes = []
-    for i in range(100):
+    for i in range(2):
         print(f'Generation {i+1}')
         ma, mi, av, tma = genetic_algorithm.next_generation()
         maxes.append(ma)
@@ -177,7 +197,7 @@ def main(games):
     plt.plot(avgs, label='Avg')
     plt.plot(true_maxes, label='True Max')
 
-    plt.show()
+    # plt.show()
 
 if __name__ == '__main__':
     main()
