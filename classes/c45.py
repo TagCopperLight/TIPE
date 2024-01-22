@@ -144,4 +144,5 @@ class C45:
             accuracies.append(self.get_accuracy())
             
         self.data = save
+        self.generate_tree()
         return sum(accuracies) / len(accuracies)
