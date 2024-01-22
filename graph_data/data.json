@@ -2,1865 +2,2098 @@
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22727272727272727,
-        "btw of T2-R5 in time frame 8": 0.03333333333333333,
-        "eige of DEATH in time frame 9": 0.2494481946103645
+        "btw of T1-R5 in time frame 7": 0.022222222222222223,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.6022162609300032,
+        "eige of T1-R5 in time frame 8": 1.9700120584493567e-05,
+        "eige of T2-R5 in time frame 1": 0.4266566421678194
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.4,
-        "btw of T2-R5 in time frame 8": 0.0022222222222222222,
-        "eige of DEATH in time frame 9": 0.3333263717409567
+        "btw of T1-R5 in time frame 7": 0.23611111111111113,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 4.926615612814244e-07,
+        "eige of T1-R5 in time frame 8": 0.28675890294817097,
+        "eige of T2-R5 in time frame 1": 0.18168863541051686
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.4263157894736842,
-        "btw of T2-R5 in time frame 8": 0.03333333333333333,
-        "eige of DEATH in time frame 9": 0.5772457340226578
+        "btw of T1-R5 in time frame 7": 0.01388888888888889,
+        "btw of T2-R4 in time frame 5": 0.07777777777777778,
+        "eige of T1-R4 in time frame 9": 0.22336694779083682,
+        "eige of T1-R5 in time frame 8": 1.8876649802101063e-09,
+        "eige of T2-R5 in time frame 1": 0.3539252812510548
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 6,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.2722222222222222,
-        "btw of T2-R5 in time frame 8": 0.05555555555555556,
-        "eige of DEATH in time frame 9": 0.5178811679287719
+        "btw of T1-R5 in time frame 7": 0.12222222222222223,
+        "btw of T2-R4 in time frame 5": 0.044444444444444446,
+        "eige of T1-R4 in time frame 9": 0.44822572308823433,
+        "eige of T1-R5 in time frame 8": 0.34963515969756503,
+        "eige of T2-R5 in time frame 1": 0.30153038164915513
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.1,
-        "btw of T2-R5 in time frame 8": 0.06181216931216932,
-        "eige of DEATH in time frame 9": 1.705984479889119e-06
+        "btw of T1-R5 in time frame 7": 0.05407407407407407,
+        "btw of T2-R4 in time frame 5": 0.011111111111111112,
+        "eige of T1-R4 in time frame 9": 1.705984479889119e-06,
+        "eige of T1-R5 in time frame 8": 0.2506059607296058,
+        "eige of T2-R5 in time frame 1": 0.4494661153415599
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.12833333333333335,
-        "eige of DEATH in time frame 9": 0.3674418626918418
+        "btw of T1-R5 in time frame 7": 0.035555555555555556,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.3024359787143177,
+        "eige of T1-R5 in time frame 8": 0.2330254572358558,
+        "eige of T2-R5 in time frame 1": 0.5495569411320954
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.35,
-        "btw of T2-R5 in time frame 8": 0.054034391534391525,
-        "eige of DEATH in time frame 9": 0.5416079878571293
+        "btw of T1-R5 in time frame 7": 0.09814814814814814,
+        "btw of T2-R4 in time frame 5": 0.0925925925925926,
+        "eige of T1-R4 in time frame 9": 0.2160327427133901,
+        "eige of T1-R5 in time frame 8": 0.2976386728871001,
+        "eige of T2-R5 in time frame 1": 0.37267783337647625
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.4723117310826694
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.3878853697660957,
+        "eige of T1-R5 in time frame 8": 0.2316013230188783,
+        "eige of T2-R5 in time frame 1": 5.074932575781734e-05
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.18,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.44737819106167637
+        "btw of T1-R5 in time frame 7": 0.09365079365079365,
+        "btw of T2-R4 in time frame 5": 0.17592592592592593,
+        "eige of T1-R4 in time frame 9": 0.44055828481808934,
+        "eige of T1-R5 in time frame 8": 0.3610093122313104,
+        "eige of T2-R5 in time frame 1": 0.5000048064360738
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.1,
-        "btw of T2-R5 in time frame 8": 0.08888888888888889,
-        "eige of DEATH in time frame 9": 0.6807106042864096
+        "btw of T1-R5 in time frame 7": 0.007407407407407408,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 1.5361533995920887e-05,
+        "eige of T1-R5 in time frame 8": 8.879384540539342e-13,
+        "eige of T2-R5 in time frame 1": 0.6030226889451387
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.19230769230769232,
-        "btw of T2-R5 in time frame 8": 0.14746031746031746,
-        "eige of DEATH in time frame 9": 0.4113295423550746
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.05555555555555556,
+        "eige of T1-R4 in time frame 9": 2.1009903759082858e-16,
+        "eige of T1-R5 in time frame 8": 0.16716386757821486,
+        "eige of T2-R5 in time frame 1": 0.3968304750047902
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.3857142857142857,
-        "btw of T2-R5 in time frame 8": 0.02074074074074074,
-        "eige of DEATH in time frame 9": 0.6317296152452956
+        "btw of T1-R5 in time frame 7": 0.1,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.4005947901660154,
+        "eige of T1-R5 in time frame 8": 0.0989991384543817,
+        "eige of T2-R5 in time frame 1": 0.4898521464679614
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.24499999999999997,
-        "btw of T2-R5 in time frame 8": 0.09444444444444443,
-        "eige of DEATH in time frame 9": 0.3174904594208184
+        "btw of T1-R5 in time frame 7": 0.08333333333333334,
+        "btw of T2-R4 in time frame 5": 0.017777777777777778,
+        "eige of T1-R4 in time frame 9": 0.37092070446370107,
+        "eige of T1-R5 in time frame 8": 0.03706230360441657,
+        "eige of T2-R5 in time frame 1": 2.76049727058017e-26
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.15,
-        "btw of T2-R5 in time frame 8": 0.05185185185185185,
-        "eige of DEATH in time frame 9": 0.6169142378379455
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.020370370370370372,
+        "eige of T1-R4 in time frame 9": 0.4698842709702279,
+        "eige of T1-R5 in time frame 8": 0.19179378623006965,
+        "eige of T2-R5 in time frame 1": 2.8297738643244443e-05
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.4263157894736842,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.5633206047537653
+        "btw of T1-R5 in time frame 7": 0.03518518518518519,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.2449337426639622,
+        "eige of T1-R5 in time frame 8": 0.4048925450288378,
+        "eige of T2-R5 in time frame 1": 0.4999981762857858
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.23151284129813432
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.23333333333333334,
+        "eige of T1-R4 in time frame 9": 3.282592050394044e-12,
+        "eige of T1-R5 in time frame 8": 0.4999999999984084,
+        "eige of T2-R5 in time frame 1": 0.30151139685290207
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.36,
-        "btw of T2-R5 in time frame 8": 0.09990740740740742,
-        "eige of DEATH in time frame 9": 0.3934754342605299
+        "btw of T1-R5 in time frame 7": 0.41481481481481486,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.41462755840740184,
+        "eige of T1-R5 in time frame 8": 0.24356211577882098,
+        "eige of T2-R5 in time frame 1": 0.5222329675697022
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.13333333333333333,
-        "btw of T2-R5 in time frame 8": 0.02722222222222222,
-        "eige of DEATH in time frame 9": 0.4729330926203758
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.011111111111111112,
+        "eige of T1-R4 in time frame 9": 0.3008765991639325,
+        "eige of T1-R5 in time frame 8": 5.7771014580152895e-11,
+        "eige of T2-R5 in time frame 1": 0.4827017940570841
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 6,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.4098889873427223
+        "btw of T1-R5 in time frame 7": 0.007407407407407408,
+        "btw of T2-R4 in time frame 5": 0.03888888888888889,
+        "eige of T1-R4 in time frame 9": 0.37970105057951625,
+        "eige of T1-R5 in time frame 8": 6.767977851636583e-07,
+        "eige of T2-R5 in time frame 1": 0.4481240345093183
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.35,
-        "btw of T2-R5 in time frame 8": 0.1648148148148148,
-        "eige of DEATH in time frame 9": 0.43759447557313313
+        "btw of T1-R5 in time frame 7": 0.125,
+        "btw of T2-R4 in time frame 5": 0.16666666666666669,
+        "eige of T1-R4 in time frame 9": 0.3405838548517278,
+        "eige of T1-R5 in time frame 8": 0.3425681030117455,
+        "eige of T2-R5 in time frame 1": 0.49999999998980105
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.15,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.5769059089671442
+        "btw of T1-R5 in time frame 7": 0.11425925925925927,
+        "btw of T2-R4 in time frame 5": 0.08333333333333334,
+        "eige of T1-R4 in time frame 9": 9.13962470357246e-264,
+        "eige of T1-R5 in time frame 8": 0.3015147043942344,
+        "eige of T2-R5 in time frame 1": 0.4165245220563006
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 6,
-        "cls of T2-R4 in time frame 2": 0.2,
-        "btw of T2-R5 in time frame 8": 0.15314814814814814,
-        "eige of DEATH in time frame 9": 0.3162287860817692
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.11296296296296299,
+        "eige of T1-R4 in time frame 9": 0.3162277282360042,
+        "eige of T1-R5 in time frame 8": 0.04244026731076859,
+        "eige of T2-R5 in time frame 1": 0.2528356301543199
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.4263157894736842,
-        "btw of T2-R5 in time frame 8": 0.2074074074074074,
-        "eige of DEATH in time frame 9": 0.3846681074352384
+        "btw of T1-R5 in time frame 7": 0.06092592592592593,
+        "btw of T2-R4 in time frame 5": 0.09518518518518519,
+        "eige of T1-R4 in time frame 9": 0.42352659788567243,
+        "eige of T1-R5 in time frame 8": 0.08988292689167704,
+        "eige of T2-R5 in time frame 1": 0.4743404365098284
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.11944444444444446,
-        "eige of DEATH in time frame 9": 0.45573751345932506
+        "btw of T1-R5 in time frame 7": 0.15185185185185182,
+        "btw of T2-R4 in time frame 5": 0.11666666666666667,
+        "eige of T1-R4 in time frame 9": 0.30382097157255,
+        "eige of T1-R5 in time frame 8": 0.28237470195045317,
+        "eige of T2-R5 in time frame 1": 0.2488749179706209
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.35,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.4472167568329792
+        "btw of T1-R5 in time frame 7": 0.22222222222222224,
+        "btw of T2-R4 in time frame 5": 0.12222222222222223,
+        "eige of T1-R4 in time frame 9": 1.5832067722556089e-06,
+        "eige of T1-R5 in time frame 8": 0.09821272041441197,
+        "eige of T2-R5 in time frame 1": 0.4999999999808769
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.01925925925925926,
-        "eige of DEATH in time frame 9": 0.5364416401871288
+        "btw of T1-R5 in time frame 7": 0.05814814814814815,
+        "btw of T2-R4 in time frame 5": 0.08888888888888889,
+        "eige of T1-R4 in time frame 9": 0.3616871572248085,
+        "eige of T1-R5 in time frame 8": 0.2182534943715779,
+        "eige of T2-R5 in time frame 1": 0.4096159602471665
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.36,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.4910677622636726
+        "btw of T1-R5 in time frame 7": 0.18333333333333335,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.3150618904464789,
+        "eige of T1-R5 in time frame 8": 0.3783269484306739,
+        "eige of T2-R5 in time frame 1": 0.4866856197165962
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.2777777777777778,
-        "btw of T2-R5 in time frame 8": 0.25648148148148153,
-        "eige of DEATH in time frame 9": 0.2801827823836355
+        "btw of T1-R5 in time frame 7": 0.06666666666666667,
+        "btw of T2-R4 in time frame 5": 0.06666666666666667,
+        "eige of T1-R4 in time frame 9": 1.98827661719358e-06,
+        "eige of T1-R5 in time frame 8": 0.3270840130498193,
+        "eige of T2-R5 in time frame 1": 0.49999999998470157
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.07222222222222223,
-        "eige of DEATH in time frame 9": 0.4549826133526106
+        "btw of T1-R5 in time frame 7": 0.03462962962962963,
+        "btw of T2-R4 in time frame 5": 0.07777777777777778,
+        "eige of T1-R4 in time frame 9": 0.26489597669326914,
+        "eige of T1-R5 in time frame 8": 0.39026692075919683,
+        "eige of T2-R5 in time frame 1": 0.500306965511845
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.2793103448275862,
-        "btw of T2-R5 in time frame 8": 0.1774074074074074,
-        "eige of DEATH in time frame 9": 0.5773495395653128
+        "btw of T1-R5 in time frame 7": 0.044444444444444446,
+        "btw of T2-R4 in time frame 5": 0.005555555555555556,
+        "eige of T1-R4 in time frame 9": 0.19245036155005535,
+        "eige of T1-R5 in time frame 8": 0.25002121568704777,
+        "eige of T2-R5 in time frame 1": 0.45534943881762513
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.2722222222222222,
-        "btw of T2-R5 in time frame 8": 0.05555555555555556,
-        "eige of DEATH in time frame 9": 0.44541325979626584
+        "btw of T1-R5 in time frame 7": 0.03888888888888889,
+        "btw of T2-R4 in time frame 5": 0.06481481481481481,
+        "eige of T1-R4 in time frame 9": 0.2231592109073429,
+        "eige of T1-R5 in time frame 8": 0.0017714618130406214,
+        "eige of T2-R5 in time frame 1": 0.40824829033329874
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 6,
-        "cls of T2-R4 in time frame 2": 0.13333333333333333,
-        "btw of T2-R5 in time frame 8": 0.06666666666666667,
-        "eige of DEATH in time frame 9": 0.16223773329969965
+        "btw of T1-R5 in time frame 7": 0.11080246913580247,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 8.459468278728732e-38,
+        "eige of T1-R5 in time frame 8": 2.0213807132352034e-14,
+        "eige of T2-R5 in time frame 1": 0.2744750213455256
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.24259259259259264,
-        "eige of DEATH in time frame 9": 0.4592944531342754
+        "btw of T1-R5 in time frame 7": 0.022222222222222223,
+        "btw of T2-R4 in time frame 5": 0.3148148148148149,
+        "eige of T1-R4 in time frame 9": 0.37762721285270595,
+        "eige of T1-R5 in time frame 8": 0.08101718516962392,
+        "eige of T2-R5 in time frame 1": 0.3017302447080749
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.2,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.6010978563897705
+        "btw of T1-R5 in time frame 7": 0.028333333333333332,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.27798746352200526,
+        "eige of T1-R5 in time frame 8": 0.36502738621781416,
+        "eige of T2-R5 in time frame 1": 3.548806942553805e-52
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.1,
-        "btw of T2-R5 in time frame 8": 0.23333333333333334,
-        "eige of DEATH in time frame 9": 0.4012256036682817
+        "btw of T1-R5 in time frame 7": 0.1537037037037037,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.19112215199261873,
+        "eige of T1-R5 in time frame 8": 0.3872981153018198,
+        "eige of T2-R5 in time frame 1": 0.4999999993806738
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.15,
-        "btw of T2-R5 in time frame 8": 0.04999999999999999,
-        "eige of DEATH in time frame 9": 0.4400053677178874
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.14907407407407408,
+        "eige of T1-R4 in time frame 9": 0.0748463309859511,
+        "eige of T1-R5 in time frame 8": 0.3839118772720246,
+        "eige of T2-R5 in time frame 1": 2.1201649805722904e-05
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.5036728869002872
+        "btw of T1-R5 in time frame 7": 0.037037037037037035,
+        "btw of T2-R4 in time frame 5": 0.05,
+        "eige of T1-R4 in time frame 9": 0.2826810097814922,
+        "eige of T1-R5 in time frame 8": 0.31427755371252586,
+        "eige of T2-R5 in time frame 1": 1.0045963437847345e-05
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.03908529741863076,
-        "eige of DEATH in time frame 9": 1.4163743109766592e-08
+        "btw of T1-R5 in time frame 7": 0.0287037037037037,
+        "btw of T2-R4 in time frame 5": 0.10953703703703706,
+        "eige of T1-R4 in time frame 9": 2.832748621953318e-07,
+        "eige of T1-R5 in time frame 8": 0.15113319345026416,
+        "eige of T2-R5 in time frame 1": 0.5940881792623757
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.1,
-        "btw of T2-R5 in time frame 8": 0.16462962962962963,
-        "eige of DEATH in time frame 9": 0.5266986202922466
+        "btw of T1-R5 in time frame 7": 0.023518518518518515,
+        "btw of T2-R4 in time frame 5": 0.23981481481481481,
+        "eige of T1-R4 in time frame 9": 0.3144719002562679,
+        "eige of T1-R5 in time frame 8": 0.4022518775766947,
+        "eige of T2-R5 in time frame 1": 0.45228346514674234
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.17037037037037037,
-        "eige of DEATH in time frame 9": 0.2338749047270995
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.022222222222222223,
+        "eige of T1-R4 in time frame 9": 0.31627585706308176,
+        "eige of T1-R5 in time frame 8": 0.5075836119065761,
+        "eige of T2-R5 in time frame 1": 0.4850708036394674
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.24,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.4193326217136919
+        "btw of T1-R5 in time frame 7": 0.14423280423280424,
+        "btw of T2-R4 in time frame 5": 0.011111111111111112,
+        "eige of T1-R4 in time frame 9": 3.444371950261038e-10,
+        "eige of T1-R5 in time frame 8": 3.107228372408611e-22,
+        "eige of T2-R5 in time frame 1": 0.3629745489728363
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 6,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.3272727272727272,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.3413196932960345
+        "btw of T1-R5 in time frame 7": 0.15555555555555556,
+        "btw of T2-R4 in time frame 5": 0.022222222222222223,
+        "eige of T1-R4 in time frame 9": 0.15697646785122749,
+        "eige of T1-R5 in time frame 8": 1.328896034857394e-14,
+        "eige of T2-R5 in time frame 1": 0.4999999999877584
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.26666666666666666,
-        "btw of T2-R5 in time frame 8": 0.0689153439153439,
-        "eige of DEATH in time frame 9": 0.5390956372490522
+        "btw of T1-R5 in time frame 7": 0.05425925925925926,
+        "btw of T2-R4 in time frame 5": 0.03148148148148148,
+        "eige of T1-R4 in time frame 9": 0.2695401231824998,
+        "eige of T1-R5 in time frame 8": 0.3937875893370857,
+        "eige of T2-R5 in time frame 1": 0.3999978427718474
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.07777777777777778,
-        "eige of DEATH in time frame 9": 0.5816592357919591
+        "btw of T1-R5 in time frame 7": 0.08953703703703704,
+        "btw of T2-R4 in time frame 5": 0.11388888888888889,
+        "eige of T1-R4 in time frame 9": 0.20986409196368278,
+        "eige of T1-R5 in time frame 8": 1.269960324115073e-07,
+        "eige of T2-R5 in time frame 1": 0.6015009548875968
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 6,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.014814814814814815,
-        "eige of DEATH in time frame 9": 0.40824971802408927
+        "btw of T1-R5 in time frame 7": 0.05259259259259259,
+        "btw of T2-R4 in time frame 5": 0.2207407407407407,
+        "eige of T1-R4 in time frame 9": 0.40824971802408927,
+        "eige of T1-R5 in time frame 8": 0.3528973541497165,
+        "eige of T2-R5 in time frame 1": 0.228144971963128
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.3521739130434783,
-        "btw of T2-R5 in time frame 8": 0.10555555555555556,
-        "eige of DEATH in time frame 9": 0.502291936472014
+        "btw of T1-R5 in time frame 7": 0.16666666666666669,
+        "btw of T2-R4 in time frame 5": 0.12407407407407407,
+        "eige of T1-R4 in time frame 9": 0.3521699573595208,
+        "eige of T1-R5 in time frame 8": 0.3564059409297079,
+        "eige of T2-R5 in time frame 1": 0.5222329674402704
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.1894736842105263,
-        "btw of T2-R5 in time frame 8": 0.13333333333333333,
-        "eige of DEATH in time frame 9": 0.5634283497625792
+        "btw of T1-R5 in time frame 7": 0.19687830687830687,
+        "btw of T2-R4 in time frame 5": 0.11111111111111112,
+        "eige of T1-R4 in time frame 9": 0.0523622770978939,
+        "eige of T1-R5 in time frame 8": 0.16177193421605982,
+        "eige of T2-R5 in time frame 1": 0.504290335431349
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.04745014245014245,
-        "eige of DEATH in time frame 9": 0.22476992858986483
+        "btw of T1-R5 in time frame 7": 0.29444444444444445,
+        "btw of T2-R4 in time frame 5": 0.009259259259259259,
+        "eige of T1-R4 in time frame 9": 0.4244280623807309,
+        "eige of T1-R5 in time frame 8": 0.36794862386747595,
+        "eige of T2-R5 in time frame 1": 0.5857864342152694
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.06761904761904763,
-        "eige of DEATH in time frame 9": 0.4364486008042123
+        "btw of T1-R5 in time frame 7": 0.011111111111111112,
+        "btw of T2-R4 in time frame 5": 0.061111111111111116,
+        "eige of T1-R4 in time frame 9": 0.06628464255537574,
+        "eige of T1-R5 in time frame 8": 0.3519022876365659,
+        "eige of T2-R5 in time frame 1": 0.2672605354886045
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.005555555555555556,
-        "eige of DEATH in time frame 9": 0.5787432868423776
+        "btw of T1-R5 in time frame 7": 0.06574074074074074,
+        "btw of T2-R4 in time frame 5": 0.15054232804232806,
+        "eige of T1-R4 in time frame 9": 0.34892570968282,
+        "eige of T1-R5 in time frame 8": 2.9355307079424063e-22,
+        "eige of T2-R5 in time frame 1": 0.3290458672966813
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.08783950617283952,
-        "eige of DEATH in time frame 9": 0.3773522511690986
+        "btw of T1-R5 in time frame 7": 0.3037037037037037,
+        "btw of T2-R4 in time frame 5": 0.09742063492063492,
+        "eige of T1-R4 in time frame 9": 0.39746720602449276,
+        "eige of T1-R5 in time frame 8": 0.25532356211351775,
+        "eige of T2-R5 in time frame 1": 0.5773481451109277
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.305993265993266,
-        "eige of DEATH in time frame 9": 0.25888142287732807
+        "btw of T1-R5 in time frame 7": 0.11666666666666667,
+        "btw of T2-R4 in time frame 5": 0.059722222222222225,
+        "eige of T1-R4 in time frame 9": 0.32230816160956427,
+        "eige of T1-R5 in time frame 8": 0.340465347726765,
+        "eige of T2-R5 in time frame 1": 0.3597224042830138
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.12666666666666668,
-        "eige of DEATH in time frame 9": 0.25543290926398154
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.03518518518518519,
+        "eige of T1-R4 in time frame 9": 0.3643881636414259,
+        "eige of T1-R5 in time frame 8": 0.2817757001328671,
+        "eige of T2-R5 in time frame 1": 0.20455605010105324
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.3521739130434783,
-        "btw of T2-R5 in time frame 8": 0.09407407407407407,
-        "eige of DEATH in time frame 9": 0.5227233022595633
+        "btw of T1-R5 in time frame 7": 0.045,
+        "btw of T2-R4 in time frame 5": 0.011111111111111112,
+        "eige of T1-R4 in time frame 9": 0.17017660346161087,
+        "eige of T1-R5 in time frame 8": 0.3926662927323203,
+        "eige of T2-R5 in time frame 1": 0.4999999998842429
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.055555555555555546,
-        "eige of DEATH in time frame 9": 0.38894057786073727
+        "btw of T1-R5 in time frame 7": 0.0712962962962963,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.3331068485004969,
+        "eige of T1-R5 in time frame 8": 0.30581848887162366,
+        "eige of T2-R5 in time frame 1": 1.6858718302248216e-07
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.2777777777777778,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.20889962827815972
+        "btw of T1-R5 in time frame 7": 0.0468945868945869,
+        "btw of T2-R4 in time frame 5": 0.25370370370370376,
+        "eige of T1-R4 in time frame 9": 0.2528955227137018,
+        "eige of T1-R5 in time frame 8": 0.24607962486290919,
+        "eige of T2-R5 in time frame 1": 0.43643502837916914
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 6,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.35714285714285715,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.22302834744842637
+        "btw of T1-R5 in time frame 7": 0.11666666666666667,
+        "btw of T2-R4 in time frame 5": 0.11939153439153438,
+        "eige of T1-R4 in time frame 9": 0.07008697729301323,
+        "eige of T1-R5 in time frame 8": 0.3535549484548556,
+        "eige of T2-R5 in time frame 1": 0.5271164352034523
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.36,
-        "btw of T2-R5 in time frame 8": 0.11944444444444445,
-        "eige of DEATH in time frame 9": 0.4264063811935207
+        "btw of T1-R5 in time frame 7": 0.030555555555555558,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 9.905938904561741e-06,
+        "eige of T1-R5 in time frame 8": 0.23428217878541216,
+        "eige of T2-R5 in time frame 1": 0.40637439075000875
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 6,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.09462962962962965,
-        "eige of DEATH in time frame 9": 0.47362822336880916
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.011111111111111112,
+        "eige of T1-R4 in time frame 9": 0.22352096752842646,
+        "eige of T1-R5 in time frame 8": 0.3419682759269051,
+        "eige of T2-R5 in time frame 1": 0.40269345149505587
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.09444444444444444,
-        "eige of DEATH in time frame 9": 0.5851526533684955
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.053818342151675476,
+        "eige of T1-R4 in time frame 9": 0.25887103065845574,
+        "eige of T1-R5 in time frame 8": 0.3555992230885346,
+        "eige of T2-R5 in time frame 1": 0.5144953454864936
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.30624999999999997,
-        "btw of T2-R5 in time frame 8": 0.15925925925925924,
-        "eige of DEATH in time frame 9": 0.4700928741984069
+        "btw of T1-R5 in time frame 7": 0.07407407407407407,
+        "btw of T2-R4 in time frame 5": 0.08888888888888889,
+        "eige of T1-R4 in time frame 9": 0.33240841970143475,
+        "eige of T1-R5 in time frame 8": 0.49130172781112946,
+        "eige of T2-R5 in time frame 1": 1.2583242091851296e-35
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.13333333333333333,
-        "btw of T2-R5 in time frame 8": 0.33333333333333337,
-        "eige of DEATH in time frame 9": 0.4447003830629682
+        "btw of T1-R5 in time frame 7": 0.17425925925925928,
+        "btw of T2-R4 in time frame 5": 0.03888888888888889,
+        "eige of T1-R4 in time frame 9": 0.4447003801692694,
+        "eige of T1-R5 in time frame 8": 0.4645340424926182,
+        "eige of T2-R5 in time frame 1": 0.3999999999714409
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.2777777777777778,
-        "btw of T2-R5 in time frame 8": 0.03333333333333333,
-        "eige of DEATH in time frame 9": 0.12934074794858683
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.022222222222222223,
+        "eige of T1-R4 in time frame 9": 0.48316494502264234,
+        "eige of T1-R5 in time frame 8": 0.43386086441097876,
+        "eige of T2-R5 in time frame 1": 0.46109338763612284
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.1,
-        "btw of T2-R5 in time frame 8": 0.212962962962963,
-        "eige of DEATH in time frame 9": 0.4250656960310842
+        "btw of T1-R5 in time frame 7": 0.04444444444444444,
+        "btw of T2-R4 in time frame 5": 0.11111111111111112,
+        "eige of T1-R4 in time frame 9": 0.289641856585584,
+        "eige of T1-R5 in time frame 8": 0.20790942561073614,
+        "eige of T2-R5 in time frame 1": 0.48506923832478804
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 6,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.003703703703703704,
-        "eige of DEATH in time frame 9": 0.4397564127110451
+        "btw of T1-R5 in time frame 7": 0.40407407407407403,
+        "btw of T2-R4 in time frame 5": 0.03333333333333333,
+        "eige of T1-R4 in time frame 9": 0.29671429226915486,
+        "eige of T1-R5 in time frame 8": 0.32505758359485815,
+        "eige of T2-R5 in time frame 1": 0.48507125005837054
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.016666666666666666,
-        "eige of DEATH in time frame 9": 0.6162588327310079
+        "btw of T1-R5 in time frame 7": 0.2555555555555556,
+        "btw of T2-R4 in time frame 5": 0.20801587301587302,
+        "eige of T1-R4 in time frame 9": 0.11493919221658608,
+        "eige of T1-R5 in time frame 8": 0.14098062466289846,
+        "eige of T2-R5 in time frame 1": 0.40435913458454376
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.4168122700433174
+        "btw of T1-R5 in time frame 7": 0.2762962962962963,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.369496306185422,
+        "eige of T1-R5 in time frame 8": 0.22753232239064308,
+        "eige of T2-R5 in time frame 1": 0.48506996692867793
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 6,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.4263157894736842,
-        "btw of T2-R5 in time frame 8": 0.049047619047619055,
-        "eige of DEATH in time frame 9": 0.42138951714744277
+        "btw of T1-R5 in time frame 7": 0.051296296296296305,
+        "btw of T2-R4 in time frame 5": 0.062037037037037036,
+        "eige of T1-R4 in time frame 9": 0.3969178763904923,
+        "eige of T1-R5 in time frame 8": 0.28199180604617047,
+        "eige of T2-R5 in time frame 1": 0.370736966576132
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.07962962962962962,
-        "eige of DEATH in time frame 9": 0.5119897558855919
+        "btw of T1-R5 in time frame 7": 0.21777777777777776,
+        "btw of T2-R4 in time frame 5": 0.03888888888888889,
+        "eige of T1-R4 in time frame 9": 0.4182084088117112,
+        "eige of T1-R5 in time frame 8": 0.24582722023271633,
+        "eige of T2-R5 in time frame 1": 0.5129892409355752
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.00814814814814815,
-        "eige of DEATH in time frame 9": 0.4744957538075192
+        "btw of T1-R5 in time frame 7": 0.012037037037037037,
+        "btw of T2-R4 in time frame 5": 0.011111111111111112,
+        "eige of T1-R4 in time frame 9": 0.4165903492731954,
+        "eige of T1-R5 in time frame 8": 0.4806225730099492,
+        "eige of T2-R5 in time frame 1": 0.458160054386116
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.10370370370370371,
-        "eige of DEATH in time frame 9": 0.44722403446690795
+        "btw of T1-R5 in time frame 7": 0.07777777777777778,
+        "btw of T2-R4 in time frame 5": 0.10936507936507936,
+        "eige of T1-R4 in time frame 9": 6.524397176667543e-06,
+        "eige of T1-R5 in time frame 8": 0.2246998454291685,
+        "eige of T2-R5 in time frame 1": 0.22474736070591442
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.18148148148148152,
-        "eige of DEATH in time frame 9": 0.2957675806435929
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.011111111111111112,
+        "eige of T1-R4 in time frame 9": 0.35731961027370773,
+        "eige of T1-R5 in time frame 8": 0.07889935608037063,
+        "eige of T2-R5 in time frame 1": 0.4296884658574088
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.016666666666666666,
-        "eige of DEATH in time frame 9": 0.4434901163060602
+        "btw of T1-R5 in time frame 7": 0.3555555555555555,
+        "btw of T2-R4 in time frame 5": 0.09537037037037038,
+        "eige of T1-R4 in time frame 9": 0.34302132023374554,
+        "eige of T1-R5 in time frame 8": 0.001699098138474469,
+        "eige of T2-R5 in time frame 1": 0.3027365609955754
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.3272727272727272,
-        "btw of T2-R5 in time frame 8": 0.057777777777777775,
-        "eige of DEATH in time frame 9": 0.5740111140613999
+        "btw of T1-R5 in time frame 7": 0.021296296296296296,
+        "btw of T2-R4 in time frame 5": 0.043686868686868684,
+        "eige of T1-R4 in time frame 9": 0.21319728920741537,
+        "eige of T1-R5 in time frame 8": 0.17832722576088733,
+        "eige of T2-R5 in time frame 1": 0.4260062273074612
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.26666666666666666,
-        "btw of T2-R5 in time frame 8": 0.13296296296296295,
-        "eige of DEATH in time frame 9": 0.35630616163232176
+        "btw of T1-R5 in time frame 7": 0.2574074074074074,
+        "btw of T2-R4 in time frame 5": 0.11111111111111112,
+        "eige of T1-R4 in time frame 9": 0.2562643593632078,
+        "eige of T1-R5 in time frame 8": 0.24891736188815555,
+        "eige of T2-R5 in time frame 1": 0.5222329678380621
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.2,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.38880021383965385
+        "btw of T1-R5 in time frame 7": 0.0462962962962963,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.29757692034442756,
+        "eige of T1-R5 in time frame 8": 1.161957223797397e-10,
+        "eige of T2-R5 in time frame 1": 1.0276512757394756e-05
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.1,
-        "btw of T2-R5 in time frame 8": 0.045370370370370366,
-        "eige of DEATH in time frame 9": 0.5000257124967964
+        "btw of T1-R5 in time frame 7": 0.016666666666666666,
+        "btw of T2-R4 in time frame 5": 0.04351851851851851,
+        "eige of T1-R4 in time frame 9": 3.0105984729215918e-05,
+        "eige of T1-R5 in time frame 8": 0.23769822466110727,
+        "eige of T2-R5 in time frame 1": 0.0011695826436945113
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.324,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.11785013802525306
+        "btw of T1-R5 in time frame 7": 0.03657407407407407,
+        "btw of T2-R4 in time frame 5": 0.022063492063492063,
+        "eige of T1-R4 in time frame 9": 0.4082489444434832,
+        "eige of T1-R5 in time frame 8": 0.15617977944828065,
+        "eige of T2-R5 in time frame 1": 0.5222329678380621
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.16666666666666666,
-        "btw of T2-R5 in time frame 8": 0.06481481481481481,
-        "eige of DEATH in time frame 9": 0.27952335375244153
+        "btw of T1-R5 in time frame 7": 0.13148148148148148,
+        "btw of T2-R4 in time frame 5": 0.11851851851851852,
+        "eige of T1-R4 in time frame 9": 0.22971382109946864,
+        "eige of T1-R5 in time frame 8": 0.35814830129499714,
+        "eige of T2-R5 in time frame 1": 0.37541520713440657
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.22727272727272727,
-        "btw of T2-R5 in time frame 8": 0.06793650793650795,
-        "eige of DEATH in time frame 9": 0.5213690026151078
+        "btw of T1-R5 in time frame 7": 0.03185185185185185,
+        "btw of T2-R4 in time frame 5": 0.05,
+        "eige of T1-R4 in time frame 9": 0.32123717641472604,
+        "eige of T1-R5 in time frame 8": 0.30596948079880176,
+        "eige of T2-R5 in time frame 1": 0.15056293742455845
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.17851851851851852,
-        "eige of DEATH in time frame 9": 0.4456050100992744
+        "btw of T1-R5 in time frame 7": 0.08333333333333334,
+        "btw of T2-R4 in time frame 5": 0.13518518518518519,
+        "eige of T1-R4 in time frame 9": 4.4520813020202215e-11,
+        "eige of T1-R5 in time frame 8": 0.3494136760961062,
+        "eige of T2-R5 in time frame 1": 0.34227491422853407
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.24,
-        "btw of T2-R5 in time frame 8": 0.028703703703703707,
-        "eige of DEATH in time frame 9": 0.32478800748052433
+        "btw of T1-R5 in time frame 7": 0.18333333333333335,
+        "btw of T2-R4 in time frame 5": 0.022222222222222223,
+        "eige of T1-R4 in time frame 9": 0.3072647318032394,
+        "eige of T1-R5 in time frame 8": 0.3573835228704443,
+        "eige of T2-R5 in time frame 1": 0.399999781922338
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.22272727272727272,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.5166851830149989
+        "btw of T1-R5 in time frame 7": 0.1211111111111111,
+        "btw of T2-R4 in time frame 5": 0.016666666666666666,
+        "eige of T1-R4 in time frame 9": 0.3569370517299522,
+        "eige of T1-R5 in time frame 8": 0.2858757320302451,
+        "eige of T2-R5 in time frame 1": 0.4572596184701916
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.35714285714285715,
-        "btw of T2-R5 in time frame 8": 0.37592592592592594,
-        "eige of DEATH in time frame 9": 0.524523152948329
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.11270763613696926,
+        "eige of T1-R5 in time frame 8": 0.17772511615798647,
+        "eige of T2-R5 in time frame 1": 0.5773502691457056
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.26129032258064516,
-        "btw of T2-R5 in time frame 8": 0.025524691358024695,
-        "eige of DEATH in time frame 9": 0.5307753254467112
+        "btw of T1-R5 in time frame 7": 0.030661375661375664,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.24516798320887143,
+        "eige of T1-R5 in time frame 8": 0.24540326489912428,
+        "eige of T2-R5 in time frame 1": 0.4898974652800188
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.08854497354497355,
-        "eige of DEATH in time frame 9": 0.444749364130683
+        "btw of T1-R5 in time frame 7": 0.0059259259259259265,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.29485959690390184,
+        "eige of T1-R5 in time frame 8": 0.14510356149568754,
+        "eige of T2-R5 in time frame 1": 1.2268968019168401e-05
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.036243386243386244,
-        "eige of DEATH in time frame 9": 0.41111172429586235
+        "btw of T1-R5 in time frame 7": 0.02259259259259259,
+        "btw of T2-R4 in time frame 5": 0.11388888888888887,
+        "eige of T1-R4 in time frame 9": 0.2866368730213514,
+        "eige of T1-R5 in time frame 8": 0.34433737535948405,
+        "eige of T2-R5 in time frame 1": 0.48506992347793443
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.005555555555555556,
-        "eige of DEATH in time frame 9": 0.44676269252842893
+        "btw of T1-R5 in time frame 7": 0.28457671957671954,
+        "btw of T2-R4 in time frame 5": 0.03888888888888888,
+        "eige of T1-R4 in time frame 9": 0.25446415747844997,
+        "eige of T1-R5 in time frame 8": 1.5203217049640813e-21,
+        "eige of T2-R5 in time frame 1": 0.2021301248990797
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.044444444444444446,
-        "eige of DEATH in time frame 9": 1.9967069481655006e-06
+        "btw of T1-R5 in time frame 7": 0.008950617283950617,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 5.268356063761215e-09,
+        "eige of T1-R5 in time frame 8": 0.3839144014884606,
+        "eige of T2-R5 in time frame 1": 1.0316037918619642e-05
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.35,
-        "btw of T2-R5 in time frame 8": 0.003703703703703704,
-        "eige of DEATH in time frame 9": 0.2628680583315572
+        "btw of T1-R5 in time frame 7": 0.0959034484034484,
+        "btw of T2-R4 in time frame 5": 0.0763888888888889,
+        "eige of T1-R4 in time frame 9": 2.4898879270510763e-16,
+        "eige of T1-R5 in time frame 8": 0.15484774561485992,
+        "eige of T2-R5 in time frame 1": 0.29767300280603154
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.19999999999999998,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.5699444474743316
+        "btw of T1-R5 in time frame 7": 0.04074074074074074,
+        "btw of T2-R4 in time frame 5": 0.07222222222222223,
+        "eige of T1-R4 in time frame 9": 0.36294172815145953,
+        "eige of T1-R5 in time frame 8": 0.3098511421349882,
+        "eige of T2-R5 in time frame 1": 0.4850712500586969
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.10555555555555556,
-        "eige of DEATH in time frame 9": 0.39886485835714564
+        "btw of T1-R5 in time frame 7": 0.03333333333333333,
+        "btw of T2-R4 in time frame 5": 0.011111111111111112,
+        "eige of T1-R4 in time frame 9": 0.39886148015876255,
+        "eige of T1-R5 in time frame 8": 0.3805461185881013,
+        "eige of T2-R5 in time frame 1": 0.4598229207938201
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.3857142857142857,
-        "btw of T2-R5 in time frame 8": 0.07648148148148147,
-        "eige of DEATH in time frame 9": 0.6813246654012592
+        "btw of T1-R5 in time frame 7": 0.1533333333333333,
+        "btw of T2-R4 in time frame 5": 0.07777777777777778,
+        "eige of T1-R4 in time frame 9": 0.1686650639769565,
+        "eige of T1-R5 in time frame 8": 0.3119135491514167,
+        "eige of T2-R5 in time frame 1": 0.40961596024723534
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.05246913580246914,
-        "eige of DEATH in time frame 9": 0.40946453885798373
+        "btw of T1-R5 in time frame 7": 0.009259259259259259,
+        "btw of T2-R4 in time frame 5": 0.275925925925926,
+        "eige of T1-R4 in time frame 9": 0.3743314935365573,
+        "eige of T1-R5 in time frame 8": 0.26902861327535244,
+        "eige of T2-R5 in time frame 1": 0.3827814830082853
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.24,
-        "btw of T2-R5 in time frame 8": 0.04473544973544974,
-        "eige of DEATH in time frame 9": 0.45850189942633035
+        "btw of T1-R5 in time frame 7": 0.06139009139009139,
+        "btw of T2-R4 in time frame 5": 0.01388888888888889,
+        "eige of T1-R4 in time frame 9": 0.39160475939854666,
+        "eige of T1-R5 in time frame 8": 0.2835417255213627,
+        "eige of T2-R5 in time frame 1": 0.4999999999813019
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.32162439171498186
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.12222222222222223,
+        "eige of T1-R4 in time frame 9": 0.12955416693474361,
+        "eige of T1-R5 in time frame 8": 0.49999814786116664,
+        "eige of T2-R5 in time frame 1": 5.162840127087874e-21
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.3857142857142857,
-        "btw of T2-R5 in time frame 8": 0.06092592592592593,
-        "eige of DEATH in time frame 9": 0.41589976593901096
+        "btw of T1-R5 in time frame 7": 0.003703703703703704,
+        "btw of T2-R4 in time frame 5": 0.05555555555555556,
+        "eige of T1-R4 in time frame 9": 0.1263702879037777,
+        "eige of T1-R5 in time frame 8": 0.23307322545232848,
+        "eige of T2-R5 in time frame 1": 0.47360891791195175
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.1,
-        "btw of T2-R5 in time frame 8": 0.11574074074074074,
-        "eige of DEATH in time frame 9": 0.4637619776315179
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.025,
+        "eige of T1-R4 in time frame 9": 0.18795974000377916,
+        "eige of T1-R5 in time frame 8": 0.4848018354228215,
+        "eige of T2-R5 in time frame 1": 0.3934564859722208
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.35,
-        "btw of T2-R5 in time frame 8": 0.03361111111111111,
-        "eige of DEATH in time frame 9": 0.521220280458915
+        "btw of T1-R5 in time frame 7": 0.20925925925925926,
+        "btw of T2-R4 in time frame 5": 0.05555555555555556,
+        "eige of T1-R4 in time frame 9": 0.22953757538058953,
+        "eige of T1-R5 in time frame 8": 0.31082006753631214,
+        "eige of T2-R5 in time frame 1": 0.1357098699493672
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.03148148148148148,
-        "eige of DEATH in time frame 9": 0.555088861729818
-    },
-    {
-        "class": "T2",
-        "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.01962962962962963,
-        "eige of DEATH in time frame 9": 0.5639525527669298
-    },
-    {
-        "class": "T1",
-        "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.35,
-        "btw of T2-R5 in time frame 8": 0.12576879910213243,
-        "eige of DEATH in time frame 9": 0.2770928288549067
-    },
-    {
-        "class": "T2",
-        "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.1,
-        "btw of T2-R5 in time frame 8": 0.05555555555555556,
-        "eige of DEATH in time frame 9": 0.3933234886720534
+        "btw of T1-R5 in time frame 7": 0.08333333333333333,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 3.062133290588041e-10,
+        "eige of T1-R5 in time frame 8": 3.0862513796847286e-10,
+        "eige of T2-R5 in time frame 1": 1.6840522932649926e-05
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 6,
-        "cls of T2-R4 in time frame 2": 0.3521739130434783,
-        "btw of T2-R5 in time frame 8": 0.075,
-        "eige of DEATH in time frame 9": 0.5470099277754301
+        "btw of T1-R5 in time frame 7": 0.057407407407407414,
+        "btw of T2-R4 in time frame 5": 0.21666666666666667,
+        "eige of T1-R4 in time frame 9": 0.2592227631819768,
+        "eige of T1-R5 in time frame 8": 0.4031418457917525,
+        "eige of T2-R5 in time frame 1": 1.4435590846326132e-28
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.2,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.4175073891676876
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.03888888888888889,
+        "eige of T1-R4 in time frame 9": 0.35271576888640954,
+        "eige of T1-R5 in time frame 8": 0.2918418298566874,
+        "eige of T2-R5 in time frame 1": 0.27826976275890875
+    },
+    {
+        "class": "T2",
+        "outdeg of T1-R1 in time frame 12": 3,
+        "btw of T1-R5 in time frame 7": 0.0709920634920635,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.3494773374395733,
+        "eige of T1-R5 in time frame 8": 0.31621971369389046,
+        "eige of T2-R5 in time frame 1": 0.7071067810410469
+    },
+    {
+        "class": "T2",
+        "outdeg of T1-R1 in time frame 12": 5,
+        "btw of T1-R5 in time frame 7": 0.07037037037037037,
+        "btw of T2-R4 in time frame 5": 0.00962962962962963,
+        "eige of T1-R4 in time frame 9": 7.225595115540992e-33,
+        "eige of T1-R5 in time frame 8": 0.17230792216858326,
+        "eige of T2-R5 in time frame 1": 0.2998376325349375
+    },
+    {
+        "class": "T1",
+        "outdeg of T1-R1 in time frame 12": 3,
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.11666666666666667,
+        "eige of T1-R4 in time frame 9": 0.3722161710292584,
+        "eige of T1-R5 in time frame 8": 0.4264010688187415,
+        "eige of T2-R5 in time frame 1": 0.48507125002234824
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.15416666666666667,
-        "eige of DEATH in time frame 9": 0.3801426382229521
+        "btw of T1-R5 in time frame 7": 0.3527777777777778,
+        "btw of T2-R4 in time frame 5": 0.022222222222222223,
+        "eige of T1-R4 in time frame 9": 0.5322006084547347,
+        "eige of T1-R5 in time frame 8": 0.40805143436257246,
+        "eige of T2-R5 in time frame 1": 0.4364354553090481
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 6,
-        "cls of T2-R4 in time frame 2": 0.2571428571428571,
-        "btw of T2-R5 in time frame 8": 0.17592592592592593,
-        "eige of DEATH in time frame 9": 0.5838445544056677
+        "btw of T1-R5 in time frame 7": 0.0175,
+        "btw of T2-R4 in time frame 5": 0.05555555555555556,
+        "eige of T1-R4 in time frame 9": 0.3304967744094168,
+        "eige of T1-R5 in time frame 8": 0.10956655535689017,
+        "eige of T2-R5 in time frame 1": 0.47140366348119
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.21176470588235294,
-        "btw of T2-R5 in time frame 8": 0.03888888888888889,
-        "eige of DEATH in time frame 9": 0.4200721952559373
+        "btw of T1-R5 in time frame 7": 0.003703703703703704,
+        "btw of T2-R4 in time frame 5": 0.19465608465608467,
+        "eige of T1-R4 in time frame 9": 0.19433308648322611,
+        "eige of T1-R5 in time frame 8": 0.29156125889213524,
+        "eige of T2-R5 in time frame 1": 0.399995659825823
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.030000000000000002,
-        "eige of DEATH in time frame 9": 0.4874611236880754
+        "btw of T1-R5 in time frame 7": 0.047962962962962964,
+        "btw of T2-R4 in time frame 5": 0.007407407407407408,
+        "eige of T1-R4 in time frame 9": 0.4299015681539426,
+        "eige of T1-R5 in time frame 8": 0.27038263432386,
+        "eige of T2-R5 in time frame 1": 5.364418029630594e-06
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.32000000000000006,
-        "btw of T2-R5 in time frame 8": 0.13444444444444445,
-        "eige of DEATH in time frame 9": 0.33308469932901835
+        "btw of T1-R5 in time frame 7": 0.3277777777777778,
+        "btw of T2-R4 in time frame 5": 0.07354497354497355,
+        "eige of T1-R4 in time frame 9": 0.3807092198310864,
+        "eige of T1-R5 in time frame 8": 0.3525474286142742,
+        "eige of T2-R5 in time frame 1": 0.44721359547532796
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.26666666666666666,
-        "btw of T2-R5 in time frame 8": 0.006111111111111111,
-        "eige of DEATH in time frame 9": 0.4828701812259848
+        "btw of T1-R5 in time frame 7": 0.35000000000000003,
+        "btw of T2-R4 in time frame 5": 0.06746031746031746,
+        "eige of T1-R4 in time frame 9": 0.3450971239173851,
+        "eige of T1-R5 in time frame 8": 0.3109629772055669,
+        "eige of T2-R5 in time frame 1": 0.41208099978336454
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.32000000000000006,
-        "btw of T2-R5 in time frame 8": 0.1611111111111111,
-        "eige of DEATH in time frame 9": 0.39553552321818164
+        "btw of T1-R5 in time frame 7": 0.06925925925925926,
+        "btw of T2-R4 in time frame 5": 0.33240740740740743,
+        "eige of T1-R4 in time frame 9": 0.3560692981982573,
+        "eige of T1-R5 in time frame 8": 0.4720967305537639,
+        "eige of T2-R5 in time frame 1": 0.5345224837760729
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.32000000000000006,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.53058580671357
+        "btw of T1-R5 in time frame 7": 0.11333333333333336,
+        "btw of T2-R4 in time frame 5": 0.011481481481481481,
+        "eige of T1-R4 in time frame 9": 0.21218226460320225,
+        "eige of T1-R5 in time frame 8": 0.21411291986395817,
+        "eige of T2-R5 in time frame 1": 1.4433638719351674e-05
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.009259259259259259,
-        "eige of DEATH in time frame 9": 0.5708365431308509
+        "btw of T1-R5 in time frame 7": 0.2612962962962963,
+        "btw of T2-R4 in time frame 5": 0.011111111111111112,
+        "eige of T1-R4 in time frame 9": 0.28147923014327186,
+        "eige of T1-R5 in time frame 8": 0.39761034997835953,
+        "eige of T2-R5 in time frame 1": 0.3939191431274791
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.35,
-        "btw of T2-R5 in time frame 8": 0.11666666666666667,
-        "eige of DEATH in time frame 9": 0.5388321456243542
+        "btw of T1-R5 in time frame 7": 0.1925925925925926,
+        "btw of T2-R4 in time frame 5": 0.1,
+        "eige of T1-R4 in time frame 9": 0.29469834756827185,
+        "eige of T1-R5 in time frame 8": 0.16903746282404739,
+        "eige of T2-R5 in time frame 1": 0.2000443217079831
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.4083333333333333,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.6038312664616917
+        "btw of T1-R5 in time frame 7": 0.2490740740740741,
+        "btw of T2-R4 in time frame 5": 0.06481481481481481,
+        "eige of T1-R4 in time frame 9": 0.32639497743728274,
+        "eige of T1-R5 in time frame 8": 0.2382404248696949,
+        "eige of T2-R5 in time frame 1": 0.34078019292180806
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.24899153171303
+        "btw of T1-R5 in time frame 7": 0.062037037037037036,
+        "btw of T2-R4 in time frame 5": 0.007407407407407408,
+        "eige of T1-R4 in time frame 9": 0.3909372916982819,
+        "eige of T1-R5 in time frame 8": 0.33916398932675307,
+        "eige of T2-R5 in time frame 1": 0.47140334307628357
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.32000000000000006,
-        "btw of T2-R5 in time frame 8": 0.35759259259259263,
-        "eige of DEATH in time frame 9": 0.4991242624985444
+        "btw of T1-R5 in time frame 7": 0.1259259259259259,
+        "btw of T2-R4 in time frame 5": 0.17222222222222222,
+        "eige of T1-R4 in time frame 9": 0.277628791766873,
+        "eige of T1-R5 in time frame 8": 0.39424078089577735,
+        "eige of T2-R5 in time frame 1": 0.39784881077814616
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.36,
-        "btw of T2-R5 in time frame 8": 0.0637037037037037,
-        "eige of DEATH in time frame 9": 0.4748941111940825
+        "btw of T1-R5 in time frame 7": 0.03333333333333333,
+        "btw of T2-R4 in time frame 5": 0.16666666666666669,
+        "eige of T1-R4 in time frame 9": 1.2682922924439393e-10,
+        "eige of T1-R5 in time frame 8": 0.18361397978521726,
+        "eige of T2-R5 in time frame 1": 0.447209654262095
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.45714285714285713,
-        "btw of T2-R5 in time frame 8": 0.0651875901875902,
-        "eige of DEATH in time frame 9": 0.5503496388384326
+        "btw of T1-R5 in time frame 7": 0.025,
+        "btw of T2-R4 in time frame 5": 0.03629629629629629,
+        "eige of T1-R4 in time frame 9": 0.22891282992235076,
+        "eige of T1-R5 in time frame 8": 0.3494948105830663,
+        "eige of T2-R5 in time frame 1": 0.2684364881871765
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.32000000000000006,
-        "btw of T2-R5 in time frame 8": 0.046296296296296294,
-        "eige of DEATH in time frame 9": 0.31284961115960835
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.011111111111111112,
+        "eige of T1-R4 in time frame 9": 0.28585815849398316,
+        "eige of T1-R5 in time frame 8": 1.884008202881603e-06,
+        "eige of T2-R5 in time frame 1": 0.5345213359090978
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.32000000000000006,
-        "btw of T2-R5 in time frame 8": 0.08888888888888889,
-        "eige of DEATH in time frame 9": 0.5296717901106478
+        "btw of T1-R5 in time frame 7": 0.0574074074074074,
+        "btw of T2-R4 in time frame 5": 0.07407407407407407,
+        "eige of T1-R4 in time frame 9": 0.34167698534848034,
+        "eige of T1-R5 in time frame 8": 0.262220231122114,
+        "eige of T2-R5 in time frame 1": 0.4862971256927588
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 6,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.22727272727272727,
-        "btw of T2-R5 in time frame 8": 0.040740740740740744,
-        "eige of DEATH in time frame 9": 0.16783606029689283
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.3611111111111111,
+        "eige of T1-R4 in time frame 9": 0.3752928398884301,
+        "eige of T1-R5 in time frame 8": 0.28642772157221225,
+        "eige of T2-R5 in time frame 1": 2.607561528984972e-23
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.047592592592592596,
-        "eige of DEATH in time frame 9": 0.2044355202480329
+        "btw of T1-R5 in time frame 7": 0.05129629629629629,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.3875249523835732,
+        "eige of T1-R5 in time frame 8": 0.38703480561090614,
+        "eige of T2-R5 in time frame 1": 0.49999999998300176
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.3,
-        "btw of T2-R5 in time frame 8": 0.0549438832772166,
-        "eige of DEATH in time frame 9": 0.5789561803016218
+        "btw of T1-R5 in time frame 7": 0.06984126984126984,
+        "btw of T2-R4 in time frame 5": 0.2037037037037037,
+        "eige of T1-R4 in time frame 9": 0.3955928130071373,
+        "eige of T1-R5 in time frame 8": 0.3046917449152949,
+        "eige of T2-R5 in time frame 1": 0.4009063845535714
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.15,
-        "btw of T2-R5 in time frame 8": 0.14333333333333334,
-        "eige of DEATH in time frame 9": 0.3903620998316877
+        "btw of T1-R5 in time frame 7": 0.022222222222222223,
+        "btw of T2-R4 in time frame 5": 0.022222222222222223,
+        "eige of T1-R4 in time frame 9": 0.19517860699821304,
+        "eige of T1-R5 in time frame 8": 0.348090093672781,
+        "eige of T2-R5 in time frame 1": 0.33380157013397493
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.4263157894736842,
-        "btw of T2-R5 in time frame 8": 0.03944444444444444,
-        "eige of DEATH in time frame 9": 0.4951203628120821
+        "btw of T1-R5 in time frame 7": 0.06666666666666667,
+        "btw of T2-R4 in time frame 5": 0.23333333333333334,
+        "eige of T1-R4 in time frame 9": 0.15862536287225248,
+        "eige of T1-R5 in time frame 8": 0.13522894403381083,
+        "eige of T2-R5 in time frame 1": 0.0013118723103687075
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.324,
-        "btw of T2-R5 in time frame 8": 0.01,
-        "eige of DEATH in time frame 9": 0.0021863326869624535
+        "btw of T1-R5 in time frame 7": 0.18626984126984125,
+        "btw of T2-R4 in time frame 5": 0.011111111111111112,
+        "eige of T1-R4 in time frame 9": 0.0,
+        "eige of T1-R5 in time frame 8": 0.1290552185721198,
+        "eige of T2-R5 in time frame 1": 0.004948872051551134
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.1259259259259259,
-        "eige of DEATH in time frame 9": 0.5160880565556619
+        "btw of T1-R5 in time frame 7": 0.017592592592592594,
+        "btw of T2-R4 in time frame 5": 0.15092592592592594,
+        "eige of T1-R4 in time frame 9": 0.27779818589855126,
+        "eige of T1-R5 in time frame 8": 0.40113895184566384,
+        "eige of T2-R5 in time frame 1": 0.33333289873528144
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.3272727272727272,
-        "btw of T2-R5 in time frame 8": 0.1542416225749559,
-        "eige of DEATH in time frame 9": 0.5519704559700073
+        "btw of T1-R5 in time frame 7": 0.005555555555555556,
+        "btw of T2-R4 in time frame 5": 0.022222222222222223,
+        "eige of T1-R4 in time frame 9": 0.14159730679869295,
+        "eige of T1-R5 in time frame 8": 0.3882170971179635,
+        "eige of T2-R5 in time frame 1": 0.39999535508701284
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.05432659932659931,
-        "eige of DEATH in time frame 9": 0.6447670968458877
+        "btw of T1-R5 in time frame 7": 0.24444444444444446,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 3.1120928459414094e-06,
+        "eige of T1-R5 in time frame 8": 0.23258976688361976,
+        "eige of T2-R5 in time frame 1": 6.483934037756814e-06
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.36070611146383125
+        "btw of T1-R5 in time frame 7": 0.2111111111111111,
+        "btw of T2-R4 in time frame 5": 0.05555555555555556,
+        "eige of T1-R4 in time frame 9": 0.21513114964330649,
+        "eige of T1-R5 in time frame 8": 6.327005210881142e-24,
+        "eige of T2-R5 in time frame 1": 0.3779642670339253
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.044444444444444446,
-        "eige of DEATH in time frame 9": 0.3664903628641561
+        "btw of T1-R5 in time frame 7": 0.04777777777777778,
+        "btw of T2-R4 in time frame 5": 0.011111111111111112,
+        "eige of T1-R4 in time frame 9": 1.5736621783164763e-19,
+        "eige of T1-R5 in time frame 8": 5.417517740856144e-06,
+        "eige of T2-R5 in time frame 1": 0.33333284191175583
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.2777777777777778,
-        "btw of T2-R5 in time frame 8": 0.08148148148148149,
-        "eige of DEATH in time frame 9": 0.46649859090614515
+        "btw of T1-R5 in time frame 7": 0.003703703703703704,
+        "btw of T2-R4 in time frame 5": 0.09537037037037036,
+        "eige of T1-R4 in time frame 9": 0.4612307779282764,
+        "eige of T1-R5 in time frame 8": 0.3649305234553369,
+        "eige of T2-R5 in time frame 1": 0.40824829046188277
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.3,
-        "btw of T2-R5 in time frame 8": 0.018518518518518517,
-        "eige of DEATH in time frame 9": 0.5683555363704067
+        "btw of T1-R5 in time frame 7": 0.08888888888888889,
+        "btw of T2-R4 in time frame 5": 0.037962962962962955,
+        "eige of T1-R4 in time frame 9": 0.06880103776436476,
+        "eige of T1-R5 in time frame 8": 0.3650744574253022,
+        "eige of T2-R5 in time frame 1": 0.30151134453420053
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.05666666666666668,
-        "eige of DEATH in time frame 9": 0.29599678590676815
+        "btw of T1-R5 in time frame 7": 0.03721901555234888,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.3991164399555354,
+        "eige of T1-R5 in time frame 8": 0.16014137808537543,
+        "eige of T2-R5 in time frame 1": 0.40824829067204793
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.2722222222222222,
-        "btw of T2-R5 in time frame 8": 0.09768518518518518,
-        "eige of DEATH in time frame 9": 0.47896110634037464
+        "btw of T1-R5 in time frame 7": 0.040740740740740744,
+        "btw of T2-R4 in time frame 5": 0.19444444444444445,
+        "eige of T1-R4 in time frame 9": 0.3422434909824178,
+        "eige of T1-R5 in time frame 8": 0.16779540052201328,
+        "eige of T2-R5 in time frame 1": 0.24629190571090545
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.022222222222222223,
-        "eige of DEATH in time frame 9": 0.44214716109223506
+        "btw of T1-R5 in time frame 7": 0.022037037037037032,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.2833958946058841,
+        "eige of T1-R5 in time frame 8": 7.755384831750472e-07,
+        "eige of T2-R5 in time frame 1": 0.4001442589322945
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.022222222222222223,
-        "eige of DEATH in time frame 9": 0.48100671274408635
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.06481481481481481,
+        "eige of T1-R4 in time frame 9": 0.32966433495266984,
+        "eige of T1-R5 in time frame 8": 0.22360648526607071,
+        "eige of T2-R5 in time frame 1": 0.386128972526566
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.24,
-        "btw of T2-R5 in time frame 8": 0.05555555555555556,
-        "eige of DEATH in time frame 9": 0.477949315789615
+        "btw of T1-R5 in time frame 7": 0.13407407407407407,
+        "btw of T2-R4 in time frame 5": 0.044444444444444446,
+        "eige of T1-R4 in time frame 9": 0.33049041106608185,
+        "eige of T1-R5 in time frame 8": 0.15833365390478035,
+        "eige of T2-R5 in time frame 1": 0.4031746668435477
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.3047619047619048,
-        "btw of T2-R5 in time frame 8": 0.10925925925925925,
-        "eige of DEATH in time frame 9": 0.5943344113357575
+        "btw of T1-R5 in time frame 7": 0.05555555555555556,
+        "btw of T2-R4 in time frame 5": 0.03148148148148148,
+        "eige of T1-R4 in time frame 9": 0.37679303276947895,
+        "eige of T1-R5 in time frame 8": 0.3290907209974807,
+        "eige of T2-R5 in time frame 1": 0.39999999999020974
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.002777777777777778,
-        "eige of DEATH in time frame 9": 0.47245549856523816
+        "btw of T1-R5 in time frame 7": 0.1827777777777778,
+        "btw of T2-R4 in time frame 5": 0.0077777777777777776,
+        "eige of T1-R4 in time frame 9": 1.9800387252143232e-11,
+        "eige of T1-R5 in time frame 8": 5.902854357810719e-07,
+        "eige of T2-R5 in time frame 1": 0.4850711324582738
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.4263157894736842,
-        "btw of T2-R5 in time frame 8": 0.21203703703703702,
-        "eige of DEATH in time frame 9": 0.3309943966903878
+        "btw of T1-R5 in time frame 7": 0.06092592592592592,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.20806647842466963,
+        "eige of T1-R5 in time frame 8": 0.355604340186975,
+        "eige of T2-R5 in time frame 1": 0.45325149653398866
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.13333333333333333,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.4631624723143599
+        "btw of T1-R5 in time frame 7": 0.027513227513227514,
+        "btw of T2-R4 in time frame 5": 0.018518518518518517,
+        "eige of T1-R4 in time frame 9": 0.21495634070366565,
+        "eige of T1-R5 in time frame 8": 1.3765103082270764e-07,
+        "eige of T2-R5 in time frame 1": 0.48986707183079403
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.5053451726027268
+        "btw of T1-R5 in time frame 7": 0.03132275132275133,
+        "btw of T2-R4 in time frame 5": 0.007407407407407408,
+        "eige of T1-R4 in time frame 9": 0.3450623381156695,
+        "eige of T1-R5 in time frame 8": 1.6815415885096227e-17,
+        "eige of T2-R5 in time frame 1": 0.49999999987074556
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.3407002169341006
+        "btw of T1-R5 in time frame 7": 0.06481481481481481,
+        "btw of T2-R4 in time frame 5": 0.014814814814814815,
+        "eige of T1-R4 in time frame 9": 0.3418111776361676,
+        "eige of T1-R5 in time frame 8": 0.3653540047141067,
+        "eige of T2-R5 in time frame 1": 0.44721109648614
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.15,
-        "btw of T2-R5 in time frame 8": 0.07235449735449735,
-        "eige of DEATH in time frame 9": 0.5017440188136081
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.028518518518518523,
+        "eige of T1-R4 in time frame 9": 0.3477216786472836,
+        "eige of T1-R5 in time frame 8": 0.4511855241381052,
+        "eige of T2-R5 in time frame 1": 0.3605047084119857
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.2777777777777778,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.5778923064497667
+        "btw of T1-R5 in time frame 7": 0.02777777777777778,
+        "btw of T2-R4 in time frame 5": 0.053703703703703705,
+        "eige of T1-R4 in time frame 9": 0.15062312230080335,
+        "eige of T1-R5 in time frame 8": 0.41595734656386474,
+        "eige of T2-R5 in time frame 1": 0.43346930342856316
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.09494708994708993,
-        "eige of DEATH in time frame 9": 0.42203470424880196
+        "btw of T1-R5 in time frame 7": 0.2388888888888889,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.38405749270336886,
+        "eige of T1-R5 in time frame 8": 0.32356217446077634,
+        "eige of T2-R5 in time frame 1": 5.5534424478177876e-21
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.2777777777777778,
-        "btw of T2-R5 in time frame 8": 0.15555555555555556,
-        "eige of DEATH in time frame 9": 2.7239220167642518e-42
+        "btw of T1-R5 in time frame 7": 0.027592592592592596,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.49735534403502013,
+        "eige of T1-R5 in time frame 8": 0.05049929431531313,
+        "eige of T2-R5 in time frame 1": 0.2970442628673586
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.2722222222222222,
-        "btw of T2-R5 in time frame 8": 0.020370370370370372,
-        "eige of DEATH in time frame 9": 0.30189634430919005
+        "btw of T1-R5 in time frame 7": 0.040740740740740744,
+        "btw of T2-R4 in time frame 5": 0.029118165784832454,
+        "eige of T1-R4 in time frame 9": 0.07344383686674874,
+        "eige of T1-R5 in time frame 8": 0.34388380498628585,
+        "eige of T2-R5 in time frame 1": 0.4460661221273158
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.32000000000000006,
-        "btw of T2-R5 in time frame 8": 0.05814814814814814,
-        "eige of DEATH in time frame 9": 0.5447007727742962
+        "btw of T1-R5 in time frame 7": 0.006481481481481481,
+        "btw of T2-R4 in time frame 5": 0.05555555555555556,
+        "eige of T1-R4 in time frame 9": 0.3522623971785724,
+        "eige of T1-R5 in time frame 8": 0.273052056983659,
+        "eige of T2-R5 in time frame 1": 0.6154559395030516
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.27692307692307694,
-        "btw of T2-R5 in time frame 8": 0.044444444444444446,
-        "eige of DEATH in time frame 9": 0.3732718305053018
+        "btw of T1-R5 in time frame 7": 0.15,
+        "btw of T2-R4 in time frame 5": 0.011111111111111112,
+        "eige of T1-R4 in time frame 9": 0.3638827853911254,
+        "eige of T1-R5 in time frame 8": 7.30267531376269e-07,
+        "eige of T2-R5 in time frame 1": 0.21317207515821093
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.3521739130434783,
-        "btw of T2-R5 in time frame 8": 0.12037037037037038,
-        "eige of DEATH in time frame 9": 0.42260660929357197
+        "btw of T1-R5 in time frame 7": 0.2690740740740741,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.2988850434656945,
+        "eige of T1-R5 in time frame 8": 0.4508745815941242,
+        "eige of T2-R5 in time frame 1": 0.2675652803974676
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.35714285714285715,
-        "btw of T2-R5 in time frame 8": 0.07751322751322752,
-        "eige of DEATH in time frame 9": 0.4101836973991385
+        "btw of T1-R5 in time frame 7": 0.18592592592592594,
+        "btw of T2-R4 in time frame 5": 0.04685185185185185,
+        "eige of T1-R4 in time frame 9": 0.1811183613744736,
+        "eige of T1-R5 in time frame 8": 0.276243997845483,
+        "eige of T2-R5 in time frame 1": 0.39735919317315405
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.22727272727272727,
-        "btw of T2-R5 in time frame 8": 0.17333333333333334,
-        "eige of DEATH in time frame 9": 0.44800412721828275
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.09407215799164564,
+        "eige of T1-R5 in time frame 8": 0.2776459036913081,
+        "eige of T2-R5 in time frame 1": 0.272285863670977
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.07777777777777778,
-        "eige of DEATH in time frame 9": 0.5896587425727453
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.398839056967396,
+        "eige of T1-R5 in time frame 8": 0.40590146243406866,
+        "eige of T2-R5 in time frame 1": 0.5445714604566969
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.1,
-        "btw of T2-R5 in time frame 8": 0.06582010582010582,
-        "eige of DEATH in time frame 9": 0.17843472702993585
+        "btw of T1-R5 in time frame 7": 0.2759259259259259,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.45834577883770955,
+        "eige of T1-R5 in time frame 8": 0.09768581897156751,
+        "eige of T2-R5 in time frame 1": 2.458336608800588e-15
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.1,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.3526617577649586
+        "btw of T1-R5 in time frame 7": 0.11111111111111112,
+        "btw of T2-R4 in time frame 5": 0.044444444444444446,
+        "eige of T1-R4 in time frame 9": 0.3991610600280176,
+        "eige of T1-R5 in time frame 8": 0.34853356275929676,
+        "eige of T2-R5 in time frame 1": 0.4850708036394674
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.30624999999999997,
-        "btw of T2-R5 in time frame 8": 0.02777777777777778,
-        "eige of DEATH in time frame 9": 0.44666843640443105
+        "btw of T1-R5 in time frame 7": 0.07666666666666666,
+        "btw of T2-R4 in time frame 5": 0.10555555555555556,
+        "eige of T1-R4 in time frame 9": 0.05795167720577261,
+        "eige of T1-R5 in time frame 8": 0.301511765211771,
+        "eige of T2-R5 in time frame 1": 0.49999999998470157
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.14314814814814814,
-        "eige of DEATH in time frame 9": 0.5547114321030765
+        "btw of T1-R5 in time frame 7": 0.13333333333333333,
+        "btw of T2-R4 in time frame 5": 0.03333333333333333,
+        "eige of T1-R4 in time frame 9": 2.281343626369364e-37,
+        "eige of T1-R5 in time frame 8": 0.2995703156334797,
+        "eige of T2-R5 in time frame 1": 0.344799619253844
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 6,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.4368771792981372
+        "btw of T1-R5 in time frame 7": 0.06666666666666667,
+        "btw of T2-R4 in time frame 5": 0.005555555555555556,
+        "eige of T1-R4 in time frame 9": 0.29493187921419967,
+        "eige of T1-R5 in time frame 8": 0.44218077920283705,
+        "eige of T2-R5 in time frame 1": 0.29276939480331887
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.32000000000000006,
-        "btw of T2-R5 in time frame 8": 0.11277777777777778,
-        "eige of DEATH in time frame 9": 0.5738543129654798
+        "btw of T1-R5 in time frame 7": 0.009259259259259259,
+        "btw of T2-R4 in time frame 5": 0.02917989417989418,
+        "eige of T1-R4 in time frame 9": 0.23586662132601965,
+        "eige of T1-R5 in time frame 8": 0.20967161429420694,
+        "eige of T2-R5 in time frame 1": 0.44721213159509654
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.09185185185185185,
-        "eige of DEATH in time frame 9": 0.37225656609587976
+        "btw of T1-R5 in time frame 7": 0.06444444444444444,
+        "btw of T2-R4 in time frame 5": 0.003703703703703704,
+        "eige of T1-R4 in time frame 9": 0.28908791166918973,
+        "eige of T1-R5 in time frame 8": 0.0765692102113569,
+        "eige of T2-R5 in time frame 1": 0.40783522070307254
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 6,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.005555555555555556,
-        "eige of DEATH in time frame 9": 0.25468217608278765
+        "btw of T1-R5 in time frame 7": 0.08703703703703705,
+        "btw of T2-R4 in time frame 5": 0.26055555555555554,
+        "eige of T1-R4 in time frame 9": 0.4122414232806768,
+        "eige of T1-R5 in time frame 8": 3.3382625229546534e-22,
+        "eige of T2-R5 in time frame 1": 0.3770322905078781
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.32000000000000006,
-        "btw of T2-R5 in time frame 8": 0.03333333333333333,
-        "eige of DEATH in time frame 9": 0.4472264547602425
+        "btw of T1-R5 in time frame 7": 0.014814814814814815,
+        "btw of T2-R4 in time frame 5": 0.10333333333333332,
+        "eige of T1-R4 in time frame 9": 0.25818652746693294,
+        "eige of T1-R5 in time frame 8": 0.09394579507223623,
+        "eige of T2-R5 in time frame 1": 0.35392577507354167
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.06277777777777778,
-        "eige of DEATH in time frame 9": 0.564200099527174
+        "btw of T1-R5 in time frame 7": 0.11111111111111112,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.09073449103134142,
+        "eige of T1-R5 in time frame 8": 0.4609180817888313,
+        "eige of T2-R5 in time frame 1": 0.5222329678380621
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.1,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.590824381441609
+        "btw of T1-R5 in time frame 7": 0.005555555555555556,
+        "btw of T2-R4 in time frame 5": 0.1277777777777778,
+        "eige of T1-R4 in time frame 9": 0.27710032864701845,
+        "eige of T1-R5 in time frame 8": 0.26285557233576473,
+        "eige of T2-R5 in time frame 1": 0.32213354997480875
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.07222222222222223,
-        "eige of DEATH in time frame 9": 0.5227786303199087
+        "btw of T1-R5 in time frame 7": 0.22777777777777777,
+        "btw of T2-R4 in time frame 5": 0.05,
+        "eige of T1-R4 in time frame 9": 0.3593930791516267,
+        "eige of T1-R5 in time frame 8": 0.25098146064427274,
+        "eige of T2-R5 in time frame 1": 0.49999999998479816
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.2,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.4975207591076896
+        "btw of T1-R5 in time frame 7": 0.061111111111111116,
+        "btw of T2-R4 in time frame 5": 0.005555555555555556,
+        "eige of T1-R4 in time frame 9": 0.29931536896856,
+        "eige of T1-R5 in time frame 8": 1.3758222494801316e-14,
+        "eige of T2-R5 in time frame 1": 4.485452067370931e-18
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.2,
-        "btw of T2-R5 in time frame 8": 0.09537037037037036,
-        "eige of DEATH in time frame 9": 0.6625715931740692
+        "btw of T1-R5 in time frame 7": 0.020370370370370372,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.21851215939957475,
+        "eige of T1-R5 in time frame 8": 0.27245079817561996,
+        "eige of T2-R5 in time frame 1": 0.39999848397168
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.18749978915553217
+        "btw of T1-R5 in time frame 7": 0.12407407407407407,
+        "btw of T2-R4 in time frame 5": 0.13333333333333333,
+        "eige of T1-R4 in time frame 9": 0.4374997407454794,
+        "eige of T1-R5 in time frame 8": 0.39391703369500675,
+        "eige of T2-R5 in time frame 1": 0.4850703160162342
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.25,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.28918288030436096
+        "btw of T1-R5 in time frame 7": 0.09240740740740741,
+        "btw of T2-R4 in time frame 5": 0.027248677248677248,
+        "eige of T1-R4 in time frame 9": 0.23186865346887353,
+        "eige of T1-R5 in time frame 8": 0.37796447300765573,
+        "eige of T2-R5 in time frame 1": 0.3938346930710626
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.2,
-        "btw of T2-R5 in time frame 8": 0.04814814814814815,
-        "eige of DEATH in time frame 9": 0.14306210576983877
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.011111111111111112,
+        "eige of T1-R4 in time frame 9": 0.5115647643801366,
+        "eige of T1-R5 in time frame 8": 0.13880020632433693,
+        "eige of T2-R5 in time frame 1": 0.49999999998470157
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.3857142857142857,
-        "btw of T2-R5 in time frame 8": 0.07117283950617286,
-        "eige of DEATH in time frame 9": 0.3432525375205579
+        "btw of T1-R5 in time frame 7": 0.09074074074074073,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.28376416400451154,
+        "eige of T1-R5 in time frame 8": 0.2125352569538645,
+        "eige of T2-R5 in time frame 1": 0.2886751343652996
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.24499999999999997,
-        "btw of T2-R5 in time frame 8": 0.12591269841269842,
-        "eige of DEATH in time frame 9": 0.5455889446606963
+        "btw of T1-R5 in time frame 7": 0.07722222222222222,
+        "btw of T2-R4 in time frame 5": 0.014814814814814815,
+        "eige of T1-R4 in time frame 9": 0.3339531693116368,
+        "eige of T1-R5 in time frame 8": 0.2855869227342794,
+        "eige of T2-R5 in time frame 1": 0.4629036836842772
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.23703703703703705,
-        "btw of T2-R5 in time frame 8": 0.13962962962962963,
-        "eige of DEATH in time frame 9": 0.6772213413763607
+        "btw of T1-R5 in time frame 7": 0.2796296296296296,
+        "btw of T2-R4 in time frame 5": 0.19629629629629633,
+        "eige of T1-R4 in time frame 9": 4.356098791936939e-06,
+        "eige of T1-R5 in time frame 8": 0.24944192770928722,
+        "eige of T2-R5 in time frame 1": 0.469949594403984
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.1546169283166778
+        "btw of T1-R5 in time frame 7": 0.0959259259259259,
+        "btw of T2-R4 in time frame 5": 0.05925925925925926,
+        "eige of T1-R4 in time frame 9": 0.4456505906832905,
+        "eige of T1-R5 in time frame 8": 2.1324763291180192e-07,
+        "eige of T2-R5 in time frame 1": 0.49999999998980105
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.35,
-        "btw of T2-R5 in time frame 8": 0.27148148148148155,
-        "eige of DEATH in time frame 9": 0.5076772790651743
+        "btw of T1-R5 in time frame 7": 0.011111111111111112,
+        "btw of T2-R4 in time frame 5": 0.08703703703703704,
+        "eige of T1-R4 in time frame 9": 4.1528184472885054e-16,
+        "eige of T1-R5 in time frame 8": 0.3143992675611294,
+        "eige of T2-R5 in time frame 1": 0.34815499490148144
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 6,
-        "cls of T2-R4 in time frame 2": 0.2,
-        "btw of T2-R5 in time frame 8": 0.17743827160493827,
-        "eige of DEATH in time frame 9": 4.412548963492152e-18
+        "btw of T1-R5 in time frame 7": 0.20703703703703705,
+        "btw of T2-R4 in time frame 5": 0.11198412698412699,
+        "eige of T1-R4 in time frame 9": 4.412548963492152e-18,
+        "eige of T1-R5 in time frame 8": 0.307031631636249,
+        "eige of T2-R5 in time frame 1": 0.49999999968195263
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.24545454545454545,
-        "btw of T2-R5 in time frame 8": 0.03222222222222222,
-        "eige of DEATH in time frame 9": 0.45858678458274144
+        "btw of T1-R5 in time frame 7": 0.011111111111111112,
+        "btw of T2-R4 in time frame 5": 0.011111111111111112,
+        "eige of T1-R4 in time frame 9": 0.3618620796593316,
+        "eige of T1-R5 in time frame 8": 0.34029908303389755,
+        "eige of T2-R5 in time frame 1": 6.214848820553743e-07
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.03888888888888889,
-        "eige of DEATH in time frame 9": 0.34073821876301974
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.4020995869248701,
+        "eige of T1-R5 in time frame 8": 0.3499261977381611,
+        "eige of T2-R5 in time frame 1": 0.38924947207012495
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.3857142857142857,
-        "btw of T2-R5 in time frame 8": 0.05555555555555556,
-        "eige of DEATH in time frame 9": 0.56075072049181
+        "btw of T1-R5 in time frame 7": 0.06993386243386245,
+        "btw of T2-R4 in time frame 5": 0.022222222222222223,
+        "eige of T1-R4 in time frame 9": 0.3819277098887905,
+        "eige of T1-R5 in time frame 8": 0.5027463532764542,
+        "eige of T2-R5 in time frame 1": 7.575705848609209e-06
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.30624999999999997,
-        "btw of T2-R5 in time frame 8": 0.024259259259259258,
-        "eige of DEATH in time frame 9": 0.4178637564314649
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.022222222222222223,
+        "eige of T1-R4 in time frame 9": 0.05898775629924898,
+        "eige of T1-R5 in time frame 8": 0.264707644350686,
+        "eige of T2-R5 in time frame 1": 0.5222329678237547
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.15,
-        "btw of T2-R5 in time frame 8": 0.03444444444444445,
-        "eige of DEATH in time frame 9": 0.43470205803355905
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.07222222222222223,
+        "eige of T1-R4 in time frame 9": 0.1972350869019431,
+        "eige of T1-R5 in time frame 8": 0.09075066805010154,
+        "eige of T2-R5 in time frame 1": 0.3922296889620379
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.09722222222222222,
-        "eige of DEATH in time frame 9": 0.4674401397168572
+        "btw of T1-R5 in time frame 7": 0.10465608465608467,
+        "btw of T2-R4 in time frame 5": 0.005555555555555556,
+        "eige of T1-R4 in time frame 9": 0.2626562707439263,
+        "eige of T1-R5 in time frame 8": 0.1562477662185105,
+        "eige of T2-R5 in time frame 1": 0.4999999999702045
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.4083333333333333,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.1623388401723667
+        "btw of T1-R5 in time frame 7": 0.11481481481481483,
+        "btw of T2-R4 in time frame 5": 0.25333333333333335,
+        "eige of T1-R4 in time frame 9": 0.5188204043609135,
+        "eige of T1-R5 in time frame 8": 0.37796245403770584,
+        "eige of T2-R5 in time frame 1": 0.33561592311400995
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22727272727272727,
-        "btw of T2-R5 in time frame 8": 0.06481481481481481,
-        "eige of DEATH in time frame 9": 0.63189703890559
+        "btw of T1-R5 in time frame 7": 0.030246913580246917,
+        "btw of T2-R4 in time frame 5": 0.011111111111111112,
+        "eige of T1-R4 in time frame 9": 0.19091299322155014,
+        "eige of T1-R5 in time frame 8": 0.02103405877421082,
+        "eige of T2-R5 in time frame 1": 0.47805349525068713
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.26666666666666666,
-        "btw of T2-R5 in time frame 8": 0.044444444444444446,
-        "eige of DEATH in time frame 9": 0.3609906381760843
+        "btw of T1-R5 in time frame 7": 0.14895943562610228,
+        "btw of T2-R4 in time frame 5": 0.05925925925925926,
+        "eige of T1-R4 in time frame 9": 0.34210965369697727,
+        "eige of T1-R5 in time frame 8": 0.14996843334032686,
+        "eige of T2-R5 in time frame 1": 7.70806911524552e-37
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.3521739130434783,
-        "btw of T2-R5 in time frame 8": 0.061111111111111116,
-        "eige of DEATH in time frame 9": 0.43663978774493123
+        "btw of T1-R5 in time frame 7": 0.20555555555555557,
+        "btw of T2-R4 in time frame 5": 0.022222222222222223,
+        "eige of T1-R4 in time frame 9": 0.30729936598930113,
+        "eige of T1-R5 in time frame 8": 0.5345211260400071,
+        "eige of T2-R5 in time frame 1": 0.4990699175451262
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.35,
-        "btw of T2-R5 in time frame 8": 0.03333333333333333,
-        "eige of DEATH in time frame 9": 0.4229891960665939
+        "btw of T1-R5 in time frame 7": 0.011111111111111112,
+        "btw of T2-R4 in time frame 5": 0.022222222222222223,
+        "eige of T1-R4 in time frame 9": 0.2653224325719483,
+        "eige of T1-R5 in time frame 8": 3.4349598616347937e-06,
+        "eige of T2-R5 in time frame 1": 0.43643497762410843
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.11000000000000001,
-        "eige of DEATH in time frame 9": 0.5431707130707157
+        "btw of T1-R5 in time frame 7": 0.21481481481481482,
+        "btw of T2-R4 in time frame 5": 0.02777777777777778,
+        "eige of T1-R4 in time frame 9": 0.22313274894275675,
+        "eige of T1-R5 in time frame 8": 0.2591582422176528,
+        "eige of T2-R5 in time frame 1": 0.4330127018119576
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.324,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.41481925683141113
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.06325396825396826,
+        "eige of T1-R4 in time frame 9": 0.41481925691332355,
+        "eige of T1-R5 in time frame 8": 0.20504436926650157,
+        "eige of T2-R5 in time frame 1": 0.5305346198757221
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.26666666666666666,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.3837959319509684
+        "btw of T1-R5 in time frame 7": 0.09074074074074073,
+        "btw of T2-R4 in time frame 5": 0.1203703703703704,
+        "eige of T1-R4 in time frame 9": 0.19358557532419296,
+        "eige of T1-R5 in time frame 8": 0.30257890958002526,
+        "eige of T2-R5 in time frame 1": 0.2837036581949939
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.1,
-        "btw of T2-R5 in time frame 8": 0.005555555555555556,
-        "eige of DEATH in time frame 9": 0.33335481616315715
+        "btw of T1-R5 in time frame 7": 0.0059259259259259265,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.5032783728476052,
+        "eige of T1-R5 in time frame 8": 1.968633215796359e-09,
+        "eige of T2-R5 in time frame 1": 0.44721109648614
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.08407407407407406,
-        "eige of DEATH in time frame 9": 2.3841857909824213e-07
+        "btw of T1-R5 in time frame 7": 0.011111111111111112,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 5.245208740161326e-06,
+        "eige of T1-R5 in time frame 8": 0.0787579530695609,
+        "eige of T2-R5 in time frame 1": 0.3999992490186387
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.26666666666666666,
-        "btw of T2-R5 in time frame 8": 0.020370370370370372,
-        "eige of DEATH in time frame 9": 0.4943478247798548
+        "btw of T1-R5 in time frame 7": 0.015185185185185185,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.49434782478010947,
+        "eige of T1-R5 in time frame 8": 0.40036720875815446,
+        "eige of T2-R5 in time frame 1": 0.32791893101957476
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22857142857142856,
-        "btw of T2-R5 in time frame 8": 0.04907407407407407,
-        "eige of DEATH in time frame 9": 2.1812241729231443e-11
+        "btw of T1-R5 in time frame 7": 0.03333333333333333,
+        "btw of T2-R4 in time frame 5": 0.044444444444444446,
+        "eige of T1-R4 in time frame 9": 5.45306043230786e-10,
+        "eige of T1-R5 in time frame 8": 0.3043563125642998,
+        "eige of T2-R5 in time frame 1": 0.4999999999872513
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 6,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.04555555555555555,
-        "eige of DEATH in time frame 9": 0.43522089218767523
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.39111413499374564,
+        "eige of T1-R5 in time frame 8": 0.19221802284592987,
+        "eige of T2-R5 in time frame 1": 0.44721266258858416
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.36,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.18570845628825403
+        "btw of T1-R5 in time frame 7": 0.09574074074074075,
+        "btw of T2-R4 in time frame 5": 0.003703703703703704,
+        "eige of T1-R4 in time frame 9": 0.41522635158174126,
+        "eige of T1-R5 in time frame 8": 0.40884282963190893,
+        "eige of T2-R5 in time frame 1": 0.41256767448220477
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.22272727272727272,
-        "btw of T2-R5 in time frame 8": 0.06,
-        "eige of DEATH in time frame 9": 0.2963925026295515
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.10925925925925925,
+        "eige of T1-R4 in time frame 9": 0.36518488547322075,
+        "eige of T1-R5 in time frame 8": 0.1724587009530719,
+        "eige of T2-R5 in time frame 1": 0.3557617325777697
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.41819525714678607
+        "btw of T1-R5 in time frame 7": 0.22222222222222224,
+        "btw of T2-R4 in time frame 5": 0.06425925925925927,
+        "eige of T1-R4 in time frame 9": 0.3061398081275946,
+        "eige of T1-R5 in time frame 8": 1.348699538191808e-07,
+        "eige of T2-R5 in time frame 1": 0.0012448908704291866
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.13333333333333333,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.3177736423807819
+        "btw of T1-R5 in time frame 7": 0.022222222222222223,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.3808096853401078,
+        "eige of T1-R5 in time frame 8": 0.31480955903197655,
+        "eige of T2-R5 in time frame 1": 0.48507124992687406
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.3857142857142857,
-        "btw of T2-R5 in time frame 8": 0.20740740740740743,
-        "eige of DEATH in time frame 9": 0.565559058379928
+        "btw of T1-R5 in time frame 7": 0.20000000000000004,
+        "btw of T2-R4 in time frame 5": 0.1388888888888889,
+        "eige of T1-R4 in time frame 9": 0.265509858427886,
+        "eige of T1-R5 in time frame 8": 0.542044836780819,
+        "eige of T2-R5 in time frame 1": 0.25555099317184016
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.2777777777777778,
-        "btw of T2-R5 in time frame 8": 0.011111111111111112,
-        "eige of DEATH in time frame 9": 0.7127797821415051
+        "btw of T1-R5 in time frame 7": 0.14941798941798942,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 2.4469843718945364e-14,
+        "eige of T1-R5 in time frame 8": 0.4379081751040702,
+        "eige of T2-R5 in time frame 1": 0.4472128958094954
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.24074074074074073,
-        "eige of DEATH in time frame 9": 0.5298972881259182
+        "btw of T1-R5 in time frame 7": 0.048148148148148134,
+        "btw of T2-R4 in time frame 5": 0.03333333333333333,
+        "eige of T1-R4 in time frame 9": 9.429057312578288e-16,
+        "eige of T1-R5 in time frame 8": 0.297579512649144,
+        "eige of T2-R5 in time frame 1": 0.19141223674024452
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.324,
-        "btw of T2-R5 in time frame 8": 0.16111111111111107,
-        "eige of DEATH in time frame 9": 0.45749676792617705
+        "btw of T1-R5 in time frame 7": 0.005555555555555556,
+        "btw of T2-R4 in time frame 5": 0.03425925925925926,
+        "eige of T1-R4 in time frame 9": 3.272260438116127e-06,
+        "eige of T1-R5 in time frame 8": 0.15383510163960112,
+        "eige of T2-R5 in time frame 1": 0.3827818862019903
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.1,
-        "btw of T2-R5 in time frame 8": 0.02962962962962963,
-        "eige of DEATH in time frame 9": 0.5656863506732657
+        "btw of T1-R5 in time frame 7": 0.1764814814814815,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.39999772459911886,
+        "eige of T1-R5 in time frame 8": 0.29654772363278387,
+        "eige of T2-R5 in time frame 1": 0.36126976947484873
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.08888888888888889,
-        "eige of DEATH in time frame 9": 0.34144489110335585
+        "btw of T1-R5 in time frame 7": 0.011111111111111112,
+        "btw of T2-R4 in time frame 5": 0.012962962962962963,
+        "eige of T1-R4 in time frame 9": 0.439658822087559,
+        "eige of T1-R5 in time frame 8": 0.4242627903250171,
+        "eige of T2-R5 in time frame 1": 0.31622750816615214
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.01611111111111111,
-        "eige of DEATH in time frame 9": 0.47507309674110954
+        "btw of T1-R5 in time frame 7": 0.017592592592592594,
+        "btw of T2-R4 in time frame 5": 0.15925925925925927,
+        "eige of T1-R4 in time frame 9": 0.21453697745015735,
+        "eige of T1-R5 in time frame 8": 6.859049516571218e-13,
+        "eige of T2-R5 in time frame 1": 0.4595984874658388
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.13333333333333333,
-        "btw of T2-R5 in time frame 8": 0.035555555555555556,
-        "eige of DEATH in time frame 9": 0.5599279536692682
+        "btw of T1-R5 in time frame 7": 0.015555555555555555,
+        "btw of T2-R4 in time frame 5": 0.07777777777777778,
+        "eige of T1-R4 in time frame 9": 0.3284538078426918,
+        "eige of T1-R5 in time frame 8": 0.3725864195286725,
+        "eige of T2-R5 in time frame 1": 0.3015113445651883
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 6,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.3521739130434783,
-        "btw of T2-R5 in time frame 8": 0.06666666666666667,
-        "eige of DEATH in time frame 9": 0.5615212347367261
+        "btw of T1-R5 in time frame 7": 0.11187830687830687,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.25351433293742764,
+        "eige of T1-R5 in time frame 8": 0.20566049537841127,
+        "eige of T2-R5 in time frame 1": 0.4242248018400776
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.05037037037037037,
-        "eige of DEATH in time frame 9": 0.4329973808206669
+        "btw of T1-R5 in time frame 7": 0.05555555555555556,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.4144587500723707,
+        "eige of T1-R5 in time frame 8": 0.3993206567233856,
+        "eige of T2-R5 in time frame 1": 0.4242634456108664
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.26859783472085796
+        "btw of T1-R5 in time frame 7": 0.005555555555555556,
+        "btw of T2-R4 in time frame 5": 0.09074074074074073,
+        "eige of T1-R4 in time frame 9": 0.19662411127284074,
+        "eige of T1-R5 in time frame 8": 0.1526968785715999,
+        "eige of T2-R5 in time frame 1": 0.45408015255833917
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.22129629629629627,
-        "eige of DEATH in time frame 9": 0.5500876763866863
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.3956697907427526,
+        "eige of T1-R5 in time frame 8": 0.18062115853257416,
+        "eige of T2-R5 in time frame 1": 0.0014870689974625382
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.14761904761904762,
-        "eige of DEATH in time frame 9": 0.40688694736193143
+        "btw of T1-R5 in time frame 7": 0.046296296296296294,
+        "btw of T2-R4 in time frame 5": 0.09259259259259259,
+        "eige of T1-R4 in time frame 9": 0.4076777415682894,
+        "eige of T1-R5 in time frame 8": 0.23297918821069696,
+        "eige of T2-R5 in time frame 1": 0.3015113443211972
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.4083333333333333,
-        "btw of T2-R5 in time frame 8": 0.13564814814814816,
-        "eige of DEATH in time frame 9": 0.539280624412931
+        "btw of T1-R5 in time frame 7": 0.07388888888888888,
+        "btw of T2-R4 in time frame 5": 0.022222222222222223,
+        "eige of T1-R4 in time frame 9": 0.11234294624312505,
+        "eige of T1-R5 in time frame 8": 0.1517953273608974,
+        "eige of T2-R5 in time frame 1": 0.33397256276919807
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.07462962962962963,
-        "eige of DEATH in time frame 9": 0.48454521935525485
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.0287037037037037,
+        "eige of T1-R4 in time frame 9": 0.17318545078071404,
+        "eige of T1-R5 in time frame 8": 0.4310759664094765,
+        "eige of T2-R5 in time frame 1": 0.34097556612762525
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.14074074074074075,
-        "eige of DEATH in time frame 9": 0.41639387160580293
+        "btw of T1-R5 in time frame 7": 0.1307936507936508,
+        "btw of T2-R4 in time frame 5": 0.016666666666666666,
+        "eige of T1-R4 in time frame 9": 0.33195309684335556,
+        "eige of T1-R5 in time frame 8": 0.44423025314765946,
+        "eige of T2-R5 in time frame 1": 0.31812737550191983
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 4,
-        "outdeg of T1-R5 in time frame 11": 3,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.034107744107744115,
-        "eige of DEATH in time frame 9": 0.0011372703886850634
+        "btw of T1-R5 in time frame 7": 0.07891534391534392,
+        "btw of T2-R4 in time frame 5": 0.02777777777777778,
+        "eige of T1-R4 in time frame 9": 0.0022745407773701273,
+        "eige of T1-R5 in time frame 8": 0.2874298714192784,
+        "eige of T2-R5 in time frame 1": 0.348154486605202
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.26666666666666666,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.5019609668206895
+        "btw of T1-R5 in time frame 7": 0.125,
+        "btw of T2-R4 in time frame 5": 0.06666666666666667,
+        "eige of T1-R4 in time frame 9": 0.32617184072607264,
+        "eige of T1-R5 in time frame 8": 0.14051412157376159,
+        "eige of T2-R5 in time frame 1": 6.32700520987115e-24
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.2571428571428571,
-        "btw of T2-R5 in time frame 8": 0.04039682539682539,
-        "eige of DEATH in time frame 9": 0.29759378861925784
+        "btw of T1-R5 in time frame 7": 0.06574074074074074,
+        "btw of T2-R4 in time frame 5": 0.07944444444444443,
+        "eige of T1-R4 in time frame 9": 0.3616515064056416,
+        "eige of T1-R5 in time frame 8": 0.4109173323972173,
+        "eige of T2-R5 in time frame 1": 0.3477725410078695
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.10851851851851853,
-        "eige of DEATH in time frame 9": 0.5113650238361642
+        "btw of T1-R5 in time frame 7": 0.14425925925925928,
+        "btw of T2-R4 in time frame 5": 0.09814814814814816,
+        "eige of T1-R4 in time frame 9": 0.31453824611036857,
+        "eige of T1-R5 in time frame 8": 0.29251493229650977,
+        "eige of T2-R5 in time frame 1": 0.4431971653307741
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 3,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.35714285714285715,
-        "btw of T2-R5 in time frame 8": 0.04227513227513228,
-        "eige of DEATH in time frame 9": 0.5979843916174697
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.08611111111111111,
+        "eige of T1-R4 in time frame 9": 0.32929790262155223,
+        "eige of T1-R5 in time frame 8": 0.22644145450728925,
+        "eige of T2-R5 in time frame 1": 0.3691052963996943
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.3,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.5246135406544674
+        "btw of T1-R5 in time frame 7": 0.12148148148148148,
+        "btw of T2-R4 in time frame 5": 0.040740740740740744,
+        "eige of T1-R4 in time frame 9": 0.246862995014898,
+        "eige of T1-R5 in time frame 8": 9.548361343374524e-08,
+        "eige of T2-R5 in time frame 1": 0.5350742929316172
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.2111111111111111,
-        "eige of DEATH in time frame 9": 0.1847725698392242
+        "btw of T1-R5 in time frame 7": 0.02666666666666667,
+        "btw of T2-R4 in time frame 5": 0.06,
+        "eige of T1-R4 in time frame 9": 0.3167578911773275,
+        "eige of T1-R5 in time frame 8": 0.26612662470791393,
+        "eige of T2-R5 in time frame 1": 0.5327748686850292
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.4083333333333333,
-        "btw of T2-R5 in time frame 8": 0.044444444444444446,
-        "eige of DEATH in time frame 9": 0.36981178065874
+        "btw of T1-R5 in time frame 7": 0.1537037037037037,
+        "btw of T2-R4 in time frame 5": 0.06888888888888889,
+        "eige of T1-R4 in time frame 9": 0.33125313873416706,
+        "eige of T1-R5 in time frame 8": 0.2740150468929315,
+        "eige of T2-R5 in time frame 1": 0.28867513457806376
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 4,
-        "cls of T2-R4 in time frame 2": 0.13333333333333333,
-        "btw of T2-R5 in time frame 8": 0.04160493827160495,
-        "eige of DEATH in time frame 9": 0.39444111898277817
+        "btw of T1-R5 in time frame 7": 0.0,
+        "btw of T2-R4 in time frame 5": 0.011111111111111112,
+        "eige of T1-R4 in time frame 9": 0.09169518701442045,
+        "eige of T1-R5 in time frame 8": 0.2998980111257313,
+        "eige of T2-R5 in time frame 1": 0.2886747583446892
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 1,
-        "outdeg of T1-R5 in time frame 11": 2,
-        "cls of T2-R4 in time frame 2": 0.36,
-        "btw of T2-R5 in time frame 8": 0.09074074074074073,
-        "eige of DEATH in time frame 9": 1.651812369880113e-06
+        "btw of T1-R5 in time frame 7": 0.046296296296296294,
+        "btw of T2-R4 in time frame 5": 0.025925925925925925,
+        "eige of T1-R4 in time frame 9": 1.651812369880113e-06,
+        "eige of T1-R5 in time frame 8": 0.6129430197420604,
+        "eige of T2-R5 in time frame 1": 0.4999999998403288
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.1,
-        "btw of T2-R5 in time frame 8": 0.0,
-        "eige of DEATH in time frame 9": 0.6625860309104221
+        "btw of T1-R5 in time frame 7": 0.14259259259259258,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.16564935387991053,
+        "eige of T1-R5 in time frame 8": 2.7414336745672173e-07,
+        "eige of T2-R5 in time frame 1": 0.34815464798116436
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 0,
-        "outdeg of T1-R5 in time frame 11": 0,
-        "cls of T2-R4 in time frame 2": 0.0,
-        "btw of T2-R5 in time frame 8": 0.00814814814814815,
-        "eige of DEATH in time frame 9": 0.6123693350803875
+        "btw of T1-R5 in time frame 7": 0.1118783068783069,
+        "btw of T2-R4 in time frame 5": 0.024074074074074074,
+        "eige of T1-R4 in time frame 9": 0.20412311372124342,
+        "eige of T1-R5 in time frame 8": 0.3334964412708391,
+        "eige of T2-R5 in time frame 1": 0.3253000243058425
     },
     {
         "class": "T2",
         "outdeg of T1-R1 in time frame 12": 5,
-        "outdeg of T1-R5 in time frame 11": 5,
-        "cls of T2-R4 in time frame 2": 0.2722222222222222,
-        "btw of T2-R5 in time frame 8": 0.05444444444444445,
-        "eige of DEATH in time frame 9": 0.5501564083241607
+        "btw of T1-R5 in time frame 7": 0.16666666666666669,
+        "btw of T2-R4 in time frame 5": 0.0,
+        "eige of T1-R4 in time frame 9": 0.2049725340998936,
+        "eige of T1-R5 in time frame 8": 0.2830643179314352,
+        "eige of T2-R5 in time frame 1": 1.589457362388466e-07
     },
     {
         "class": "T1",
         "outdeg of T1-R1 in time frame 12": 2,
-        "outdeg of T1-R5 in time frame 11": 1,
-        "cls of T2-R4 in time frame 2": 0.22499999999999998,
-        "btw of T2-R5 in time frame 8": 0.15555555555555553,
-        "eige of DEATH in time frame 9": 0.17667730747936117
+        "btw of T1-R5 in time frame 7": 0.01388888888888889,
+        "btw of T2-R4 in time frame 5": 0.1,
+        "eige of T1-R4 in time frame 9": 0.3188489944742655,
+        "eige of T1-R5 in time frame 8": 0.2850906757735315,
+        "eige of T2-R5 in time frame 1": 0.49999999998470157
     }
 ]
