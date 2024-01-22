@@ -1,5 +1,8 @@
 features = [
-    [['outdeg', 0, 12], ['outdeg', 4, 11], ['cls', 8, 2], ['btw', 9, 8], ['eige', 10, 9]]
+    [['outdeg', 0, 12], ['btw', 4, 7], ['btw', 8, 5], ['eige', 3, 9], ['eige', 4, 8], ['eige', 9, 1]],
+    [['outdeg', 1, 5], ['btw', 1, 11], ['eige', 0, 0], ['eige', 1, 11], ['eige', 3, 7], ['eige', 5, 12]],
+    [['outdeg', 4, 11], ['outdeg', 4, 14], ['btw', 4, 14], ['btw', 5, 8], ['eige', 0, 11]],
+    [['indeg', 10, 10], ['cls', 3, 8], ['btw', 4, 7], ['eige', 4, 0], ['eige', 4, 5]]
 ]
 
 for feature_list in features:
