@@ -7,7 +7,7 @@ from classes.get_tree import create_decision_tree_files, create_decision_tree_fr
 
 
 def accuracy_fix(features):
-    return 0.02 * exp(len(features)/3)
+    return 0.02 * exp(len(features)/2.85)
 
 def chunk_split(a, n):
     k, m = divmod(len(a), n)
@@ -93,10 +93,12 @@ class GeneticAlgorithm:
 
     def threaded_fitness(self, args):
         id = args[0]
+        print(f'Process {id} started')
         args = args[1]
         computed_values = {}
         for i, individual in args:
-            print(f'{i+1}/{self.population_size}')
+            if (i+1) % 100 == 0:
+                print(f'{i+1}/{self.population_size}')
             raw_features = self.get_features(individual)
             features = []
             for feature in raw_features:
@@ -190,15 +192,15 @@ class GeneticAlgorithm:
     
 
 def main(games):
-    pop_size = 300
+    pop_size = 1000
     genetic_algorithm = GeneticAlgorithm(games, pop_size, [['indeg', 'outdeg', 'cls', 'btw', 'eige'], list(range(11)), list(range(30))])
-    i = genetic_algorithm.set_features([['outdeg', 0, 12], ['outdeg', 4, 11], ['cls', 8, 2], ['btw', 9, 8], ['eige', 10, 9]])
-    genetic_algorithm.population.population[0].individual = i
+    # i = genetic_algorithm.set_features([['outdeg', 0, 12], ['outdeg', 4, 11], ['cls', 8, 2], ['btw', 9, 8], ['eige', 10, 9]])
+    # genetic_algorithm.population.population[0].individual = i
 
     maxes = []
     avgs = []
     true_maxes = []
-    for i in range(100):
+    for i in range(200):
         print(f'Generation {i+1}')
         ma, mi, av, tma = genetic_algorithm.next_generation()
         maxes.append(ma)
