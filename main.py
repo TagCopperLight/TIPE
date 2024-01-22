@@ -90,11 +90,12 @@ def get_selected_features(games, features):
         create_decision_tree_files(games, features)
         tree = create_decision_tree()
         acc = tree.get_accuracy()
-        print(f'Fixed accuracy: {acc - accuracy_fix(features)}')
-        print(f'Accuracy: {acc}')
-        print(f'Features: {features}')
-        print(f'Number of features: {len(features)}')
-        print(f'3-fold cross validation: {tree.k_fold_cross_validation(3)}')
+        # print(f'Fixed accuracy: {acc - accuracy_fix(features)}')
+        # print(f'Accuracy: {acc}')
+        # print(f'Features: {features}')
+        # print(f'Number of features: {len(features)}')
+        # print(f'3-fold cross validation: {tree.k_fold_cross_validation(3)}')
+        print(f'Number of rules: {len(get_rules(tree, 0.7, 20))}')
         print()
 
 def get_rules(tree, confidence, support):
@@ -110,7 +111,7 @@ def get_rules(tree, confidence, support):
         else:
             if data[node.label] <= node.threshold:
                 return __get_path_rec(data, node.children[0], path)
-            else:
+            elif len(node.children) == 2:
                 return __get_path_rec(data, node.children[1], path)
 
     for game in data:
@@ -135,6 +136,8 @@ def get_rules(tree, confidence, support):
             print(f'{node.label} <= {node.threshold} & ', end='')
         print(f'\n{rule.label} (support: {rules[rule]["support"]}, confidence: {rules[rule]["confidence"]})')
 
+    return rules
+
 def main():
     games: list[Game] = get_games()
 
@@ -148,7 +151,8 @@ def main():
         [('cls', 'T2-R1', 12), ('eige', 'T1-R1', 10), ('eige', 'T1-R4', 7), ('eige', 'T2-R5', 14), ('eige', 'DEATH', 6)],
         [('outdeg', 'T2-R1', 5), ('outdeg', 'T1-R2', 10), ('cls', 'T2-R1', 5), ('cls', 'T2-R2', 3), ('cls', 'T1-R3', 13)],
         [('outdeg', 'T1-R4', 12), ('outdeg', 'T1-R5', 7), ('cls', 'T2-R4', 11), ('btw', 'T1-R4', 13), ('btw', 'T2-R2', 6), ('eige', 'T1-R5', 5)],
-        [('outdeg', 'T1-R1', 12), ('outdeg', 'T1-R5', 11), ('cls', 'T2-R4', 2), ('btw', 'T2-R5', 8), ('eige', 'DEATH', 9)]
+        [('outdeg', 'T1-R1', 12), ('outdeg', 'T1-R5', 11), ('cls', 'T2-R4', 2), ('btw', 'T2-R5', 8), ('eige', 'DEATH', 9)],
+        [('outdeg', 'T1-R1', 12), ('btw', 'T1-R5', 7), ('btw', 'T2-R4', 5), ('eige', 'T1-R4', 9), ('eige', 'T1-R5', 8), ('eige', 'T2-R5', 1)]
     ]
 
     # for features in trained_features:
