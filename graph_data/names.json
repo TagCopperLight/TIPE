@@ -5,10 +5,9 @@
     ],
     "features": [
         "outdeg of T1-R1 in time frame 12",
-        "btw of T1-R5 in time frame 7",
-        "btw of T2-R4 in time frame 5",
-        "eige of T1-R4 in time frame 9",
-        "eige of T1-R5 in time frame 8",
-        "eige of T2-R5 in time frame 1"
+        "outdeg of T1-R5 in time frame 11",
+        "cls of T2-R4 in time frame 2",
+        "btw of T2-R5 in time frame 8",
+        "eige of DEATH in time frame 9"
     ]
 }
