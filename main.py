@@ -2,8 +2,7 @@ import pathlib
 import json
 import pickle
 import logging
-import random
-import math
+import re
 import networkx as nx
 import matplotlib.pyplot as plt
 
@@ -179,15 +178,31 @@ def frequent_subgraph_mining(games, rule):
                 if data[node[0].label] <= node[0].threshold:
                     return False
         return True
+    
+    condition_nodes = []
+    for node in rule['path'][:-1]:
+        _, player, frame = re.search(r'([a-z]+) of ([a-zA-z0-9-]+) in time frame ([0-9]+)', node[0].label).groups()
+        condition_nodes.append((player, frame))
 
     for saved_matrics, game in zip(data, games):
         if __verify_rule(saved_matrics, rule['path']):
             games_satisfying_rules.append((game, saved_matrics))
 
+    frequent_subgraphs = []
+
     for time_frame in range(nb_time_frames):
+        condition_nodes_in_frame = [node for node in condition_nodes if node[1] == str(time_frame)]
+        
         graphs = [create_graph_from_game(game, time_frame) for game, _ in games_satisfying_rules]
-        frequent_subgraph = FSM(graphs, 0.75*len(games_satisfying_rules))
-        print(frequent_subgraph)
+        frequent_subgraph = FSM(graphs, 0.75*len(games_satisfying_rules), condition_nodes_in_frame)
+        frequent_subgraphs.append(frequent_subgraph)
+    
+    for time_frame, frequent_subgraph in enumerate(frequent_subgraphs):
+        # plt.subplot(5, 6, time_frame+1)
+        pos = nx.nx_agraph.graphviz_layout(frequent_subgraph)
+        nx.draw(frequent_subgraph, with_labels=True, font_weight='bold', pos=pos)
+
+        plt.show()
 
 def main():
     games: list[Game] = get_games()
