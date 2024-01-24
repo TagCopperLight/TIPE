@@ -1,6 +1,7 @@
+import tqdm
 import networkx as nx
-import matplotlib.pyplot as plt
 from itertools import combinations
+from PIL import Image
 
 def translate_features():
     features = [
@@ -49,11 +50,13 @@ class GraphCounter(dict):
             else:
                 self[hashe] = [1, graph]
 
-def FSM(graphs, min_support, condition_nodes):
+def FSM(args):
+    graphs, min_support, condition_nodes = args
+    
     frequent_subgraph = nx.DiGraph()
     if not condition_nodes:
         return frequent_subgraph
-
+    
     def find_subgraphs(graph, min_size=1, max_size=None):
         if max_size is None:
             max_size = len(graph.nodes)
@@ -68,8 +71,7 @@ def FSM(graphs, min_support, condition_nodes):
 
     counter = GraphCounter()
 
-    for i, graph in enumerate(graphs):
-        print(f'{i+1}/{len(graphs)}')
+    for graph in tqdm.tqdm(graphs, dynamic_ncols=True):
         subgraphs = find_subgraphs(graph, min_size=1)
 
         counter.update(subgraphs)
@@ -80,3 +82,12 @@ def FSM(graphs, min_support, condition_nodes):
             frequent_subgraph.add_edges_from(subgraph.edges)
     
     return frequent_subgraph
+
+def image_grid(imgs, rows, cols):
+
+    w, h = imgs[0].size
+    grid = Image.new('RGB', size=(cols*w, rows*h))
+    
+    for i, img in enumerate(imgs):
+        grid.paste(img, box=(i%cols*w, i//cols*h))
+    return grid
