@@ -3,13 +3,15 @@ import json
 import pickle
 import logging
 import re
+from PIL import Image, ImageOps
 import networkx as nx
 import matplotlib.pyplot as plt
+from multiprocessing import Pool
 
 from get_stats import Game, TimeFrame, show_interactions
 from classes.get_tree import create_decision_tree_files, create_decision_tree
-from classes.train_features import main as train_features, accuracy_fix
-from classes.utils import FSM
+from classes.train_features import main as train_features, accuracy_fix, chunk_split
+from classes.utils import FSM, image_grid
 
 
 log = logging.getLogger(__name__)
@@ -98,7 +100,7 @@ def get_selected_features(games, features):
         print(f'Number of rules: {len(get_rules(tree, 0.7, 20))}')
         print()
 
-def get_rules(tree, confidence, support):
+def get_rules(tree, confidence, support, verbose=False):
     rules = {}
 
     with open('graph_data/data.json', 'r') as file:
@@ -133,29 +135,21 @@ def get_rules(tree, confidence, support):
 
     rules = {rule: rules[rule] for rule in rules if rules[rule]["confidence"] >= confidence and rules[rule]["support"] >= support}
 
-    # for rule in rules:
-    #     print(f'IF ', end='')
-    #     for node in rules[rule]["path"]:
-    #         if node[1] == 'leaf':
-    #             print(f'THEN {node[0].label} win', end='')
-    #         else:
-    #             print(f'{node[0].label} {node[1]} {node[0].threshold} & ', end='')
-    #     print(f'\n{rule.label} (support: {rules[rule]["support"]}, confidence: {rules[rule]["confidence"]})')
-    #     print(f'\n(support: {rules[rule]["support"]}, confidence: {rules[rule]["confidence"]})')
-    # print()
+    if verbose:
+        for rule in rules:
+            print(f'IF ', end='')
+            for node in rules[rule]["path"]:
+                if node[1] == 'leaf':
+                    print(f'THEN {node[0].label} win', end='')
+                else:
+                    print(f'{node[0].label} {node[1]} {node[0].threshold} & ', end='')
+            print(f'\n{rule.label} (support: {rules[rule]["support"]}, confidence: {rules[rule]["confidence"]})')
+            print(f'\n(support: {rules[rule]["support"]}, confidence: {rules[rule]["confidence"]})')
+        print()
 
     return rules
 
-def frequent_subgraph_mining(games, rule):
-    print(f'IF ', end='')
-    for node in rule["path"]:
-        if node[1] == 'leaf':
-            print(f'THEN {node[0].label} win', end='')
-        else:
-            print(f'{node[0].label} {node[1]} {node[0].threshold} & ', end='')
-    print(f'\n(support: {rule["support"]}, confidence: {rule["confidence"]})')
-    print()
-
+def frequent_subgraph_mining(games, rule, minimum_support):
     games_satisfying_rules = []
     
     with open('graph_data/data.json', 'r') as file:
@@ -188,57 +182,90 @@ def frequent_subgraph_mining(games, rule):
         if __verify_rule(saved_matrics, rule['path']):
             games_satisfying_rules.append((game, saved_matrics))
 
-    frequent_subgraphs = []
-
+    args = []
+    
     for time_frame in range(nb_time_frames):
         condition_nodes_in_frame = [node for node in condition_nodes if node[1] == str(time_frame)]
-        
         graphs = [create_graph_from_game(game, time_frame) for game, _ in games_satisfying_rules]
-        frequent_subgraph = FSM(graphs, 0.75*len(games_satisfying_rules), condition_nodes_in_frame)
-        frequent_subgraphs.append(frequent_subgraph)
-    
-    for time_frame, frequent_subgraph in enumerate(frequent_subgraphs):
-        # plt.subplot(5, 6, time_frame+1)
-        pos = nx.nx_agraph.graphviz_layout(frequent_subgraph)
-        nx.draw(frequent_subgraph, with_labels=True, font_weight='bold', pos=pos)
+        args.append((graphs, minimum_support*len(games_satisfying_rules), condition_nodes_in_frame))
 
-        plt.show()
+    processes = 6
+    with Pool(processes=processes) as pool:
+        # frequent_subgraph = FSM(graphs, minimum_support*len(games_satisfying_rules), condition_nodes_in_frame)
+        # frequent_subgraphs.append(frequent_subgraph)
+        frequent_subgraphs = pool.map(FSM, [arg for arg in args], chunksize=1)
+        pool.close()
+    
+    return frequent_subgraphs
+
+def consruct_frequents_subgraphs_image(games, trained_features, winner='T2'):
+    graphs = []
+    total_rules = 0
+
+    for features in trained_features:
+        flatten_rule_list = []
+
+        create_decision_tree_files(games, features)
+        tree = create_decision_tree()
+        rules = get_rules(tree, 0.7, 20)
+        for rule in rules:
+            if rules[rule]['path'][-1][0].label == winner:
+                flatten_rule_list.append(rules[rule])
+        total_rules += len(flatten_rule_list)
+
+        # flatten_rule_list.sort(key=lambda x: x["support"]*x['confidence'], reverse=True)
+
+        for rule in flatten_rule_list:
+            print(f'Rule: {rule}')
+            frequent_subgraphs = frequent_subgraph_mining(games, rule, 0.5)
+            for time_frame, frequent_subgraph in enumerate(frequent_subgraphs):
+                if len(graphs) <= time_frame:
+                    graphs.append([])
+                graphs[time_frame].append(frequent_subgraph)
+    
+    print(f'Total rules: {total_rules}')
+    images = []
+    for frame in graphs:
+        merged_graph = nx.DiGraph()
+        for graph in frame:
+            merged_graph.add_nodes_from(graph.nodes)
+            merged_graph.add_edges_from(graph.edges)
+            
+        fig = plt.figure()
+        pos = nx.nx_agraph.graphviz_layout(merged_graph)
+        nx.draw(merged_graph, with_labels=True, font_weight='bold', pos=pos)
+        fig.canvas.draw()
+        image = Image.frombytes('RGB', fig.canvas.get_width_height(), fig.canvas.tostring_rgb())
+        image = ImageOps.expand(image, border=1, fill='black')
+
+        images.append(image)
+        plt.close(fig)
+
+    print(len(images))
+    grid = image_grid(images, 6, 5)
+    grid.save('graph_data/frequent_subgraphs.png')
 
 def main():
     games: list[Game] = get_games()
 
     trained_features = [
-        # [('indeg', 'T1-R2', 8), ('cls', 'T1-R1', 5), ('btw', 'T1-R4', 9), ('eige', 'T2-R1', 3), ('eige', 'T2-R2', 7)],
-        # [('btw', 'T1-R4', 15), ('btw', 'T2-R4', 7), ('eige', 'T1-R1', 11), ('eige', 'T1-R2', 11), ('eige', 'T1-R4', 13)],
-        # [('btw', 'T2-R1', 13), ('btw', 'T1-R4', 15), ('btw', 'T2-R4', 7), ('eige', 'T1-R1', 11), ('eige', 'T1-R2', 11), ('eige', 'T1-R4', 13)],
-        # [('indeg', 'T1-R5', 12), ('cls', 'T1-R4', 9), ('cls', 'T2-R4', 11), ('btw', 'T2-R1', 14), ('btw', 'T1-R2', 7), ('eige', 'T2-R1', 9), ('eige', 'T1-R3', 5)],
-        # [('cls', 'T2-R1', 10), ('btw', 'T2-R4', 10), ('btw', 'T2-R5', 9), ('eige', 'T2-R1', 6), ('eige', 'T1-R2', 11), ('eige', 'DEATH', 9)],
-        # [('indeg', 'T2-R1', 8), ('outdeg', 'T1-R5', 11), ('btw', 'T1-R5', 14), ('eige', 'T2-R1', 2)],
-        # [('cls', 'T2-R1', 12), ('eige', 'T1-R1', 10), ('eige', 'T1-R4', 7), ('eige', 'T2-R5', 14), ('eige', 'DEATH', 6)],
-        # [('outdeg', 'T2-R1', 5), ('outdeg', 'T1-R2', 10), ('cls', 'T2-R1', 5), ('cls', 'T2-R2', 3), ('cls', 'T1-R3', 13)],
-        # [('outdeg', 'T1-R4', 12), ('outdeg', 'T1-R5', 7), ('cls', 'T2-R4', 11), ('btw', 'T1-R4', 13), ('btw', 'T2-R2', 6), ('eige', 'T1-R5', 5)],
-        [('outdeg', 'T1-R1', 12), ('outdeg', 'T1-R5', 11), ('cls', 'T2-R4', 2), ('btw', 'T2-R5', 8), ('eige', 'DEATH', 9)]
-        # [('outdeg', 'T1-R1', 12), ('btw', 'T1-R5', 7), ('btw', 'T2-R4', 5), ('eige', 'T1-R4', 9), ('eige', 'T1-R5', 8), ('eige', 'T2-R5', 1)],
-        # [('outdeg', 'T1-R2', 5), ('btw', 'T1-R2', 11), ('eige', 'T1-R1', 0), ('eige', 'T1-R2', 11), ('eige', 'T1-R4', 7), ('eige', 'T2-R1', 12)],
-        # [('outdeg', 'T1-R5', 11), ('outdeg', 'T1-R5', 14), ('btw', 'T1-R5', 14), ('btw', 'T2-R1', 8), ('eige', 'T1-R1', 11)],
-        # [('indeg', 'DEATH', 10), ('cls', 'T1-R4', 8), ('btw', 'T1-R5', 7), ('eige', 'T1-R5', 0), ('eige', 'T1-R5', 5)]
+        [('indeg', 'T1-R2', 8), ('cls', 'T1-R1', 5), ('btw', 'T1-R4', 9), ('eige', 'T2-R1', 3), ('eige', 'T2-R2', 7)],
+        [('btw', 'T1-R4', 15), ('btw', 'T2-R4', 7), ('eige', 'T1-R1', 11), ('eige', 'T1-R2', 11), ('eige', 'T1-R4', 13)],
+        [('btw', 'T2-R1', 13), ('btw', 'T1-R4', 15), ('btw', 'T2-R4', 7), ('eige', 'T1-R1', 11), ('eige', 'T1-R2', 11), ('eige', 'T1-R4', 13)],
+        [('indeg', 'T1-R5', 12), ('cls', 'T1-R4', 9), ('cls', 'T2-R4', 11), ('btw', 'T2-R1', 14), ('btw', 'T1-R2', 7), ('eige', 'T2-R1', 9), ('eige', 'T1-R3', 5)],
+        [('cls', 'T2-R1', 10), ('btw', 'T2-R4', 10), ('btw', 'T2-R5', 9), ('eige', 'T2-R1', 6), ('eige', 'T1-R2', 11), ('eige', 'DEATH', 9)],
+        [('indeg', 'T2-R1', 8), ('outdeg', 'T1-R5', 11), ('btw', 'T1-R5', 14), ('eige', 'T2-R1', 2)],
+        [('cls', 'T2-R1', 12), ('eige', 'T1-R1', 10), ('eige', 'T1-R4', 7), ('eige', 'T2-R5', 14), ('eige', 'DEATH', 6)],
+        [('outdeg', 'T2-R1', 5), ('outdeg', 'T1-R2', 10), ('cls', 'T2-R1', 5), ('cls', 'T2-R2', 3), ('cls', 'T1-R3', 13)],
+        [('outdeg', 'T1-R4', 12), ('outdeg', 'T1-R5', 7), ('cls', 'T2-R4', 11), ('btw', 'T1-R4', 13), ('btw', 'T2-R2', 6), ('eige', 'T1-R5', 5)],
+        [('outdeg', 'T1-R1', 12), ('outdeg', 'T1-R5', 11), ('cls', 'T2-R4', 2), ('btw', 'T2-R5', 8), ('eige', 'DEATH', 9)],
+        [('outdeg', 'T1-R1', 12), ('btw', 'T1-R5', 7), ('btw', 'T2-R4', 5), ('eige', 'T1-R4', 9), ('eige', 'T1-R5', 8), ('eige', 'T2-R5', 1)],
+        [('outdeg', 'T1-R2', 5), ('btw', 'T1-R2', 11), ('eige', 'T1-R1', 0), ('eige', 'T1-R2', 11), ('eige', 'T1-R4', 7), ('eige', 'T2-R1', 12)],
+        [('outdeg', 'T1-R5', 11), ('outdeg', 'T1-R5', 14), ('btw', 'T1-R5', 14), ('btw', 'T2-R1', 8), ('eige', 'T1-R1', 11)],
+        [('indeg', 'DEATH', 10), ('cls', 'T1-R4', 8), ('btw', 'T1-R5', 7), ('eige', 'T1-R5', 0), ('eige', 'T1-R5', 5)]
     ]
 
-    rule_list = []
-    flatten_rule_list = []
-
-    for features in trained_features:
-        # get_selected_features(games, features)
-        create_decision_tree_files(games, features)
-        tree = create_decision_tree()
-        rule_list.append(get_rules(tree, 0.7, 20))
-
-    for rules in rule_list:
-        for rule in rules:
-            flatten_rule_list.append(rules[rule])
-    
-    flatten_rule_list.sort(key=lambda x: x["support"]*x['confidence'], reverse=True)
-    frequent_subgraph_mining(games, flatten_rule_list[0])
+    consruct_frequents_subgraphs_image(games, trained_features)
 
     # train_features(games)
 
