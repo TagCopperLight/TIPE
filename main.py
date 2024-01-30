@@ -233,7 +233,7 @@ def consruct_frequents_subgraphs_image(games, trained_features, winner='T2'):
             
         fig = plt.figure()
         pos = nx.nx_agraph.graphviz_layout(merged_graph)
-        nx.draw(merged_graph, with_labels=True, font_weight='bold', pos=pos)
+        nx.draw(merged_graph, with_labels=True, font_weight='bold', pos=pos, font_size=18)
         fig.canvas.draw()
         image = Image.frombytes('RGB', fig.canvas.get_width_height(), fig.canvas.tostring_rgb())
         image = ImageOps.expand(image, border=1, fill='black')
