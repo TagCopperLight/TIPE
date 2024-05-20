@@ -165,8 +165,26 @@ def generate_json(game_id, game_duration):
     return events
 
 if __name__ == "__main__":
+    # try:
+    #     generate_json("6751494867", 8*60+39)
+    # except Exception as e:
+    #     log.error(e)
+    #     raise e
+    
     try:
-        generate_json("6751494867", 8*60+39)
-    except Exception as e:
-        log.error(e)
-        raise e
+        soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        soc.connect(("127.0.0.1", 34243))
+        soc.setblocking(0)
+    except ConnectionRefusedError:
+        raise ConnectionRefusedError("App not started")
+
+    try:
+        while True:
+            if soc.recv(1):
+                size = soc.recv(4)
+                size = int.from_bytes(size, byteorder=sys.byteorder)
+                data = soc.recv(size)
+                data = data.decode("utf-8")
+                print(data)
+    except BlockingIOError:
+        pass

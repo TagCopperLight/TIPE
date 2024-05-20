@@ -265,8 +265,10 @@ def main():
         [('indeg', 'DEATH', 10), ('cls', 'T1-R4', 8), ('btw', 'T1-R5', 7), ('eige', 'T1-R5', 0), ('eige', 'T1-R5', 5)]
     ]
 
-    consruct_frequents_subgraphs_image(games, trained_features)
-
+    # consruct_frequents_subgraphs_image(games, trained_features)
+    tree = create_decision_tree_files(games, trained_features[1])
+    tree = create_decision_tree()
+    get_rules(tree, 0.7, 20, verbose=True)
     # train_features(games)
 
     # save_graphs(games)
