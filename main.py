@@ -1,9 +1,12 @@
 import logging
 import matplotlib.pyplot as plt
 
-import get_data.header_stats as hstats
+from classes.game import Game
 import classes.importer as importer
 from classes.utils import int_to_elo
+from classes.time_frame import TimeFrame
+import get_data.header_stats as hstats
+from classes.get_graphs import save_graphs
 from classes.get_objects import parse_all_games
 
 
@@ -34,9 +37,16 @@ def get_objects():
     log.info('Parsing games...')
     parse_all_games()
 
+def get_graphs():
+    log.info('Getting graphs...')
+    games = importer.get_done_game_objects()
+    save_graphs(games)
+
 def main():
     # header_stats()
-    get_objects()
+    # get_objects()
+    # get_graphs()
+    pass
 
 if __name__ == "__main__":
     main()
