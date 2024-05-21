@@ -1,4 +1,3 @@
-import random
 import logging
 
 from classes.utils import elo_to_int, get_region, get_mean_elo
