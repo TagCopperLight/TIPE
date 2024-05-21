@@ -98,7 +98,6 @@ def get_done_game_objects():
     games = []
     for game_id in done_objects:
         object_path = pathlib.Path(f'game_objects/{game_id[5:]}.pkl')
-        print(object_path)
         with open(object_path, 'rb') as file:
             games.append(pickle.load(file))
 

@@ -4,8 +4,6 @@ import random
 import logging
 from math import exp
 from PIL import Image
-import networkx as nx
-from itertools import combinations
 
 from get_tree import create_decision_tree_files, create_decision_tree
 
@@ -83,10 +81,10 @@ def show_interactions(interactions):
     
     for i in range(5):
         for j in range(5):
-            print('⬛', end=' ') if interactions[i][j][0] else print('⬜', end=' ')
-            print('⬛', end=' ') if interactions[i][j][1] else print('⬜', end=' ')
-            print(' ', end='')
-        print()
+            log.info('⬛', end=' ') if interactions[i][j][0] else log.info('⬜', end=' ')
+            log.info('⬛', end=' ') if interactions[i][j][1] else log.info('⬜', end=' ')
+            log.info(' ', end='')
+        log.info()
 
 def take_random_valid(games):
     """
@@ -133,87 +131,10 @@ def show_tree_stats(games, features):
     log.info(f'3-fold cross validation: {tree.k_fold_cross_validation(3)}')
     log.info()
 
-def translate_features():
-    features = [
-    ]
-
-    for feature_list in features:
-        print('[', end='')
-        for feature in feature_list:
-            print('(', end='')
-            if feature[1] == 10:
-                print(f"'{feature[0]}', 'DEATH', {feature[2]}", end='')
-            else:
-                print(f"'{feature[0]}', '{['T1-R1', 'T1-R2', 'T1-R3', 'T1-R4', 'T1-R5', 'T2-R1', 'T2-R2', 'T2-R3', 'T2-R4', 'T2-R5'][feature[1]]}', {feature[2]}", end='')
-            if feature != feature_list[-1]:
-                print('), ', end='')
-            else:
-                print(')', end='')
-        print('],')
-
-def hash_graph(graph: nx.DiGraph) -> int:
-    nodes = ['T1-R1', 'T1-R2', 'T1-R3', 'T1-R4', 'T1-R5', 'T2-R1', 'T2-R2', 'T2-R3', 'T2-R4', 'T2-R5', 'DEATH']
-    hash = 0
-
-    for node in nodes:
-        if node in graph.nodes:
-            hash = (hash << 1) | 1
-        hash = hash << 1
-
-    for node1 in nodes:
-        for node2 in nodes:
-            if graph.has_edge(node1, node2):
-                hash = (hash << 1) | 1
-            hash = hash << 1
-    
-    return hash
-
-class GraphCounter(dict):
-    def __init__(self):
-        super().__init__()
-
-    def update(self, graphs):
-        for graph in graphs:
-            hashe = hash_graph(graph)
-            if hashe in self:
-                self[hashe][0] += 1
-            else:
-                self[hashe] = [1, graph]
-
-def FSM(args):
-    graphs, min_support, condition_nodes = args
-    
-    frequent_subgraph = nx.DiGraph()
-    if not condition_nodes:
-        return frequent_subgraph
-    
-    def find_subgraphs(graph, min_size=1, max_size=None):
-        if max_size is None:
-            max_size = len(graph.nodes)
-        subgraphs = []
-        for size in range(min_size, max_size + 1):
-            for nodes in combinations(graph.nodes, size):
-                subgraph = graph.subgraph(nodes)
-                if all([node[0] in subgraph.nodes for node in condition_nodes]) and condition_nodes:
-                    if nx.is_weakly_connected(subgraph):
-                        subgraphs.append(subgraph)
-        return subgraphs
-
-    counter = GraphCounter()
-
-    for graph in tqdm.tqdm(graphs, dynamic_ncols=True):
-        subgraphs = find_subgraphs(graph, min_size=1)
-
-        counter.update(subgraphs)
-
-    for _, (support, subgraph) in counter.items():
-        if support >= min_support:
-            frequent_subgraph.add_nodes_from(subgraph.nodes)
-            frequent_subgraph.add_edges_from(subgraph.edges)
-    
-    return frequent_subgraph
-
 def image_grid(imgs, rows, cols):
+    """
+    Create a grid of images.
+    """
 
     w, h = imgs[0].size
     grid = Image.new('RGB', size=(cols*w, rows*h))
@@ -221,3 +142,25 @@ def image_grid(imgs, rows, cols):
     for i, img in enumerate(imgs):
         grid.paste(img, box=(i%cols*w, i//cols*h))
     return grid
+
+def translate_features():
+    """
+    Translate a feature list returned by the genetic algorithm to a list of features, usable in python.
+    """
+    features = [
+        
+    ]
+
+    for feature_list in features:
+        log.info('[', end='')
+        for feature in feature_list:
+            log.info('(', end='')
+            if feature[1] == 10:
+                log.info(f"'{feature[0]}', 'DEATH', {feature[2]}", end='')
+            else:
+                log.info(f"'{feature[0]}', '{['T1-R1', 'T1-R2', 'T1-R3', 'T1-R4', 'T1-R5', 'T2-R1', 'T2-R2', 'T2-R3', 'T2-R4', 'T2-R5'][feature[1]]}', {feature[2]}", end='')
+            if feature != feature_list[-1]:
+                log.info('), ', end='')
+            else:
+                log.info(')', end='')
+        log.info('],')
