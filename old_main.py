@@ -16,55 +16,6 @@ from classes.train_features import main as train_features, accuracy_fix, chunk_s
 log = logging.getLogger(__name__)
 logging.basicConfig(format='[%(name)s] %(asctime)s <%(levelname)s> %(message)s', level=logging.INFO, datefmt='%H:%M:%S')
 
-def get_rules(tree, confidence, support, verbose=False):
-    rules = {}
-
-    with open('graph_data/data.json', 'r') as file:
-        data = json.load(file)
-
-    def __get_path_rec(data, node, path):
-        if node.is_leaf:
-            path.append((node, 'leaf'))
-            return path
-        else:
-            if data[node.label] <= node.threshold:
-                path.append((node, '<='))
-                return __get_path_rec(data, node.children[0], path)
-            elif len(node.children) == 2:
-                path.append((node, '>'))
-                return __get_path_rec(data, node.children[1], path)
-
-    for game in data:
-        path = __get_path_rec(game, tree.tree, [])
-        
-        if path[-1][0] not in rules:
-            rules[path[-1][0]] = {'support': 1, 'confidence': 0}
-            rules[path[-1][0]]['path'] = path
-        else:
-            rules[path[-1][0]]["support"] += 1
-
-        if path[-1][0].label == game["class"]:
-            rules[path[-1][0]]["confidence"] += 1
-
-    for rule in rules:
-        rules[rule]["confidence"] /= rules[rule]["support"]
-
-    rules = {rule: rules[rule] for rule in rules if rules[rule]["confidence"] >= confidence and rules[rule]["support"] >= support}
-
-    if verbose:
-        for rule in rules:
-            print(f'IF ', end='')
-            for node in rules[rule]["path"]:
-                if node[1] == 'leaf':
-                    print(f'THEN {node[0].label} win', end='')
-                else:
-                    print(f'{node[0].label} {node[1]} {node[0].threshold} & ', end='')
-            print(f'\n{rule.label} (support: {rules[rule]["support"]}, confidence: {rules[rule]["confidence"]})')
-            print(f'\n(support: {rules[rule]["support"]}, confidence: {rules[rule]["confidence"]})')
-        print()
-
-    return rules
-
 def frequent_subgraph_mining(games, rule, minimum_support):
     games_satisfying_rules = []
     
@@ -186,8 +137,3 @@ def main():
     tree = create_decision_tree()
     get_rules(tree, 0.7, 20, verbose=True)
     # train_features(games)
-
-    # get_selected_features(games)
-
-if __name__ == '__main__':
-    main()
