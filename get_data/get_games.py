@@ -1,13 +1,11 @@
-from selenium import webdriver
-from selenium.webdriver.firefox.service import Service
 import re
 import json
+import logging
+from selenium import webdriver
+from selenium.webdriver.firefox.service import Service
 
-
-DEBUG = True
-def debug(*args):
-    if DEBUG:
-        print(*args)
+log = logging.getLogger(__name__)
+logging.basicConfig(format='[%(name)s] %(asctime)s <%(levelname)s> %(message)s', level=logging.INFO, datefmt='%H:%M:%S')
 
 with open('games/model.bat', 'r') as f:
     MODEL_FILE = f.read()
@@ -35,26 +33,26 @@ class HtmlParser:
 
 class Browser:
     def __init__(self):
-        debug("Getting driver...")
+        log.info("Getting driver...")
         self.service = Service(executable_path='./drivers/geckodriver')
         self.options = webdriver.FirefoxOptions()
         self.options.add_argument('--headless')
-        debug("Starting driver...")
+        log.info("Starting driver...")
         self.driver = webdriver.Firefox(service=self.service, options=self.options)
         self.driver.install_addon('./drivers/ublock_origin-1.53.0.xpi', temporary=True)
 
     def get_parser(self, url):
-        debug("Getting html...")
+        log.info("Getting html...")
         self.driver.get(url)
         return HtmlParser(self.driver.page_source)
     
     def write_html(self, parser):
-        debug("Writing html...")
+        log.info("Writing html...")
         with open("data.html", "w") as f:
             f.write(parser.html)
     
     def quit(self):
-        debug("Closing driver...")
+        log.info("Closing driver...")
         self.driver.quit()
 
 class Player:
@@ -150,7 +148,7 @@ def get_games(parser, browser):
     return games
 
 def record_data(browser, page):
-    debug(f"Parsing html... {page}/50")
+    log.info(f"Parsing html... {page}/50")
     if page == 1:
         parser = browser.get_parser('https://www.leagueofgraphs.com/replays/all/iron')
     else:
