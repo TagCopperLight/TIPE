@@ -10,11 +10,19 @@ logging.basicConfig(format='[%(name)s] %(asctime)s <%(levelname)s> %(message)s',
 
 
 def show_graph(graph):
+    """
+    Show the graph using graphviz.
+    """
+    
     pos = nx.nx_agraph.graphviz_layout(graph)
     nx.draw(graph, with_labels=True, font_weight='bold', pos=pos)
     plt.show()
 
 def create_graph_from_game(game, time_frame):
+    """
+    Create the graph of interactions from a game.
+    """
+    
     G = nx.DiGraph()
     for team in [1, 2]:
         for role in range(1, 6):
@@ -38,6 +46,10 @@ def create_graph_from_game(game, time_frame):
     return G
 
 def get_metrics(graph):
+    """
+    Get the metrics of the graph.
+    """
+    
     indegrees = {}
     outdegrees = {}
     for node in graph.nodes:
@@ -51,6 +63,10 @@ def get_metrics(graph):
             nx.eigenvector_centrality(graph, max_iter=100000))
 
 def save_graphs(games):
+    """
+    Save the graphs of the games.
+    """
+
     graphs = []
 
     for i, game in enumerate(games):
