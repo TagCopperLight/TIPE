@@ -5,7 +5,7 @@ from multiprocessing import Pool
 from itertools import combinations
 
 import importer as importer
-from classes.get_graphs import create_graph_from_game
+from methods.get_graphs import create_graph_from_game
 
 
 def hash_graph(graph):
@@ -48,6 +48,10 @@ class GraphCounter(dict):
                 self[hashe] = [1, graph]
 
 def FSM(args):
+    """
+    Frequent subgraph mining function.
+    """
+    
     graphs, min_support, condition_nodes = args
     
     frequent_subgraph = nx.DiGraph()
@@ -82,6 +86,11 @@ def FSM(args):
 
 
 def frequent_subgraph_mining(games, rule, minimum_support):
+    """
+    Apply the frequent subgraph mining algorithm to the games.
+    Using multiprocessing to speed up the process.
+    """
+    
     games_satisfying_rules = []
     
     data = importer.get_graphs_files()[1]

@@ -4,9 +4,9 @@ from PIL import Image, ImageOps
 from matplotlib import pyplot as plt
 
 from classes.utils import image_grid
-from classes.get_rules import get_rules
+from methods.get_rules import get_rules
 from classes.FSM import frequent_subgraph_mining
-from classes.get_tree import create_decision_tree_files, create_decision_tree
+from methods.get_tree import create_decision_tree_files, create_decision_tree
 
 
 log = logging.getLogger(__name__)

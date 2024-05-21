@@ -1,6 +1,6 @@
 import logging
 
-import importer as importer
+import classes.importer as importer
 
 
 log = logging.getLogger(__name__)

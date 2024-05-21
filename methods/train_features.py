@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from multiprocessing import Pool
 from itertools import product
 from math import prod, exp
-from classes.get_tree import create_decision_tree_files, create_decision_tree_from_dict
+from methods.get_tree import create_decision_tree_files, create_decision_tree_from_dict
 
 
 class Individual:

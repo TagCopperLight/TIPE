@@ -5,7 +5,7 @@ import logging
 from math import exp
 from PIL import Image
 
-from get_tree import create_decision_tree_files, create_decision_tree
+from methods.get_tree import create_decision_tree_files, create_decision_tree
 
 
 log = logging.getLogger(__name__)
