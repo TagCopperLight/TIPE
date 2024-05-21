@@ -1,8 +1,59 @@
 import re
 import tqdm
+from PIL import Image
 import networkx as nx
 from itertools import combinations
-from PIL import Image
+
+
+def elo_to_int(str_elo):
+    if str_elo == 'Unranked':
+        return -1
+    
+    elif str_elo in ['Master', 'GrandMaster', 'Challenger']:
+        return 7*4 + ['Master', 'GrandMaster', 'Challenger'].index(str_elo)
+    
+    else:
+        elos = ['Iron', 'Bronze', 'Silver', 'Gold', 'Platinum', 'Emerald', 'Diamond']
+        numbers = ['I', 'II', 'III', 'IV']
+
+        str_elo = re.findall(r"\w+", str_elo)
+        elo, number = elos.index(str_elo[0]), numbers.index(str_elo[1])
+
+        return 4 * elo + number
+    
+def int_to_elo(int_elo):
+    if int_elo == -1:
+        return 'Unranked'
+    
+    elif int_elo >= 28:
+        return ['Master', 'GrandMaster', 'Challenger'][int((int_elo - 28) / 4)]
+    
+    else:
+        elos = ['Iron', 'Bronze', 'Silver', 'Gold', 'Platinum', 'Emerald', 'Diamond']
+        elo = elos[int(int_elo / 4)]
+        number = 4 - int_elo % 4
+
+        return f'{elo} {number}'
+    
+def get_region(game):
+    return game.game_id.split('/')[1]
+
+def duration_to_int(length):
+    length = length.replace('(', '').replace(')', '').split(':')
+    return int(length[0]) * 60 + int(length[1])
+
+def get_mean_elo(game):
+    elo = [elo_to_int(player.elo) for player in game.players]
+    elo = [el for el in elo if el != -1]
+    return sum(elo) / len(elo)
+
+def show_interactions(interactions):
+    for i in range(5):
+        for j in range(5):
+            print('⬛', end=' ') if interactions[i][j][0] else print('⬜', end=' ')
+            print('⬛', end=' ') if interactions[i][j][1] else print('⬜', end=' ')
+            print(' ', end='')
+        print()
 
 def translate_features():
     features = [
@@ -92,53 +143,3 @@ def image_grid(imgs, rows, cols):
     for i, img in enumerate(imgs):
         grid.paste(img, box=(i%cols*w, i//cols*h))
     return grid
-
-def elo_to_int(str_elo):
-    if str_elo == 'Unranked':
-        return -1
-    
-    elif str_elo in ['Master', 'GrandMaster', 'Challenger']:
-        return 7*4 + ['Master', 'GrandMaster', 'Challenger'].index(str_elo)
-    
-    else:
-        elos = ['Iron', 'Bronze', 'Silver', 'Gold', 'Platinum', 'Emerald', 'Diamond']
-        numbers = ['I', 'II', 'III', 'IV']
-
-        str_elo = re.findall(r"\w+", str_elo)
-        elo, number = elos.index(str_elo[0]), numbers.index(str_elo[1])
-
-        return 4 * elo + number
-    
-def int_to_elo(int_elo):
-    if int_elo == -1:
-        return 'Unranked'
-    
-    elif int_elo >= 28:
-        return ['Master', 'GrandMaster', 'Challenger'][int((int_elo - 28) / 4)]
-    
-    else:
-        elos = ['Iron', 'Bronze', 'Silver', 'Gold', 'Platinum', 'Emerald', 'Diamond']
-        elo = elos[int(int_elo / 4)]
-        number = 4 - int_elo % 4
-
-        return f'{elo} {number}'
-    
-def get_region(game):
-    return game.game_id.split('/')[1]
-
-def duration_to_int(length):
-    length = length.replace('(', '').replace(')', '').split(':')
-    return int(length[0]) * 60 + int(length[1])
-
-def get_mean_elo(game):
-    elo = [elo_to_int(player.elo) for player in game.players]
-    elo = [el for el in elo if el != -1]
-    return sum(elo) / len(elo)
-
-def show_interactions(interactions):
-    for i in range(5):
-        for j in range(5):
-            print('⬛', end=' ') if interactions[i][j][0] else print('⬜', end=' ')
-            print('⬛', end=' ') if interactions[i][j][1] else print('⬜', end=' ')
-            print(' ', end='')
-        print()

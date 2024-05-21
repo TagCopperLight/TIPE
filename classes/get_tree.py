@@ -1,6 +1,5 @@
 import json
 
-from functools import wraps
 from classes.c45 import C45
 
 VOID_METRICS = {
@@ -64,7 +63,6 @@ def create_decision_tree():
 
     c45 = C45(data, names["classes"], names["features"])
     c45.generate_tree()
-    # c45.print_tree()
 
     return c45
 
