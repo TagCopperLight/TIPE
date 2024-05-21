@@ -1,14 +1,13 @@
 import json
-import enum
+import time
 import random
 import logging
-import time
 
 from get_data.liveevents import generate_json
-from get_data.get_stats import get_saved_games, convert_to_games, get_region, get_mean_elo
+from get_data.header_stats import get_saved_games, convert_to_games, get_region, get_mean_elo
 
 
-log = logging.getLogger('main')
+log = logging.getLogger(__name__)
 logging.basicConfig(format='[%(name)s] %(asctime)s <%(levelname)s> %(message)s', level=logging.INFO, datefmt='%H:%M:%S')
 
 

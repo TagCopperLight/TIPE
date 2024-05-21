@@ -7,9 +7,6 @@ from selenium.webdriver.firefox.service import Service
 log = logging.getLogger(__name__)
 logging.basicConfig(format='[%(name)s] %(asctime)s <%(levelname)s> %(message)s', level=logging.INFO, datefmt='%H:%M:%S')
 
-with open('games/model.bat', 'r') as f:
-    MODEL_FILE = f.read()
-
 with open('saved_games.json', 'r') as f:
     saved_games = json.load(f)
 
