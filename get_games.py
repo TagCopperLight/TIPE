@@ -1,5 +1,4 @@
 import re
-import json
 import logging
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service
