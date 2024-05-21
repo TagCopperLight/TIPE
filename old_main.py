@@ -1,92 +1,21 @@
 import re
 import json
-import pickle
-import pathlib
 import logging
 import networkx as nx
 import matplotlib.pyplot as plt
 from PIL import Image, ImageOps
 from multiprocessing import Pool
 
+import classes.importer as importer
+from classes.utils import FSM, image_grid
 from classes.get_objects import Game, TimeFrame, show_interactions
 from classes.get_tree import create_decision_tree_files, create_decision_tree
 from classes.train_features import main as train_features, accuracy_fix, chunk_split
-from classes.utils import FSM, image_grid
 
 
 log = logging.getLogger(__name__)
 logging.basicConfig(format='[%(name)s] %(asctime)s <%(levelname)s> %(message)s', level=logging.INFO, datefmt='%H:%M:%S')
 
-def get_games():
-    done_objects_path = pathlib.Path('game_objects/done.json')
-    with open(done_objects_path, 'r') as file:
-        done_objects = json.load(file)
-    
-    games = []
-    for game_id in done_objects:
-        object_path = pathlib.Path(f'game_objects/{game_id[5:]}.pkl')
-        with open(object_path, 'rb') as file:
-            games.append(pickle.load(file))
-
-    return games
-
-def create_graph_from_game(game: Game, time_frame):
-    G = nx.DiGraph()
-    for team in [1, 2]:
-        for role in range(1, 6):
-            G.add_node(f"T{team}-R{role}")
-    G.add_node("DEATH")
-    
-    if time_frame >= len(game.time_frames):
-        return G
-
-    for red_player, data in enumerate(game.time_frames[time_frame].interactions):
-        for blue_player, data2 in enumerate(data):
-            if data2[0]:
-                G.add_edge(f"T1-R{red_player+1}", f"T2-R{blue_player+1}")
-            if data2[1]:
-                G.add_edge(f"T2-R{blue_player+1}", f"T1-R{red_player+1}")
-    
-    for team, data in enumerate(game.time_frames[time_frame].deaths):
-        for player, data in enumerate(data):
-            if data:
-                    G.add_edge(f"T{team+1}-R{player+1}", "DEATH")
-    return G
-
-def get_metrics(graph):
-    indegrees = {}
-    outdegrees = {}
-    for node in graph.nodes:
-        indegrees[node] = graph.in_degree(node)
-        outdegrees[node] = graph.out_degree(node)
-    
-    # print("Indegrees: ", indegrees)
-    # print("Outdegrees: ", outdegrees)
-    # print("Closeness centrality: ", nx.closeness_centrality(graph))
-    # print("Betweenness centrality: ", nx.betweenness_centrality(graph))
-    # print("Eigenvector centrality: ", nx.eigenvector_centrality(graph, max_iter=100000))
-
-    return indegrees, outdegrees, nx.closeness_centrality(graph), nx.betweenness_centrality(graph), nx.eigenvector_centrality(graph, max_iter=100000)
-
-def show_graph(graph):
-    pos = nx.nx_agraph.graphviz_layout(graph)
-    nx.draw(graph, with_labels=True, font_weight='bold', pos=pos)
-    plt.show()
-
-def save_graphs(games):
-    graphs = []
-
-    for i, game in enumerate(games):
-        log.info(f'Game {i+1}/{len(games)}')
-        game_metrics = {"game_id": game.game_id, "winner": game.winner, "time_frames": []}
-        for time_frame in range(len(game.time_frames)):
-            graph = create_graph_from_game(game, time_frame)
-            metrics = get_metrics(graph)
-            game_metrics["time_frames"].append({"metrics": {"indeg": metrics[0], "outdeg": metrics[1], "cls": metrics[2], "btw": metrics[3], "eige": metrics[4]}})
-        graphs.append(game_metrics)
-
-    with open("graph_data/graphs.json", "w") as file:
-        json.dump(graphs, file, indent=4)
 
 def get_selected_features(games, features):
         create_decision_tree_files(games, features)
@@ -246,7 +175,7 @@ def consruct_frequents_subgraphs_image(games, trained_features, winner='T2'):
     grid.save('graph_data/frequent_subgraphs.png')
 
 def main():
-    games: list[Game] = get_games()
+    games: list[Game] = importer.get_done_game_objects()
 
     trained_features = [
         [('indeg', 'T1-R2', 8), ('cls', 'T1-R1', 5), ('btw', 'T1-R4', 9), ('eige', 'T2-R1', 3), ('eige', 'T2-R2', 7)],
