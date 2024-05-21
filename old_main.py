@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from PIL import Image, ImageOps
 from multiprocessing import Pool
 
-from get_stats import Game, TimeFrame, show_interactions
+from classes.get_objects import Game, TimeFrame, show_interactions
 from classes.get_tree import create_decision_tree_files, create_decision_tree
 from classes.train_features import main as train_features, accuracy_fix, chunk_split
 from classes.utils import FSM, image_grid

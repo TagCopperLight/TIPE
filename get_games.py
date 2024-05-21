@@ -4,12 +4,12 @@ import logging
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service
 
+import classes.importer as importer
+
 log = logging.getLogger(__name__)
 logging.basicConfig(format='[%(name)s] %(asctime)s <%(levelname)s> %(message)s', level=logging.INFO, datefmt='%H:%M:%S')
 
-with open('saved_games.json', 'r') as f:
-    saved_games = json.load(f)
-
+saved_games = importer.get_saved_games()
 
 class HtmlParser:
     def __init__(self, html):
@@ -19,34 +19,21 @@ class HtmlParser:
     
     def get_tables(self):
         return re.findall(r"<table.*>(?:.|\n)*?<\/table>", self.html)
-    
-    def write_tables(self):
-        with open("tables.html", "w") as f:
-            f.write(self.tables[0])
-    
-    def read_table(self):
-        with open("tables.html", "r") as f:
-            return f.read()
 
 class Browser:
     def __init__(self):
         log.info("Getting driver...")
-        self.service = Service(executable_path='./drivers/geckodriver')
+        self.service = Service(executable_path='./get_data/drivers/geckodriver')
         self.options = webdriver.FirefoxOptions()
         self.options.add_argument('--headless')
         log.info("Starting driver...")
         self.driver = webdriver.Firefox(service=self.service, options=self.options)
-        self.driver.install_addon('./drivers/ublock_origin-1.53.0.xpi', temporary=True)
+        self.driver.install_addon('./get_data/drivers/ublock_origin-1.53.0.xpi', temporary=True)
 
     def get_parser(self, url):
         log.info("Getting html...")
         self.driver.get(url)
         return HtmlParser(self.driver.page_source)
-    
-    def write_html(self, parser):
-        log.info("Writing html...")
-        with open("data.html", "w") as f:
-            f.write(parser.html)
     
     def quit(self):
         log.info("Closing driver...")
@@ -130,13 +117,7 @@ class Game:
         if self.file == "twitch":
             return
         
-        with open('games/batch_data.json', 'r') as f:
-            batch_data = json.load(f)
-        
-        batch_data.append({'id': self.file[2], 'arg1': self.file[4], 'arg2': self.file[3], 'arg3': self.file[2], 'arg4': self.file[1]})
-
-        with open('games/batch_data.json', 'w') as f:
-            json.dump(batch_data, f, indent=4)
+        importer.write_batch_data(self.file)
 
 def get_games(parser, browser):
     games = []
@@ -163,9 +144,8 @@ def main():
                 game.write_game()
                 game.write_file()
 
-        with open('saved_games.json', 'w') as f:
-            json.dump(saved_games, f, indent=4)
-        
+        importer.write_saved_games(saved_games)
+
         browser.quit()
 
 if __name__ == "__main__":

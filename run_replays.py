@@ -32,18 +32,18 @@ def main():
     games = [game for game in games if get_region(game) == 'euw']
     games = [game for game in games if game.duration > 20*60]
     games = [game for game in games if round(get_mean_elo(game)) == 28]
-    games = [game for game in games if game.match_id not in done_games]
+    games = [game for game in games if game.game_id not in done_games]
 
     print(f'Valid games: {len(games)}')
 
     game = random.choice(games)
     print(f'Random Game: {game}')
 
-    shortened_id = game.match_id[5:]
+    shortened_id = game.game_id[5:]
 
     generate_json(shortened_id, game.duration)
 
-    add_done_game(game.match_id)
+    add_done_game(game.game_id)
 
 if __name__ == '__main__':
     try:

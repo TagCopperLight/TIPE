@@ -124,7 +124,7 @@ def int_to_elo(int_elo):
         return f'{elo} {number}'
     
 def get_region(game):
-    return game.match_id.split('/')[1]
+    return game.game_id.split('/')[1]
 
 def duration_to_int(length):
     length = length.replace('(', '').replace(')', '').split(':')
@@ -134,3 +134,11 @@ def get_mean_elo(game):
     elo = [elo_to_int(player.elo) for player in game.players]
     elo = [el for el in elo if el != -1]
     return sum(elo) / len(elo)
+
+def show_interactions(interactions):
+    for i in range(5):
+        for j in range(5):
+            print('⬛', end=' ') if interactions[i][j][0] else print('⬜', end=' ')
+            print('⬛', end=' ') if interactions[i][j][1] else print('⬜', end=' ')
+            print(' ', end='')
+        print()
