@@ -1,9 +1,16 @@
 import random
+import logging
+from math import prod
+from itertools import product
 import matplotlib.pyplot as plt
 from multiprocessing import Pool
-from itertools import product
-from math import prod, exp
+
 from methods.get_tree import create_decision_tree_files, create_decision_tree_from_dict
+from classes.utils import chunk_split, accuracy_fix
+
+
+log = logging.getLogger(__name__)
+logging.basicConfig(format='[%(name)s] %(asctime)s <%(levelname)s> %(message)s', level=logging.INFO, datefmt='%H:%M:%S')
 
 
 class Individual:
@@ -17,9 +24,6 @@ class Individual:
             self.individual ^= 1 << random.randint(0, self.int_length - 1)
 
         self.fitness = 0
-
-    # def __repr__(self):
-        # return f'{self.individual:0>{self.int_length}b}'
 
 class Population:
     def __init__(self, size, features):
@@ -85,12 +89,12 @@ class GeneticAlgorithm:
 
     def threaded_fitness(self, args):
         id = args[0]
-        print(f'Process {id} started')
+        log.info(f'Process {id} started')
         args = args[1]
         computed_values = {}
         for i, individual in args:
             if (i+1) % 100 == 0:
-                print(f'{i+1}/{self.population_size}')
+                log.info(f'{i+1}/{self.population_size}')
             raw_features = self.get_features(individual)
             features = []
             for feature in raw_features:
@@ -166,8 +170,8 @@ class GeneticAlgorithm:
         true_max_fitness = max_fitness + accuracy_fix(max_features)
         min_fitness = min(self.population.population, key=lambda ind: ind.fitness).fitness
         avg_fitness = sum([ind.fitness for ind in self.population.population]) / len(self.population.population)
-        print(f'Max: {max_fitness}, Min: {min_fitness}, Avg: {avg_fitness}, True Max: {true_max_fitness}')
-        print(f'Max features: {self.get_features(max(self.population.population, key=lambda ind: ind.fitness))}')
+        log.info(f'Max: {max_fitness}, Min: {min_fitness}, Avg: {avg_fitness}, True Max: {true_max_fitness}')
+        log.info(f'Max features: {self.get_features(max(self.population.population, key=lambda ind: ind.fitness))}')
 
         selected = self.rank_selection()
 
@@ -193,7 +197,7 @@ def main(games):
     avgs = []
     true_maxes = []
     for i in range(200):
-        print(f'Generation {i+1}')
+        log.info(f'Generation {i+1}')
         ma, mi, av, tma = genetic_algorithm.next_generation()
         maxes.append(ma)
         avgs.append(av)
