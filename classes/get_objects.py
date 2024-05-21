@@ -10,8 +10,11 @@ log = logging.getLogger(__name__)
 logging.basicConfig(format='[%(name)s] %(asctime)s <%(levelname)s> %(message)s', level=logging.INFO, datefmt='%H:%M:%S')
 
 
-
 def get_game_infos(game_id):
+    """
+    Get the duration, date, winner and players of a game.
+    """
+    
     saved_games = importer.get_saved_games()
 
     for game in saved_games:
@@ -27,6 +30,10 @@ def get_game_infos(game_id):
     return duration, date, winner, p
 
 def parse_game(game_id):
+    """
+    Parse a game json file and return a Game object.
+    """
+    
     game = Game()
     events = importer.get_done_game(game_id)
 
@@ -77,6 +84,10 @@ def parse_game(game_id):
     return game
 
 def parse_all_games():
+    """
+    Parse all games that have been saved and not parsed yet.
+    """
+    
     done_games = importer.get_done_games()
     done_objects = importer.get_done_objects()
 

@@ -12,6 +12,10 @@ logging.basicConfig(format='[%(name)s] %(asctime)s <%(levelname)s> %(message)s',
 
 
 def elo_to_int(str_elo):
+    """
+    Convert a string elo to an integer elo.
+    """
+    
     if str_elo == 'Unranked':
         return -1
     
@@ -28,6 +32,10 @@ def elo_to_int(str_elo):
         return 4 * elo + number
     
 def int_to_elo(int_elo):
+    """
+    Convert an integer elo to a string elo.
+    """
+    
     if int_elo == -1:
         return 'Unranked'
     
@@ -42,24 +50,55 @@ def int_to_elo(int_elo):
         return f'{elo} {number}'
     
 def get_region(game):
+    """
+    Get the region of the game.
+    """
+    
     return game.game_id.split('/')[1]
 
 def duration_to_int(length):
+    """
+    Convert a string duration to an integer duration.
+    """
+    
     length = length.replace('(', '').replace(')', '').split(':')
     return int(length[0]) * 60 + int(length[1])
 
 def get_mean_elo(game):
+    """
+    Get the mean elo of the game.
+    """
+    
     elo = [elo_to_int(player.elo) for player in game.players]
     elo = [el for el in elo if el != -1]
     return sum(elo) / len(elo)
 
 def show_interactions(interactions):
+    """
+    Show the interactions list in a grid.
+    """
+    
     for i in range(5):
         for j in range(5):
             print('⬛', end=' ') if interactions[i][j][0] else print('⬜', end=' ')
             print('⬛', end=' ') if interactions[i][j][1] else print('⬜', end=' ')
             print(' ', end='')
         print()
+
+def take_random_valid(games):
+    """
+    Take a random valid game from the list of games.
+    """
+
+    games = [game for game in games if get_region(game) == 'euw']
+    games = [game for game in games if game.duration > 20*60]
+    games = [game for game in games if round(get_mean_elo(game)) == 28]
+
+    log.info(f'Valid games: {len(games)}')
+    max_length = max([game.duration for game in games])
+    log.info(f'Max length: {int(max_length / 60)}:{int(max_length % 60)}')
+    
+    return random.choice(games)
 
 def translate_features():
     features = [
@@ -149,18 +188,3 @@ def image_grid(imgs, rows, cols):
     for i, img in enumerate(imgs):
         grid.paste(img, box=(i%cols*w, i//cols*h))
     return grid
-
-def take_random_valid(games):
-    """
-    Take a random valid game from the list of games.
-    """
-
-    games = [game for game in games if get_region(game) == 'euw']
-    games = [game for game in games if game.duration > 20*60]
-    games = [game for game in games if round(get_mean_elo(game)) == 28]
-
-    log.info(f'Valid games: {len(games)}')
-    max_length = max([game.duration for game in games])
-    log.info(f'Max length: {int(max_length / 60)}:{int(max_length % 60)}')
-    
-    return random.choice(games)

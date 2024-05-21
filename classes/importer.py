@@ -13,6 +13,10 @@ DONE_GAMES_FOLDER = pathlib.Path('get_data/data')
 
 
 def write_batch_data(file):
+    """
+    Write the batch data to the batch_data.json file.
+    """
+    
     with open(BATCH_DATA_PATH, 'r') as f:
         batch_data = json.load(f)
         

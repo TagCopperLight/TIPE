@@ -1,4 +1,8 @@
 class Player:
+    """
+    A class to represent a player in a game.
+    """
+    
     def __init__(self):
         self.summoner_name = None
         self.champion = None

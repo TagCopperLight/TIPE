@@ -1,4 +1,8 @@
 class Game:
+    """
+    Represents a game.
+    """
+    
     def __init__(self):
         self.game_id = None
         self.type = None
