@@ -4,7 +4,7 @@ import logging
 
 from classes.utils import take_random_valid
 from get_data.liveevents import generate_json
-from get_data.header_stats import get_saved_games, convert_to_games, get_region, get_mean_elo
+from classes.importer import get_games
 
 
 log = logging.getLogger(__name__)
@@ -23,8 +23,7 @@ def add_done_game(game_id):
 
 def main():
     done_games = get_done_games()
-    data = get_saved_games()
-    games = convert_to_games(data)
+    games = get_games()
 
     games = [game for game in games if game.game_id not in done_games]
 
