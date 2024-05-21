@@ -16,19 +16,6 @@ from classes.train_features import main as train_features, accuracy_fix, chunk_s
 log = logging.getLogger(__name__)
 logging.basicConfig(format='[%(name)s] %(asctime)s <%(levelname)s> %(message)s', level=logging.INFO, datefmt='%H:%M:%S')
 
-
-def get_selected_features(games, features):
-        create_decision_tree_files(games, features)
-        tree = create_decision_tree()
-        acc = tree.get_accuracy()
-        print(f'Fixed accuracy: {acc - accuracy_fix(features)}')
-        print(f'Accuracy: {acc}')
-        print(f'Features: {features}')
-        print(f'Number of features: {len(features)}')
-        print(f'3-fold cross validation: {tree.k_fold_cross_validation(3)}')
-        print(f'Number of rules: {len(get_rules(tree, 0.7, 20))}')
-        print()
-
 def get_rules(tree, confidence, support, verbose=False):
     rules = {}
 
@@ -200,7 +187,6 @@ def main():
     get_rules(tree, 0.7, 20, verbose=True)
     # train_features(games)
 
-    # save_graphs(games)
     # get_selected_features(games)
 
 if __name__ == '__main__':

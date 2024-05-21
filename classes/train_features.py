@@ -6,14 +6,6 @@ from math import prod, exp
 from classes.get_tree import create_decision_tree_files, create_decision_tree_from_dict
 
 
-def accuracy_fix(features):
-    return 0.02 * exp(len(features)/2.85)
-
-def chunk_split(a, n):
-    k, m = divmod(len(a), n)
-    return (a[i*k+min(i, m):(i+1)*k+min(i+1, m)] for i in range(n))
-
-
 class Individual:
     def __init__(self, features):
         self.features = features

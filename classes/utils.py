@@ -2,9 +2,12 @@ import re
 import tqdm
 import random
 import logging
+from math import exp
 from PIL import Image
 import networkx as nx
 from itertools import combinations
+
+from get_tree import create_decision_tree_files, create_decision_tree
 
 
 log = logging.getLogger(__name__)
@@ -99,6 +102,36 @@ def take_random_valid(games):
     log.info(f'Max length: {int(max_length / 60)}:{int(max_length % 60)}')
     
     return random.choice(games)
+
+def accuracy_fix(features):
+    """
+    Return the fix of the accuracy for the number of features.
+    """
+    
+    return 0.02 * exp(len(features)/2.85)
+
+def chunk_split(a, n):
+    """
+    Split a list into n chunks.
+    """
+    
+    k, m = divmod(len(a), n)
+    return (a[i*k+min(i, m):(i+1)*k+min(i+1, m)] for i in range(n))
+
+def show_tree_stats(games, features):
+    """
+    Show the stats of the decision tree.
+    """
+    
+    create_decision_tree_files(games, features)
+    tree = create_decision_tree()
+    acc = tree.get_accuracy()
+    log.info(f'Fixed accuracy: {acc - accuracy_fix(features)}')
+    log.info(f'Accuracy: {acc}')
+    log.info(f'Features: {features}')
+    log.info(f'Number of features: {len(features)}')
+    log.info(f'3-fold cross validation: {tree.k_fold_cross_validation(3)}')
+    log.info()
 
 def translate_features():
     features = [

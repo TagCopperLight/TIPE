@@ -1,6 +1,5 @@
-import json
-
 from classes.c45 import C45
+import classes.importer as importer
 
 VOID_METRICS = {
     'indeg': {'T1-R1': 0, 'T1-R2': 0, 'T1-R3': 0, 'T1-R4': 0, 'T1-R5': 0, 'T2-R1': 0, 'T2-R2': 0, 'T2-R3': 0, 'T2-R4': 0, 'T2-R5': 0, 'DEATH': 0},
@@ -12,17 +11,17 @@ VOID_METRICS = {
 
 
 def create_decision_tree_files(games, features, create_files=True):
+    """
+    Create the files for the decision tree.
+    """
+    
     features_names = {}
     for feature in features:
         features_names[feature] = f'{feature[0]} of {feature[1]} in time frame {feature[2]}'
 
     names = {"classes": ["T1", "T2"], "features": list(features_names.values())}
-    if create_files:
-        with open("graph_data/names.json", "w") as file:
-            json.dump(names, file, indent=4)
 
-    with open('graph_data/graphs.json', 'r') as file:
-        graphs = json.load(file)
+    graphs = importer.get_graphs()
 
     data = []
     for game in games:
@@ -49,17 +48,16 @@ def create_decision_tree_files(games, features, create_files=True):
         data.append(data_to_tree)
 
     if create_files:
-        with open("graph_data/data.json", "w") as file:
-            json.dump(data, file, indent=4)
-
+        importer.write_graphs_files(names, data)
+    
     return names, data
         
 def create_decision_tree():
-    with open("graph_data/names.json", "r") as file:
-        names = json.load(file)
-
-    with open("graph_data/data.json", "r") as file:
-        data = json.load(file)
+    """
+    Create the decision tree from the files.
+    """
+    
+    names, data = importer.get_graphs_files()
 
     c45 = C45(data, names["classes"], names["features"])
     c45.generate_tree()
@@ -67,6 +65,10 @@ def create_decision_tree():
     return c45
 
 def create_decision_tree_from_dict(names, data):
+    """
+    Create the decision tree from the given data.
+    """
+    
     c45 = C45(data, names["classes"], names["features"])
     c45.generate_tree()
 

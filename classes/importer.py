@@ -11,6 +11,8 @@ SAVED_GAMES_PATH = pathlib.Path('get_data/saved_games.json')
 DONE_OBJECTS_PATH = pathlib.Path('game_objects/done.json')
 DONE_GAMES_FOLDER = pathlib.Path('get_data/data')
 GRAPHS_PATH = pathlib.Path('graph_data/graphs.json')
+GRAPHS_NAMES_PATH = pathlib.Path('graph_data/names.json')
+GRAPHS_DATA_PATH = pathlib.Path('graph_data/data.json')
 
 
 def write_batch_data(file):
@@ -96,6 +98,7 @@ def get_done_game_objects():
     games = []
     for game_id in done_objects:
         object_path = pathlib.Path(f'game_objects/{game_id[5:]}.pkl')
+        print(object_path)
         with open(object_path, 'rb') as file:
             games.append(pickle.load(file))
 
@@ -134,3 +137,35 @@ def write_graphs(graphs):
     
     with open(GRAPHS_PATH, 'w') as file:
         json.dump(graphs, file, indent=4)
+
+def get_graphs():
+    """
+    Get the graphs from the graphs.json file.
+    """
+
+    with open(GRAPHS_PATH, 'r') as file:
+        return json.load(file)
+
+def get_graphs_files():
+    """
+    Get the graphs files from the graph_data folder.
+    """
+
+    with open(GRAPHS_NAMES_PATH, "r") as file:
+        names = json.load(file)
+
+    with open(GRAPHS_DATA_PATH, "r") as file:
+        data = json.load(file)
+
+    return names, data
+
+def write_graphs_files(names, data):
+    """
+    Write the graphs files to the graph_data folder.
+    """
+
+    with open(GRAPHS_NAMES_PATH, "w") as file:
+        json.dump(names, file, indent=4)
+
+    with open(GRAPHS_DATA_PATH, "w") as file:
+        json.dump(data, file, indent=4)
