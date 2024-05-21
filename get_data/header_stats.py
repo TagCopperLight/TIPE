@@ -100,18 +100,3 @@ def get_minimum_duration(games):
     """
     
     return min([game.duration for game in games])
-
-def take_random_valid(games):
-    """
-    Take a random valid game from the list of games.
-    """
-
-    games = [game for game in games if get_region(game) == 'euw']
-    games = [game for game in games if game.duration > 20*60]
-    games = [game for game in games if round(get_mean_elo(game)) == 28]
-
-    log.info(f'Valid games: {len(games)}')
-    max_length = max([game.duration for game in games])
-    log.info(f'Max length: {int(max_length / 60)}:{int(max_length % 60)}')
-    
-    return random.choice(games)

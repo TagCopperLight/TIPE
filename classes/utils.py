@@ -1,8 +1,14 @@
 import re
 import tqdm
+import random
+import logging
 from PIL import Image
 import networkx as nx
 from itertools import combinations
+
+
+log = logging.getLogger(__name__)
+logging.basicConfig(format='[%(name)s] %(asctime)s <%(levelname)s> %(message)s', level=logging.INFO, datefmt='%H:%M:%S')
 
 
 def elo_to_int(str_elo):
@@ -143,3 +149,18 @@ def image_grid(imgs, rows, cols):
     for i, img in enumerate(imgs):
         grid.paste(img, box=(i%cols*w, i//cols*h))
     return grid
+
+def take_random_valid(games):
+    """
+    Take a random valid game from the list of games.
+    """
+
+    games = [game for game in games if get_region(game) == 'euw']
+    games = [game for game in games if game.duration > 20*60]
+    games = [game for game in games if round(get_mean_elo(game)) == 28]
+
+    log.info(f'Valid games: {len(games)}')
+    max_length = max([game.duration for game in games])
+    log.info(f'Max length: {int(max_length / 60)}:{int(max_length % 60)}')
+    
+    return random.choice(games)

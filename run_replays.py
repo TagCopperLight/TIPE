@@ -1,8 +1,8 @@
 import json
 import time
-import random
 import logging
 
+from classes.utils import take_random_valid
 from get_data.liveevents import generate_json
 from get_data.header_stats import get_saved_games, convert_to_games, get_region, get_mean_elo
 
@@ -26,17 +26,9 @@ def main():
     data = get_saved_games()
     games = convert_to_games(data)
 
-    # print(f'Total games: {len(games)}')
-    # print(f'EUW games: {len([game for game in games if get_region(game) == "euw"])}')
-
-    games = [game for game in games if get_region(game) == 'euw']
-    games = [game for game in games if game.duration > 20*60]
-    games = [game for game in games if round(get_mean_elo(game)) == 28]
     games = [game for game in games if game.game_id not in done_games]
 
-    print(f'Valid games: {len(games)}')
-
-    game = random.choice(games)
+    game = take_random_valid(games)
     print(f'Random Game: {game}')
 
     shortened_id = game.game_id[5:]
