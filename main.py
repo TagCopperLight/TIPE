@@ -37,7 +37,7 @@ logging.basicConfig(format='[%(name)s] %(asctime)s <%(levelname)s> %(message)s',
 
 def header_stats():
     log.info('Header stats')
-    log.info()
+    log.info('')
     games = importer.get_games()
     log.info(f'Total games: {len(games)}')
     avg_elo = hstats.get_average_elo(games)
@@ -85,11 +85,11 @@ def train_stats(maxes, avgs, true_maxes):
     plt.show()
 
 def main():
-    # header_stats()
+    header_stats()
     # get_objects()
     # get_graphs()
 
-    train_stats(*train())
+    # train_stats(*train())
     
     # for features in TRAINED_FEATURES:
     #     construct_fs_from_rule(importer.get_done_game_objects(), features, features_to_filename(features))
