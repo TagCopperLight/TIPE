@@ -54,6 +54,11 @@ def header_stats():
 
     plt.show()
 
+    _, ax = plt.subplots()
+    hstats.show_region_distribution(ax, games)
+
+    plt.show()
+
 def get_objects():
     log.info('Parsing games...')
     parse_all_games()

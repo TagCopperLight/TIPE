@@ -103,5 +103,3 @@ def construct_fs_from_rule(games, features, features_name, confidence=0.7, suppo
         construct_frequents_subgraphs_image(frequent_subgraphs, IMAGES_PATH / 'single_rule' / features_name, f'fs_{confidence}-{support}-{winner}-{min_support}')
     
     log.info(f'Total rules: {len(flatten_rule_list)}')
-
-    
