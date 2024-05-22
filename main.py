@@ -70,13 +70,17 @@ def train():
     features = [['indeg', 'outdeg', 'cls', 'btw', 'eige'], list(range(11)), list(range(30))]
 
     t0 = time.perf_counter()
-    m, a, t = train_features(games, 1000, 1, features, 0.8, 0.8, 0.0005)
+    m, a, t = train_features(games, 1000, 2, features, 0.8, 0.8, 0.0005)
     log.info(f'Training time: {time.perf_counter() - t0:.2f}s')
+
+    return m, a, t
 
 def train_stats(maxes, avgs, true_maxes):
     plt.plot(maxes, label='Max')
     plt.plot(avgs, label='Avg')
     plt.plot(true_maxes, label='True Max')
+
+    plt.legend()
 
     plt.show()
 
@@ -85,7 +89,7 @@ def main():
     # get_objects()
     # get_graphs()
 
-    train_stats(train())
+    train_stats(*train())
     
     # for features in TRAINED_FEATURES:
     #     construct_fs_from_rule(importer.get_done_game_objects(), features, features_to_filename(features))
