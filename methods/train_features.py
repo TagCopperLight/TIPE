@@ -2,11 +2,10 @@ import random
 import logging
 from math import prod
 from itertools import product
-import matplotlib.pyplot as plt
 from multiprocessing import Pool
 
-from methods.get_tree import create_decision_tree_files, create_decision_tree_from_dict
 from classes.utils import chunk_split, accuracy_fix
+from methods.get_tree import create_decision_tree_files, create_decision_tree_from_dict
 
 
 log = logging.getLogger(__name__)
@@ -39,13 +38,15 @@ class Population:
         return r
 
 class GeneticAlgorithm:
-    def __init__(self, games, population_size, features):
+    def __init__(self, games, population_size, features, propagation_rate, crossover_rate, mutation_rate, processes):
         self.games = games
         self.features = features
         self.population_size = population_size
-        self.propagation_rate = 0.8
-        self.crossover_rate = 0.8
-        self.mutation_rate = 0.0005
+        self.propagation_rate = propagation_rate
+        self.crossover_rate = crossover_rate
+        self.mutation_rate = mutation_rate
+        
+        self.processes = processes
 
         self.population = Population(self.population_size, self.features)
 
@@ -111,7 +112,7 @@ class GeneticAlgorithm:
 
         return computed_values
 
-    def fitness(self, processes=24):
+    def fitness(self, processes=12):
         args = list(enumerate(self.population.population))
 
         with Pool(processes=processes) as pool:
@@ -162,7 +163,7 @@ class GeneticAlgorithm:
         return children
     
     def next_generation(self):
-        self.fitness()
+        self.fitness(self.processes)
 
         max_ind = max(self.population.population, key=lambda ind: ind.fitness)
         max_features = self.get_features(max_ind)
@@ -187,27 +188,20 @@ class GeneticAlgorithm:
         return max_fitness, min_fitness, avg_fitness, true_max_fitness     
     
 
-def main(games):
-    pop_size = 1000
-    genetic_algorithm = GeneticAlgorithm(games, pop_size, [['indeg', 'outdeg', 'cls', 'btw', 'eige'], list(range(11)), list(range(30))])
+def train_features(games, pop_size, generations, features, propagation_rate=0.8, crossover_rate=0.8, mutation_rate=0.0005, processes=12):
+    genetic_algorithm = GeneticAlgorithm(games, pop_size, features, propagation_rate, crossover_rate, mutation_rate, processes)
+
     # i = genetic_algorithm.set_features([['outdeg', 0, 12], ['outdeg', 4, 11], ['cls', 8, 2], ['btw', 9, 8], ['eige', 10, 9]])
     # genetic_algorithm.population.population[0].individual = i
 
     maxes = []
     avgs = []
     true_maxes = []
-    for i in range(200):
+    for i in range(generations):
         log.info(f'Generation {i+1}')
         ma, mi, av, tma = genetic_algorithm.next_generation()
         maxes.append(ma)
         avgs.append(av)
         true_maxes.append(tma)
 
-    plt.plot(maxes, label='Max')
-    plt.plot(avgs, label='Avg')
-    plt.plot(true_maxes, label='True Max')
-
-    plt.show()
-
-if __name__ == '__main__':
-    main()
+    return maxes, avgs, true_maxes

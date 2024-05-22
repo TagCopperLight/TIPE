@@ -164,3 +164,12 @@ def translate_features():
             else:
                 log.info(')', end='')
         log.info('],')
+
+def features_to_filename(features):
+    """
+    Convert a list of features to a filename.
+    """
+    
+    features = [[feature[0][0], ['T1-R1', 'T1-R2', 'T1-R3', 'T1-R4', 'T1-R5', 'T2-R1', 'T2-R2', 'T2-R3', 'T2-R4', 'T2-R5', 'DEATH'].index(feature[1]), feature[2]] for feature in features]
+
+    return '_'.join([f'{feature[0]}-{feature[1]}-{feature[2]}' for feature in features])

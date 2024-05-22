@@ -1,3 +1,4 @@
+import time
 import logging
 import matplotlib.pyplot as plt
 
@@ -7,7 +8,10 @@ from classes.utils import int_to_elo
 import get_data.header_stats as hstats
 from classes.time_frame import TimeFrame
 from methods.get_graphs import save_graphs
+from classes.utils import features_to_filename
 from methods.get_objects import parse_all_games
+from methods.train_features import train_features
+from methods.get_FSM_images import construct_fs_from_corpus, construct_fs_from_rule
 
 TRAINED_FEATURES = [
     [('indeg', 'T1-R2', 8), ('cls', 'T1-R1', 5), ('btw', 'T1-R4', 9), ('eige', 'T2-R1', 3), ('eige', 'T2-R2', 7)],
@@ -59,11 +63,35 @@ def get_graphs():
     games = importer.get_done_game_objects()
     save_graphs(games)
 
+def train():
+    log.info('Training features...')
+
+    games = importer.get_done_game_objects()
+    features = [['indeg', 'outdeg', 'cls', 'btw', 'eige'], list(range(11)), list(range(30))]
+
+    t0 = time.perf_counter()
+    m, a, t = train_features(games, 1000, 1, features, 0.8, 0.8, 0.0005)
+    log.info(f'Training time: {time.perf_counter() - t0:.2f}s')
+
+def train_stats(maxes, avgs, true_maxes):
+    plt.plot(maxes, label='Max')
+    plt.plot(avgs, label='Avg')
+    plt.plot(true_maxes, label='True Max')
+
+    plt.show()
+
 def main():
     # header_stats()
     # get_objects()
     # get_graphs()
-    pass
+
+    train_stats(train())
+    
+    # for features in TRAINED_FEATURES:
+    #     construct_fs_from_rule(importer.get_done_game_objects(), features, features_to_filename(features))
+
+    # construct_fs_from_corpus(importer.get_done_game_objects(), TRAINED_FEATURES)
+    # construct_fs_from_corpus(importer.get_done_game_objects(), TRAINED_FEATURES, winner='T1')
 
 if __name__ == "__main__":
     main()
