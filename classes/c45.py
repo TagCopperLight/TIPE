@@ -3,7 +3,10 @@ import random
 
 
 class Node:
-    def __init__(self, is_leaf, label, threshold):
+    """
+    A class to represent a node in a decision tree.
+    """
+    def __init__(self, is_leaf: bool, label: str, threshold: float) -> None:
         self.label = label
         self.threshold = threshold
         self.is_leaf = is_leaf
@@ -11,20 +14,31 @@ class Node:
 
 
 class C45:
-    def __init__(self, data, classes, features):
+    """
+    A class to represent a C4.5 decision tree.
+    """
+    def __init__(self, data, classes: list[str], features: list[str]) -> None:
         self.data = data
         self.classes = classes
         self.features = features
 
         self.tree = None
 
-    def get_majority_class(self, data):
+    def get_majority_class(self, data) -> str:
+        """
+        Returns the class that appears the most in the data.
+        """
+
         return max(set([e["class"] for e in data]), key=[e["class"] for e in data].count)
     
-    def split_attribute(self, data, features):
+    def split_attribute(self, data, features: list[str]):
+        """
+        Splits the data on the best attribute and threshold.
+        """
+
         splitted_data = []
-        best_feature = None
-        best_threshold = None
+        best_feature: str
+        best_threshold: float
         max_gain = -1
 
         for feature in features:
@@ -43,18 +57,34 @@ class C45:
         return best_feature, best_threshold, [subset for subset in splitted_data if subset]
     
     def gain(self, parent, left, right):
+        """
+        Returns the information gain of the split.
+        """
+
         return self.entropy(parent) - self.entropy(left) * len(left) / len(parent) - self.entropy(right) * len(right) / len(parent)
     
     def entropy(self, data):
+        """
+        Returns the entropy of the data.
+        """
+
         if len(data) == 0:
             return 0
         classes = [e["class"] for e in data]
         return -1 * sum([classes.count(c) / len(data) * math.log(classes.count(c) / len(data), 2) for c in set(classes)])
 
     def generate_tree(self):
+        """
+        Generates the decision tree.
+        """
+
         self.tree = self.__generate_tree_rec(self.data, self.features)
 
     def __generate_tree_rec(self, data, features):
+        """
+        Recursively generates the decision tree.
+        """
+        
         # If all data is of the same class, return a leaf node with that class
         if len(set([e["class"] for e in data])) == 1:
             return Node(True, data[0]["class"], None)
@@ -73,6 +103,10 @@ class C45:
         return node
     
     def print_node(self, node, depth=0):
+        """
+        Prints a node of the decision tree.
+        """
+
         if node.is_leaf:
             return
         else:
@@ -92,9 +126,17 @@ class C45:
                     self.print_node(right, depth + 4)
 
     def print_tree(self):
+        """
+        Prints the decision tree.
+        """
+
         self.print_node(self.tree)
 
     def get_accuracy(self, split=None):
+        """
+        Returns the accuracy of the decision tree.
+        """
+        
         data = self.data.copy()
         if split:
             random.shuffle(data)
@@ -103,6 +145,10 @@ class C45:
         return self.__get_accuracy_rec(self.tree, data) / len(data)
     
     def __get_accuracy_rec(self, node, data):
+        """
+        Recursively calculates the accuracy of the decision tree.
+        """
+
         if node.is_leaf:
             return sum([1 for e in data if e["class"] == node.label])
         else:
@@ -114,9 +160,17 @@ class C45:
                 return self.__get_accuracy_rec(node.children[0], left_data)
         
     def predict(self, data):
+        """
+        Predicts the class of a data point.
+        """
+
         return self.__predict_rec(self.tree, data)
     
     def __predict_rec(self, node, data):
+        """
+        Recursively predicts the class of a data point.
+        """
+
         if node.is_leaf:
             return node.label
         else:
@@ -126,6 +180,10 @@ class C45:
                 return self.__predict_rec(node.children[1], data)
             
     def k_fold_cross_validation(self, k):
+        """
+        Performs k-fold cross validation.
+        """
+        
         save = self.data.copy()
         data = self.data.copy()
         data = [data[i::k] for i in range(k)]

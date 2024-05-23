@@ -27,6 +27,9 @@ def show_elo_distribution(ax, games):
     ax.bar([i - width / 2 for i in x], real_elo_distribution, width, label='Real distribution')
     ax.bar([i + width / 2 for i in x], elo_distribution, width, label='Observed distribution')
     ax.legend()
+    ax.set_xlabel('ELO')
+    ax.set_ylabel('Number of games')
+    ax.set_xticks(list(range(0, 28, 4)) + [28, 29, 30], ['Iron', 'Bronze', 'Silver', 'Gold', 'Platinum', 'Emerald', 'Diamond', 'M', 'GM', 'Chall'])
 
 def show_champion_distribution(ax, games):
     """
@@ -44,6 +47,8 @@ def show_champion_distribution(ax, games):
     champion_distribution = dict(sorted(list(champion_distribution.items()), key=lambda x: x[1], reverse=True))
     ax.bar(champion_distribution.keys(), champion_distribution.values(), label='Champion distribution')
     ax.legend()
+    ax.set_xlabel('Champion')
+    ax.set_ylabel('Number of games')
 
 def show_region_distribution(ax, games):
     """
@@ -59,6 +64,8 @@ def show_region_distribution(ax, games):
     regions = dict(sorted(list(regions.items()), key=lambda x: x[1], reverse=True))
     ax.bar(regions.keys(), regions.values(), label='Region distribution')
     ax.legend()
+    ax.set_xlabel('Region')
+    ax.set_ylabel('Number of games')
 
 def show_duration_distribution(ax, games):
     """
@@ -70,6 +77,8 @@ def show_duration_distribution(ax, games):
 
     ax.set_xticks(range(0, 70*60, 60*5), range(0, 70, 5))
     ax.legend()
+    ax.set_xlabel('Duration')
+    ax.set_ylabel('Number of games')
 
 def get_average_elo(games):
     """

@@ -4,7 +4,7 @@ import networkx as nx
 from multiprocessing import Pool
 from itertools import combinations
 
-import importer as importer
+import classes.importer as importer
 from methods.get_graphs import create_graph_from_game
 
 
@@ -58,11 +58,10 @@ def FSM(args):
     if not condition_nodes:
         return frequent_subgraph
     
-    def find_subgraphs(graph, min_size=1, max_size=None):
-        if max_size is None:
-            max_size = len(graph.nodes)
+    def find_subgraphs(graph):
+        max_size = len(graph.nodes)
         subgraphs = []
-        for size in range(min_size, max_size + 1):
+        for size in range(1, max_size + 1):
             for nodes in combinations(graph.nodes, size):
                 subgraph = graph.subgraph(nodes)
                 if all([node[0] in subgraph.nodes for node in condition_nodes]) and condition_nodes:
@@ -73,7 +72,7 @@ def FSM(args):
     counter = GraphCounter()
 
     for graph in tqdm.tqdm(graphs, dynamic_ncols=True):
-        subgraphs = find_subgraphs(graph, min_size=1)
+        subgraphs = find_subgraphs(graph)
 
         counter.update(subgraphs)
 
@@ -128,7 +127,7 @@ def frequent_subgraph_mining(games, rule, minimum_support):
         graphs = [create_graph_from_game(game, time_frame) for game, _ in games_satisfying_rules]
         args.append((graphs, minimum_support*len(games_satisfying_rules), condition_nodes_in_frame))
 
-    processes = 6
+    processes = 12
     with Pool(processes=processes) as pool:
         frequent_subgraphs = pool.map(FSM, [arg for arg in args], chunksize=1)
         pool.close()
