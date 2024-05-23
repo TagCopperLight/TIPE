@@ -13,15 +13,15 @@ def show_rules(rules):
     """
 
     for rule in rules:
-        log.info(f'IF ', end='')
+        str_rule = 'IF '
         for node in rules[rule]["path"]:
             if node[1] == 'leaf':
-                log.info(f'THEN {node[0].label} win', end='')
+                str_rule += f'THEN {node[0].label} win'
             else:
-                log.info(f'{node[0].label} {node[1]} {node[0].threshold} & ', end='')
-        log.info(f'\n{rule.label} (support: {rules[rule]["support"]}, confidence: {rules[rule]["confidence"]})')
-        log.info(f'\n(support: {rules[rule]["support"]}, confidence: {rules[rule]["confidence"]})')
-    log.info()
+                str_rule += f'{node[0].label} {node[1]} {node[0].threshold} & '
+        log.info(str_rule)
+        log.info(f'{rule.label} (support: {rules[rule]["support"]}, confidence: {rules[rule]["confidence"]})')
+        print()
 
 def get_rules(tree, confidence, support):
     """

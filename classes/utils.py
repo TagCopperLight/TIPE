@@ -84,7 +84,7 @@ def show_interactions(interactions):
             log.info('⬛', end=' ') if interactions[i][j][0] else log.info('⬜', end=' ')
             log.info('⬛', end=' ') if interactions[i][j][1] else log.info('⬜', end=' ')
             log.info(' ', end='')
-        log.info()
+        log.info('')
 
 def take_random_valid(games):
     """
@@ -129,7 +129,7 @@ def show_tree_stats(games, features):
     log.info(f'Features: {features}')
     log.info(f'Number of features: {len(features)}')
     log.info(f'3-fold cross validation: {tree.k_fold_cross_validation(3)}')
-    log.info()
+    log.info('')
 
 def image_grid(imgs, rows, cols):
     """
