@@ -1,0 +1,4 @@
+__pycache__/
+.venv/
+get_data/drivers/
+get_data/games/temp.bat
