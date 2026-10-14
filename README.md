@@ -10,7 +10,8 @@ The method follows Yang, Harrison & Roberts (2014), originally applied to Dota 2
 
 ![Frequent combat subgraphs across successive time frames](screenshots/Frequent%20Subgraphs.png)
 
-*Frequent combat subgraphs, one panel per time frame.*
+*Frequent combat subgraphs, one panel per 2-minute time frame. Team 1 is in blue,
+team 2 in pink, and edges read as in step 3 below.*
 
 ## How it works
 
@@ -108,7 +109,8 @@ python run_replays.py
 **Analyse** (still works on the recorded data in this repo). `main.py` contains
 each step: dataset stats, parsing games into objects, building graphs, training
 features, and frequent subgraph mining. Uncomment the steps you want in `main()`,
-then run:
+then run (`construct_fs_from_corpus(..., dark=True)` draws the figure at the top of
+this page):
 
 ```sh
 python main.py

@@ -101,6 +101,7 @@ def main():
 
     # construct_fs_from_corpus(importer.get_done_game_objects(), TRAINED_FEATURES)
     # construct_fs_from_corpus(importer.get_done_game_objects(), TRAINED_FEATURES, winner='T1')
+    # construct_fs_from_corpus(importer.get_done_game_objects(), TRAINED_FEATURES, dark=True)
 
 if __name__ == "__main__":
     main()
